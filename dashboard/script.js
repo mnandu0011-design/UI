@@ -1,0 +1,1 @@
+const side=document.getElementById('sidebar');document.getElementById('sideBtn').onclick=()=>side.classList.toggle('open');document.getElementById('theme').onclick=()=>document.body.classList.toggle('dark');document.getElementById('period').onchange=e=>{document.querySelector('.chart').animate([{opacity:.5},{opacity:1}],{duration:350});};
