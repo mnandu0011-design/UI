@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    background: #f6f8fb;
+    color: #182033;
+}
+
+/* Header */
+header {
+    height: 76px;
+    background: #fff;
+    border-bottom: 1px solid #e5e9ef;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+}
+
+/* SaaSify Logo */
+.brand {
+    font-size: 23px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #551A8B;
+}
+
+.brand span {
+    color: #8D80FF;
+}
+
+.crumb {
+    color: #9aa3b2;
+    margin-left: 10px;
+}
+
+/* Profile */
+.profile {
+    width: 38px;
+    height: 38px;
+    background: #7164f7;
+    color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* Main */
+main {
+    max-width: 1120px;
+    margin: 55px auto;
+    padding: 0 20px;
+}
+
+/* Title */
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.title p {
+    font-size: 11px;
+    color: #7164f7;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.title h1 {
+    font-size: 34px;
+    margin: 5px 0;
+}
+
+.title span {
+    color: #818b9d;
+}
+
+/* Buttons */
+.title > button,
+.box > button:last-child {
+    background: #7164f7;
+    color: #fff;
+    border: 0;
+    border-radius: 9px;
+    padding: 12px 17px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* Toolbar */
+.toolbar {
+    margin: 32px 0 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.toolbar input,
+.toolbar select {
+    background: #fff;
+    border: 1px solid #dfe4eb;
+    border-radius: 9px;
+    padding: 12px 14px;
+}
+
+.toolbar input {
+    flex: 1;
+}
+
+/* Table */
+.table {
+    background: #fff;
+    border: 1px solid #e3e7ed;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.thead,
+.row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 0.7fr;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 20px;
+}
+
+.thead {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: #8b95a5;
+    background: #fafbfc;
+}
+
+.row {
+    border-top: 1px solid #edf0f4;
+    font-size: 13px;
+}
+
+/* Member */
+.member {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+    background: #fff;
+    color: #8d80ff;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+}
+
+.member strong {
+    display: block;
+}
+
+.member small {
+    color: #8b95a5;
+}
+
+/* Badge */
+.badge {
+    display: inline-block;
+    padding: 5px 9px;
+    background: #f0efff;
+    color: #5f53dc;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+/* Status */
+.status {
+    color: #1c9a68;
+    font-size: 12px;
+}
+
+/* Delete Button */
+.delete {
+    border: 0;
+    background: #fff0f0;
+    color: #d95353;
+    padding: 7px 9px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #11182777;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+/* Modal Box */
+.box {
+    background: #fff;
+    width: 390px;
+    border-radius: 17px;
+    padding: 28px;
+    position: relative;
+    display: grid;
+    gap: 12px;
+}
+
+.box h2 {
+    margin: 0 0 5px;
+}
+
+.box input,
+.box select {
+    padding: 12px;
+    border: 1px solid #dfe4eb;
+    border-radius: 9px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    border: 0;
+    background: none;
+    font-size: 25px;
+    color: #8a94a5;
+    cursor: pointer;
+}
+
+/* Toast */
+#toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #182033;
+    color: #fff;
+    padding: 12px 17px;
+    border-radius: 10px;
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .title {
+        align-items: flex-start;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .thead {
+        display: none;
+    }
+
+    .row {
+        grid-template-columns: 1fr auto;
+        padding: 18px;
+    }
+
+    .row > span:nth-child(2),
+    .row > span:nth-child(3) {
+        display: none;
+    }
+
+    .toolbar {
+        flex-direction: column;
+    }
+}
