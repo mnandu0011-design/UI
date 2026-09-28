@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaSify — Modern SaaS Landing</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="../index.html">SaaS<span>ify</span></a>
+  <button class="menu" id="menuBtn">☰</button>
+  <nav id="navLinks">
+    <a href="#features">Features</a><a href="#workflow">Workflow</a><a href="#contact">Contact</a>
+    <a  href="../pricing/index.html" onclick="showToast('Opening login…')">Login</a>
+    <a href="../dashboard/index.html" onclick="showToast('Opening your workspace…')">Get Started</a>
+  </nav>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy reveal">
+    <div class="pill">✦ Modern workspace for growing teams</div>
+    <h1>Build faster.<br><span>Work smarter.</span></h1>
+    <p>One elegant workspace to manage projects, understand performance, and keep your team moving forward.</p>
+    <div class="actions"><a href="../dashboard/index.html" class="primary-action">Start for free →</a><a href="#features" class="ghost">Explore features</a></div>
+    <div class="trust">Trusted by <b>2,500+</b> modern teams</div>
+  </div>
+  <div class="hero-card reveal">
+    <div class="mini-top"><span>Workspace overview</span><b>•••</b></div>
+    <div class="mini-metric"><small>Monthly revenue</small><strong>₹48,250</strong><em>+18.4%</em></div>
+    <div class="bars"><i style="height:35%"></i><i style="height:50%"></i><i style="height:42%"></i><i style="height:70%"></i><i style="height:58%"></i><i style="height:86%"></i><i style="height:96%"></i></div>
+    <div class="mini-grid"><div>Active users<strong>2,450</strong></div><div>Projects<strong>128</strong></div></div>
+  </div>
+</section>
+<section id="features" class="section">
+  <div class="section-head"><p class="eyebrow">FEATURES</p><h2>Everything your SaaS needs</h2></div>
+  <div class="cards">
+    <article><b>◈</b><h3>Smart analytics</h3><p>Turn product activity into simple, useful insights.</p></article>
+    <article><b>⚡</b><h3>Fast workflows</h3><p>Automate repetitive work and keep projects moving.</p></article>
+    <article><b>◎</b><h3>Team collaboration</h3><p>Bring people, tasks, and decisions into one place.</p></article>
+  </div>
+</section>
+<section id="workflow" class="band"><div><p class="eyebrow">DESIGNED FOR TEAMS</p><h2>From idea to launch, without the clutter.</h2><p>Use a clean, focused interface that works across desktop, tablet, and mobile.</p></div><a href="../dashboard/index.html" class="demo-link">View demo →</a></section>
+</main>
+<footer id="contact"><div><strong>Contact SaaSify</strong><p>Have a question? Reach out to our team.</p><a href="mailto:hello@saasify.example">hello@saasify.example</a></div><span>© 2026 SaaSify · Modern SaaS UI Collection</span></footer>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
