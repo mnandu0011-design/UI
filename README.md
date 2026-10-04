@@ -1,6 +1,6 @@
-# Member5 Contribution
+# Member1 Contribution
 
-Assigned UI pages: Company Profile, Company Projects, Payments.
+Assigned UI pages: Dashboard, Notifications, Revenue Charts, Customer Dashboard.
 
 These files are the member's contribution copies from the completed ServiceNow project. The complete runnable application remains in the project root.
 
