@@ -5,13 +5,13 @@ inspired by modern ServiceNow-style service management experiences. This
 project is part of the **UI Template Collection Hackathon --- GitHub
 Team Collaboration**.
 
-## Team Members
+## Team Members(SEC-6)
 
-1.  **Jeswith**
-2.  **Nandu**
-3.  **Likith**
-4.  **Lakshman**
-5.  **Kalyan**
+1.  **Jeswith Venkata Sai Palagiri| 250200157**
+2.  **MARAMREDDY SHIVA NANDHESWARA REDDY| 250200545**
+3.  **T Venkata Likith | 250200017**
+4.  **Malli Lakshman | 250200212**
+5.  **Jorige Kalyan ram | 250200020**
 
 **Team Name:** ServiceNow UI Template Team
 
