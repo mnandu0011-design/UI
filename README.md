@@ -8,7 +8,7 @@ Team Collaboration**.
 ## Team Members(SEC-6)
 
 1.  **Jeswith Venkata Sai Palagiri| 250200157**
-2.  **MARAMREDDY SHIVA NANDHESWARA REDDY| 250200545**
+2.  **Maramreddy Shiva Nandheswara Reddy| 250200545**
 3.  **T Venkata Likith | 250200017**
 4.  **Malli Lakshman | 250200212**
 5.  **Jorige Kalyan ram | 250200020**
