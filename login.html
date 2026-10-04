@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ServiceNow | Login</title><link rel="stylesheet" href="agent.css">
+</head>
+<body class="login-page">
+<div class="login-card">
+  <a href="index.html" class="login-home">← Main Index</a>
+  <div class="brand-mark large">S</div>
+  <div class="eyebrow">ServiceNow ENTERPRISE PLATFORM</div>
+  <h1>Welcome back</h1>
+  <p>Enter your ServiceNow account details. Your role is detected automatically.</p>
+  <form id="loginForm">
+    <label for="email">Email</label>
+    <input id="email" type="email" autocomplete="username" placeholder="you@company.com" required>
+    <label for="password">Password</label>
+    <input id="password" type="password" autocomplete="current-password" placeholder="Enter password" required>
+    <label for="role">Role <span class="optional-label">(optional)</span></label>
+    <select id="role"><option value="">Auto-detect role</option><option value="customer">Customer</option><option value="admin">Admin</option></select>
+    <button class="primary-btn login-btn" type="submit">Login →</button>
+  </form>
+  <div class="demo-login">
+    <strong>Demo accounts</strong>
+    <span>Project Lead: MARAMREDDY SHIVA NANDHESWARA REDDY</span>
+    <span>Team Members: LIKITH,KALAYAN,LAKSHMAN,JESWITH</span>
+    <span>Customer: mafiacustomer@gmail.com / mafia0011</span>
+  </div>
+  <div id="loginMessage" class="login-message" aria-live="polite"></div>
+</div>
+<script src="api.js"></script>
+<script>
+document.getElementById('loginForm').addEventListener('submit', loginByRole);
+async function loginByRole(event){
+  event.preventDefault();
+  const form=event.currentTarget, message=document.getElementById('loginMessage');
+  const button=form.querySelector('button');
+  const email=document.getElementById('email').value.trim().toLowerCase();
+  const password=document.getElementById('password').value;
+  const role=document.getElementById('role').value;
+  message.className='login-message';
+  message.textContent='Checking your login...';
+  button.disabled=true;
+  try {
+    const result=await apiRequest('/login',{method:'POST',body:JSON.stringify({email,password,role})});
+    localStorage.setItem('mafiaUser',JSON.stringify(result.user));
+    message.classList.add('success');
+    message.textContent='Login successful. Opening your dashboard...';
+    window.location.href=result.user.role==='customer'?'customer-dashboard.html':'agent.html';
+  } catch(error) {
+    // Friendly local fallback keeps the demo usable if someone opens the HTML without starting Node.
+    const demo = {
+      'mafiaadmin@gmail.com': {password:'mafia0011', role:'admin', name:'ServiceNow Admin'},
+      'mafiacustomer@gmail.com': {password:'mafia0011', role:'customer', name:'ServiceNow Customer'}
+    }[email];
+    if(demo && demo.password===password && (!role || role===demo.role)){
+      const user={id:'local-'+demo.role,name:demo.name,email,role:demo.role};
+      localStorage.setItem('mafiaUser',JSON.stringify(user));
+      message.classList.add('success');
+      message.textContent='Login successful (demo mode). Opening your dashboard...';
+      setTimeout(()=>window.location.href=demo.role==='customer'?'customer-dashboard.html':'agent.html',150);
+    } else {
+      message.classList.add('error');
+      message.textContent=error.message || 'Login failed. Please check your email, password and selected role.';
+    }
+  } finally { button.disabled=false; }
+}
+</script>
+</body>
+</html>
