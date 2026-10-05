@@ -6,9 +6,11 @@ project is part of the **UI Template Collection Hackathon --- GitHub
 Team Collaboration**.
 
 ## Team Members(SEC-6)
-#### 1.Jeswith Venkata Sai Palagiri|250200157
-
-
+#### 1.Jeswith Venkata Sai Palagiri |250200157
+#### 2.Maram Shiva Nandheswara Reddy|250200545
+#### 3.T Venkata Likith |250200017
+#### 4.Malli Lakshman |250200212
+#### 5.Jorige Kalyan ram | 250200020
 
 **Team Name:** ServiceNow UI Template Team
 
