@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ServiceNow | Backend Test</title>
+<link rel="stylesheet" href="agent.css">
+</head>
+<body class="login-page">
+<div class="login-card">
+  <a href="index.html" class="login-home">← Main Index</a>
+  <div class="eyebrow"><a href="index.html" class="brand-text-link">ServiceNow BACKEND</a></div>
+  <h1>API Test</h1>
+  <p id="status">Testing backend...</p>
+  <pre id="output"></pre>
+  <a class="primary-btn" href="login.html">Back to Login</a>
+</div>
+<script src="api.js"></script>
+<script>
+const statusEl = document.getElementById('status');
+const outputEl = document.getElementById('output');
+apiRequest('/health')
+  .then(data => {
+    statusEl.textContent = 'Backend is working ✓';
+    outputEl.textContent = JSON.stringify(data, null, 2);
+  })
+  .catch(error => {
+    statusEl.textContent = 'Backend not running';
+    outputEl.textContent = 'Start the backend with: node backend/server.js\n\n' + error.message;
+  });
+</script>
+</body>
+</html>
