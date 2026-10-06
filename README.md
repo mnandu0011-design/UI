@@ -1,6 +1,6 @@
-# Member3 Contribution
+# Member4 Contribution
 
-Assigned UI pages: Real-time Analytics, Marketing Analytics, Analytics & Data Visualization.
+Assigned UI pages: Revenue Report, Activity Report, Insights.
 
 These files are the member's contribution copies from the completed ServiceNow project. The complete runnable application remains in the project root.
 
