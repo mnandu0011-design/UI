@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ServiceNow | Notifications</title><link rel="stylesheet" href="agent.css">
+<style>
+.notice-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:24px 0 16px}.notice-toolbar p{margin:0;color:#7b8497}.notice-action{border:1px solid #dfe4ee;background:#fff;border-radius:9px;padding:10px 13px;color:#5146bd;font-weight:700;cursor:pointer}.notice-list{display:grid;gap:12px}.notice-card{display:flex;gap:14px;align-items:flex-start;background:var(--panel,#fff);border:1px solid var(--border,#e7eaf0);border-radius:15px;padding:18px}.notice-card.unread{border-left:4px solid #7167f8;background:#fbfaff}.notice-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:12px;background:#ecebff;color:#5146bd;font-size:19px}.notice-icon.green{background:#e4f8ef;color:#18784c}.notice-icon.orange{background:#fff0df;color:#9a5a12}.notice-body{flex:1;min-width:0}.notice-body h3{font-size:15px;margin:0 0 5px}.notice-body p{font-size:13px;color:#737e92;margin:0;line-height:1.55}.notice-meta{font-size:11px;color:#929bad;margin-top:9px;display:flex;gap:8px;align-items:center}.unread-dot{width:7px;height:7px;border-radius:50%;background:#7167f8;display:inline-block}.empty{display:none;text-align:center;padding:35px;color:#7b8497;background:var(--panel,#fff);border:1px solid var(--border,#e7eaf0);border-radius:15px}@media(max-width:600px){.notice-card{padding:13px}.notice-icon{width:36px;height:36px;flex-basis:36px}}
+</style></head>
+<body><div class="app"><aside class="sidebar"><a href="index.html" class="brand"><div class="brand-mark">S</div><div><h2>ServiceNow</h2><span>Enterprise AI</span></div></a><div class="side-label">MAIN MENU</div><nav><a href="index.html">⌂ <span>Main Index</span></a><a href="agent.html">⊞ <span>Dashboard</span></a></nav><div class="side-label settings-label">MANAGEMENT</div><nav><a href="notifications.html" class="active">♢ <span>Notifications</span></a></nav><div class="sidebar-foot">Enterprise Service Platform<br><small>Secure • Intelligent • Scalable</small></div></aside>
+<main class="main"><header class="topbar"><div><div class="eyebrow">ServiceNow ENTERPRISE PLATFORM</div><h1>Notifications</h1><p>Keep track of important updates and activity across your workspace.</p></div><div class="top-actions"><a href="agent.html" class="secondary-btn">← Back to Dashboard</a></div></header>
+<div class="notice-toolbar"><p id="noticeCount">4 notifications · 3 unread</p><button class="notice-action" id="markAll">Mark all as read</button></div>
+<section class="notice-list" id="noticeList">
+<article class="notice-card unread"><div class="notice-icon">✦</div><div class="notice-body"><h3>AI workflow completed</h3><p>The revenue analysis workflow has finished. Your latest insights are ready to review.</p><div class="notice-meta"><span class="unread-dot"></span> Just now · AI Workflows</div></div></article>
+<article class="notice-card unread"><div class="notice-icon green">✓</div><div class="notice-body"><h3>New project created</h3><p>A new enterprise project was added to your workspace.</p><div class="notice-meta"><span class="unread-dot"></span> 18 minutes ago · Projects</div></div></article>
+<article class="notice-card unread"><div class="notice-icon orange">!</div><div class="notice-body"><h3>Unusual activity detected</h3><p>A security signal needs review. Visit Activity to view the recorded platform events.</p><div class="notice-meta"><span class="unread-dot"></span> 1 hour ago · Security</div><div style="margin-top:10px"><a href="activity-report.html">View activity →</a></div></div></article>
+<article class="notice-card"><div class="notice-icon">◈</div><div class="notice-body"><h3>Monthly insights generated</h3><p>Your monthly growth summary is available in the Insights section.</p><div class="notice-meta">Yesterday · Reports</div><div style="margin-top:10px"><a href="insights.html">View insights →</a></div></div></article>
+</section><div class="empty" id="emptyState">You're all caught up. No notifications to show.</div>
+</main></div><script>
+const cards=[...document.querySelectorAll('.notice-card')];function updateCount(){const unread=cards.filter(c=>c.classList.contains('unread')).length;document.getElementById('noticeCount').textContent=`${cards.length} notifications · ${unread} unread`;document.getElementById('markAll').textContent=unread?'Mark all as read':'All caught up';document.querySelectorAll('.notification-dot').forEach(d=>d.style.display=unread?'':'none')};document.getElementById('markAll').addEventListener('click',()=>{cards.forEach(c=>{c.classList.remove('unread');c.querySelector('.unread-dot')?.remove()});updateCount()});cards.forEach(c=>c.addEventListener('click',e=>{if(e.target.closest('a'))return;c.classList.remove('unread');c.querySelector('.unread-dot')?.remove();updateCount()}));updateCount();
+</script></body></html>
+<script src="api.js"></script>
+<script>
+(async function(){
+  try {
+    const notices=await loadNotifications();
+    const list=document.getElementById('noticeList');
+    const count=document.getElementById('noticeCount');
+    if(!list) return;
+    const icon={success:'green',warning:'orange',info:''};
+    list.innerHTML=notices.map(n=>`<article class="notice-card ${n.read?'':'unread'}"><div class="notice-icon ${icon[n.type]||''}">●</div><div class="notice-body"><h3>${escapeText(n.title)}</h3><p>${escapeText(n.message)}</p><div class="notice-meta">${new Date(n.createdAt).toLocaleString()}</div></div>${n.read?'':'<span class="unread-dot"></span>'}</article>`).join('');
+    if(count) count.textContent=notices.filter(n=>!n.read).length;
+  } catch(e) { console.warn(e.message); }
+  function escapeText(v){const d=document.createElement('div');d.textContent=v;return d.innerHTML;}
+})();
+</script>
