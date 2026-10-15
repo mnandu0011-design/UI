@@ -1,4 +1,4 @@
-# ServiceNow UI Template Collection
+# ServiceNow UI Template Collection.
 
 A team-built collection of responsive, reusable web UI templates
 inspired by modern ServiceNow-style service management experiences. This
