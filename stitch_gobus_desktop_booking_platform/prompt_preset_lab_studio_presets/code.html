@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lumina Presets Pro — Creative AI Studio</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#090a0f',
+            cardbg: '#12141c',
+            borderdark: '#1e2230',
+            accent: {
+              crimson: '#FF1744',
+              crimsonHover: '#D7193F',
+              cyan: '#00F0FF',
+              purple: '#A855F7',
+              violet: '#7C3AED'
+            }
+          },
+          boxShadow: {
+            'glow-crimson': '0 0 25px -4px rgba(255, 23, 68, 0.45)',
+            'glow-cyan': '0 0 25px -4px rgba(0, 240, 255, 0.35)',
+            'glow-card': '0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.05)'
+          }
+        }
+      }
+    }
+  </script>
+<!-- Embedded Custom Styles -->
+<style data-purpose="custom-scrollbars">
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090a0f;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e2230;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2e354b;
+    }
+  </style>
+<style data-purpose="interactive-animations">
+    .preset-card {
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+    .preset-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.85), 0 0 18px 1px rgba(255, 23, 68, 0.22);
+      border-color: rgba(255, 23, 68, 0.45);
+    }
+    .badge-blur {
+      backdrop-filter: blur(10px);
+      background: rgba(10, 12, 18, 0.72);
+    }
+  </style>
+</head>
+<body class="bg-obsidian text-slate-200 min-h-screen flex flex-col font-sans selection:bg-accent-crimson selection:text-white antialiased">
+<!-- BEGIN: TopHeader -->
+<header class="sticky top-0 z-40 bg-obsidian/90 backdrop-blur-md border-b border-borderdark/80 px-6 py-3.5 flex items-center justify-between gap-4">
+<!-- Brand / Logo Area -->
+<div class="flex items-center gap-3 shrink-0" data-purpose="app-branding">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-accent-crimson via-purple-600 to-accent-cyan p-[1.5px] flex items-center justify-center shadow-glow-crimson">
+<div class="w-full h-full bg-obsidian rounded-[10px] flex items-center justify-center">
+<svg class="w-5 h-5 text-accent-crimson" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-lg font-black tracking-tight text-white uppercase">Lumina<span class="text-accent-crimson">Presets</span></span>
+<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-accent-crimson/15 text-accent-crimson border border-accent-crimson/30">Pro Studio</span>
+</div>
+<p class="text-xs text-slate-400 font-medium">Prompt &amp; Preset Lab v4.2</p>
+</div>
+</div>
+<!-- Search Input & Quick Shortcut Filter -->
+<div class="flex-1 max-w-xl mx-4" data-purpose="global-search">
+<div class="relative flex items-center">
+<svg class="w-4 h-4 text-slate-400 absolute left-3.5 pointer-events-none" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<input class="w-full bg-[#121520] hover:bg-[#161a28] focus:bg-[#121520] text-sm text-slate-200 placeholder-slate-400 pl-10 pr-20 py-2.5 rounded-xl border border-borderdark focus:border-accent-crimson focus:ring-1 focus:ring-accent-crimson transition-all outline-none" placeholder="Search styles, lighting, prompt tokens, CFG, models..." type="text"/>
+<div class="absolute right-2.5 flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 text-[11px] font-semibold text-slate-300 bg-[#1c2233] border border-borderdark rounded">Ctrl</kbd>
+<kbd class="px-1.5 py-0.5 text-[11px] font-semibold text-slate-300 bg-[#1c2233] border border-borderdark rounded">K</kbd>
+</div>
+</div>
+</div>
+<!-- Top Right View & User Actions -->
+<div class="flex items-center gap-3 shrink-0" data-purpose="user-controls">
+<!-- Sync Status Indicator -->
+<div class="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#121520] border border-borderdark text-xs text-slate-300">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span>Cloud Engine Live</span>
+</div>
+<!-- Notification Bell -->
+<button class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-cardbg transition border border-transparent hover:border-borderdark relative">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-accent-crimson rounded-full"></span>
+</button>
+<!-- User Profile Badge -->
+<div class="flex items-center gap-3 pl-2 border-l border-borderdark">
+<div class="relative cursor-pointer group">
+<div class="w-9 h-9 rounded-full bg-gradient-to-tr from-accent-purple to-accent-crimson p-[2px]">
+<div class="w-full h-full bg-[#161a28] rounded-full flex items-center justify-center text-xs font-bold text-white uppercase tracking-wider">
+              JD
+            </div>
+</div>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-accent-cyan border-2 border-obsidian rounded-full"></span>
+</div>
+<div class="hidden xl:block leading-tight">
+<div class="text-sm font-semibold text-white flex items-center gap-1.5">
+            John Doe
+            <span class="px-1 py-0.2 bg-gradient-to-r from-accent-crimson to-accent-violet text-[9px] font-black uppercase text-white rounded">PRO</span>
+</div>
+<span class="text-xs text-slate-400">4,820 GPU Credits</span>
+</div>
+</div>
+</div>
+</header>
+<!-- END: TopHeader -->
+<!-- BEGIN: FilterBar -->
+<section class="border-b border-borderdark bg-[#0c0e15] px-6 py-3" data-purpose="filter-and-controls">
+<div class="max-w-[1720px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<!-- Filter Chips -->
+<div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 text-xs scrollbar-none" data-purpose="category-chips">
+<button class="px-3.5 py-1.5 rounded-lg font-medium whitespace-nowrap bg-accent-crimson text-white shadow-glow-crimson transition">
+          All Presets (24)
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg font-medium whitespace-nowrap bg-cardbg text-slate-300 hover:text-white hover:bg-[#1a1e2d] border border-borderdark transition">
+          Cinematic &amp; Film
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg font-medium whitespace-nowrap bg-cardbg text-slate-300 hover:text-white hover:bg-[#1a1e2d] border border-borderdark transition">
+          Cyberpunk / Neon
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg font-medium whitespace-nowrap bg-cardbg text-slate-300 hover:text-white hover:bg-[#1a1e2d] border border-borderdark transition">
+          Anime &amp; Cel-Shaded
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg font-medium whitespace-nowrap bg-cardbg text-slate-300 hover:text-white hover:bg-[#1a1e2d] border border-borderdark transition">
+          Monochrome Architecture
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg font-medium whitespace-nowrap bg-cardbg text-slate-300 hover:text-white hover:bg-[#1a1e2d] border border-borderdark transition">
+          Nature &amp; Golden Hour
+        </button>
+</div>
+<!-- View and Sort Toolbar -->
+<div class="flex items-center justify-end gap-3 w-full md:w-auto shrink-0" data-purpose="view-sorting-toolbar">
+<!-- Sort Dropdown -->
+<div class="relative flex items-center">
+<span class="text-xs text-slate-400 mr-2">Sort:</span>
+<select class="bg-cardbg text-slate-200 text-xs font-medium py-1.5 pl-3 pr-8 rounded-lg border border-borderdark hover:border-slate-600 focus:ring-accent-crimson focus:border-accent-crimson outline-none cursor-pointer">
+<option>Most Popular</option>
+<option>Highest Rated</option>
+<option>Recently Created</option>
+<option>Recently Applied</option>
+</select>
+</div>
+<!-- View Grid Switchers -->
+<div class="flex items-center bg-cardbg rounded-lg p-0.5 border border-borderdark">
+<button class="p-1.5 rounded bg-[#1e2333] text-accent-cyan shadow-sm" title="Standard Grid View">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20">
+<path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+</svg>
+</button>
+<button class="p-1.5 rounded text-slate-400 hover:text-slate-200" title="Dense List View">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FilterBar -->
+<!-- BEGIN: MainContent -->
+<main class="flex-1 px-6 py-7 max-w-[1720px] mx-auto w-full">
+<!-- Presets Header Stats Banner -->
+<div class="mb-6 flex flex-wrap items-baseline justify-between gap-2">
+<div>
+<h1 class="text-2xl font-extrabold text-white tracking-tight flex items-center gap-2.5">
+          Studio Presets
+          <span class="text-xs px-2.5 py-0.5 rounded-full font-semibold bg-accent-crimson/20 text-accent-crimson border border-accent-crimson/40">
+            24 Active Styles
+          </span>
+</h1>
+<p class="text-xs text-slate-400 mt-1">High-end prompt templates, LoRA weights &amp; sampler settings optimized for SDXL &amp; Midjourney pipelines.</p>
+</div>
+<div class="text-xs text-slate-400 flex items-center gap-3">
+<span>Displaying <span class="text-white font-semibold">4 Featured Masters</span></span>
+<span class="text-slate-600">•</span>
+<button class="text-accent-cyan hover:underline font-medium">Batch Export JSON</button>
+</div>
+</div>
+<!-- BEGIN: PresetGrid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" data-purpose="preset-gallery-grid">
+<!-- Preset Card 1: Cyberpunk Rain -->
+<article class="preset-card bg-cardbg rounded-2xl border border-borderdark overflow-hidden flex flex-col group relative" data-purpose="preset-card-item">
+<!-- Visual Output Container -->
+<div class="relative aspect-video w-full overflow-hidden bg-black/40">
+<img alt="Cinematic hyperrealistic photography preset output, moody neon cyberpunk street with rainy reflections, high contrast, vibrant glowing lights, ultra detailed 8k" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsNPdSVSs4-MnHZvgIKEIRrHVeCq0pjHP-UP_yhl6pm-O41aWUp1D9Hynu8jVpGdRlZhV_HU3CIxXXPDf7yrsA6Xe-qA9mlLbxTkxCXZe-L-iNlDXURon4FuQEpnoRMj4cNiHXSadcm8xMYS-ONIoHJGg9bkQSh3CGdcCbKH-j-dVKJMOFLqMezfWZMqjcR6Qo5Ic-V6XnXyLJc-yOsTBPhfAaXq1pFqBflNOOyMARPRfqTzxleS_leQ"/>
+<!-- Rating & Uses Floating Pill -->
+<div class="badge-blur absolute top-3 left-3 px-2.5 py-1 rounded-full border border-white/10 flex items-center gap-1.5 shadow-md">
+<svg class="w-3.5 h-3.5 text-amber-400 fill-amber-400" viewbox="0 0 20 20">
+<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+</svg>
+<span class="text-xs font-bold text-white">4.9</span>
+<span class="text-[10px] text-slate-300 font-medium">(1.4k uses)</span>
+</div>
+<!-- Favorite & Quick Overlay Buttons -->
+<div class="absolute top-3 right-3 flex items-center gap-1.5">
+<button class="badge-blur p-2 rounded-full border border-white/10 text-white/80 hover:text-accent-crimson hover:bg-black/80 transition" title="Add to Favorites">
+<svg class="w-4 h-4 fill-accent-crimson text-accent-crimson" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+<!-- Model Parameter Specs Ribbon -->
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="badge-blur text-[10px] text-accent-cyan font-mono px-2 py-0.5 rounded border border-accent-cyan/30">CFG: 7.5</span>
+<span class="badge-blur text-[10px] text-white font-mono px-2 py-0.5 rounded border border-white/20">DPM++ 2M SDE</span>
+<span class="badge-blur text-[10px] text-amber-300 font-mono px-2 py-0.5 rounded border border-amber-300/30">Steps: 34</span>
+</div>
+</div>
+<!-- Preset Metadata Body -->
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs text-slate-400 mb-1.5">
+<span class="font-medium text-accent-cyan flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-cyan"></span>
+                @kavita
+              </span>
+<span class="text-[11px] text-slate-400">Cinematic / Sci-Fi</span>
+</div>
+<h2 class="text-base font-bold text-white group-hover:text-accent-crimson transition-colors line-clamp-1 mb-2">
+              Neo-Tokyo Rain &amp; Cyberpunk Glow
+            </h2>
+<!-- Tag Chips -->
+<div class="flex flex-wrap gap-1 mb-4">
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#Cyberpunk</span>
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#Moody</span>
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#Rain</span>
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#Reflections</span>
+</div>
+</div>
+<!-- Bottom Action Buttons -->
+<div class="pt-3 border-t border-borderdark/80 flex items-center gap-2">
+<button class="flex-1 bg-accent-crimson hover:bg-accent-crimsonHover text-white py-2 px-3 rounded-xl text-xs font-semibold shadow-glow-crimson transition flex items-center justify-center gap-1.5">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              Apply Preset
+            </button>
+<button class="p-2 rounded-xl bg-[#161a28] hover:bg-[#1e2336] text-slate-300 hover:text-white border border-borderdark transition" title="Inspect Settings &amp; Prompt Template">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</article>
+<!-- Preset Card 2: Warm Vintage Film -->
+<article class="preset-card bg-cardbg rounded-2xl border border-borderdark overflow-hidden flex flex-col group relative" data-purpose="preset-card-item">
+<!-- Visual Output Container -->
+<div class="relative aspect-video w-full overflow-hidden bg-black/40">
+<img alt="Golden hour warm vintage film preset output, dreamy sun flare over rolling hills and countryside cottage, kodak portra 400 aesthetic, warm muted tones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAron2MeQMnIRrXsWhQyEh1dGUEwYxL2EN9ESusljWjt6b9ot3_IyVzcd_inl6QoPGaa8KEDyIWGDw3JBz6GZGJZBgoZmvZ3Vj-tUASF2FVkf7LAPQ82285F1kCpmMx36QCTQU3lYIgL-ZcMyklwJnXS72uYo4k2H5E4uzlryZEeSpUMUd4Ke5Xsu2OFyB0--s18mWeT0yLHkvOEE3hMVMOkrYQ7T1JK7nrkEhdsVOdahslNXdRxFaQQw"/>
+<!-- Rating & Uses Floating Pill -->
+<div class="badge-blur absolute top-3 left-3 px-2.5 py-1 rounded-full border border-white/10 flex items-center gap-1.5 shadow-md">
+<svg class="w-3.5 h-3.5 text-amber-400 fill-amber-400" viewbox="0 0 20 20">
+<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+</svg>
+<span class="text-xs font-bold text-white">4.8</span>
+<span class="text-[10px] text-slate-300 font-medium">(920 uses)</span>
+</div>
+<!-- Favorite & Quick Overlay Buttons -->
+<div class="absolute top-3 right-3 flex items-center gap-1.5">
+<button class="badge-blur p-2 rounded-full border border-white/10 text-white/80 hover:text-accent-crimson hover:bg-black/80 transition" title="Add to Favorites">
+<svg class="w-4 h-4 text-slate-300 hover:text-accent-crimson transition" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Model Parameter Specs Ribbon -->
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="badge-blur text-[10px] text-amber-300 font-mono px-2 py-0.5 rounded border border-amber-300/30">ISO 400 Grain</span>
+<span class="badge-blur text-[10px] text-white font-mono px-2 py-0.5 rounded border border-white/20">Euler A</span>
+<span class="badge-blur text-[10px] text-accent-cyan font-mono px-2 py-0.5 rounded border border-accent-cyan/30">Steps: 28</span>
+</div>
+</div>
+<!-- Preset Metadata Body -->
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs text-slate-400 mb-1.5">
+<span class="font-medium text-amber-300/90 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                @alex_d
+              </span>
+<span class="text-[11px] text-slate-400">Analogue Film</span>
+</div>
+<h2 class="text-base font-bold text-white group-hover:text-accent-crimson transition-colors line-clamp-1 mb-2">
+              Portra 400 Golden Countryside
+            </h2>
+<!-- Tag Chips -->
+<div class="flex flex-wrap gap-1 mb-4">
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#Film</span>
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#Kodak</span>
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#GoldenHour</span>
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#WarmTones</span>
+</div>
+</div>
+<!-- Bottom Action Buttons -->
+<div class="pt-3 border-t border-borderdark/80 flex items-center gap-2">
+<button class="flex-1 bg-accent-crimson hover:bg-accent-crimsonHover text-white py-2 px-3 rounded-xl text-xs font-semibold shadow-glow-crimson transition flex items-center justify-center gap-1.5">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              Apply Preset
+            </button>
+<button class="p-2 rounded-xl bg-[#161a28] hover:bg-[#1e2336] text-slate-300 hover:text-white border border-borderdark transition" title="Inspect Settings &amp; Prompt Template">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</article>
+<!-- Preset Card 3: Anime Pastoral -->
+<article class="preset-card bg-cardbg rounded-2xl border border-borderdark overflow-hidden flex flex-col group relative" data-purpose="preset-card-item">
+<!-- Visual Output Container -->
+<div class="relative aspect-video w-full overflow-hidden bg-black/40">
+<img alt="Vibrant pastel anime aesthetic landscape preset output, ethereal cherry blossom skies, clean studio ghibli lighting and soft gradients" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2D9E288TaZIKCKVqlA-IqhcuJIXxdxGgTKbvc-rBVZN7JwZIUIRTKR7MXJlOewKi6E5PTHvmlxGQnX7dHQiODSSA9mFhXZM32DogMvUH4ByDAJEaGyVegw1Nh62Rpf4fjWbq9_eDJELggi7m-BZzG2lQngKESP-ezHWUfti_9gtKlrc5Gv2BuW7qPpR4iRPy3qfSfoFa9wUBr4p0KOCgJsn6QZ2-bzW9QGrD_GVn3nqjqYBvWkPRgwQ"/>
+<!-- Rating & Uses Floating Pill -->
+<div class="badge-blur absolute top-3 left-3 px-2.5 py-1 rounded-full border border-white/10 flex items-center gap-1.5 shadow-md">
+<svg class="w-3.5 h-3.5 text-amber-400 fill-amber-400" viewbox="0 0 20 20">
+<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+</svg>
+<span class="text-xs font-bold text-white">5.0</span>
+<span class="text-[10px] text-slate-300 font-medium">(2.1k uses)</span>
+</div>
+<!-- Favorite & Quick Overlay Buttons -->
+<div class="absolute top-3 right-3 flex items-center gap-1.5">
+<button class="badge-blur p-2 rounded-full border border-white/10 text-white/80 hover:text-accent-crimson hover:bg-black/80 transition" title="Add to Favorites">
+<svg class="w-4 h-4 text-slate-300 hover:text-accent-crimson transition" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Model Parameter Specs Ribbon -->
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="badge-blur text-[10px] text-pink-300 font-mono px-2 py-0.5 rounded border border-pink-300/30">LoRA: 0.85</span>
+<span class="badge-blur text-[10px] text-white font-mono px-2 py-0.5 rounded border border-white/20">AnimeV4 Fine</span>
+<span class="badge-blur text-[10px] text-emerald-300 font-mono px-2 py-0.5 rounded border border-emerald-300/30">Steps: 26</span>
+</div>
+</div>
+<!-- Preset Metadata Body -->
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs text-slate-400 mb-1.5">
+<span class="font-medium text-pink-400 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
+                @studio_m
+              </span>
+<span class="text-[11px] text-slate-400">Animation / Illustration</span>
+</div>
+<h2 class="text-base font-bold text-white group-hover:text-accent-crimson transition-colors line-clamp-1 mb-2">
+              Ethereal Ghibli Sakura Blossom
+            </h2>
+<!-- Tag Chips -->
+<div class="flex flex-wrap gap-1 mb-4">
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#Anime</span>
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#Pastel</span>
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#Ghibli</span>
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#Vibrant</span>
+</div>
+</div>
+<!-- Bottom Action Buttons -->
+<div class="pt-3 border-t border-borderdark/80 flex items-center gap-2">
+<button class="flex-1 bg-accent-crimson hover:bg-accent-crimsonHover text-white py-2 px-3 rounded-xl text-xs font-semibold shadow-glow-crimson transition flex items-center justify-center gap-1.5">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              Apply Preset
+            </button>
+<button class="p-2 rounded-xl bg-[#161a28] hover:bg-[#1e2336] text-slate-300 hover:text-white border border-borderdark transition" title="Inspect Settings &amp; Prompt Template">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</article>
+<!-- Preset Card 4: Stark Architectural Monochrome -->
+<article class="preset-card bg-cardbg rounded-2xl border border-borderdark overflow-hidden flex flex-col group relative" data-purpose="preset-card-item">
+<!-- Visual Output Container -->
+<div class="relative aspect-video w-full overflow-hidden bg-black/40">
+<img alt="High-contrast monochrome black and white architectural photography preset output, dramatic shadows and stark geometric lines of modern skyscraper" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8E3l_kZM4nne_Fl0Yaehjw_uV-sUVHiQLvhDNORg19Y9BY3k-0tsvKkWRBDti2mLubKqukqoz55C01VW-4YBsHclzbkEcqZL-NFyZhibvY1FMok2GPj8sE0QzeN73bT08UaDGdoDLjFyGzdnZMCNCwg35z6boAtCErgyCo3fnbDwH4IMy7YMZdz84ItOqU4uv8IQkZerpHS-XdwSOOSfHWSyq4_mUzFMACFv1-cJhipaTDWmbghAVxg"/>
+<!-- Rating & Uses Floating Pill -->
+<div class="badge-blur absolute top-3 left-3 px-2.5 py-1 rounded-full border border-white/10 flex items-center gap-1.5 shadow-md">
+<svg class="w-3.5 h-3.5 text-amber-400 fill-amber-400" viewbox="0 0 20 20">
+<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+</svg>
+<span class="text-xs font-bold text-white">4.9</span>
+<span class="text-[10px] text-slate-300 font-medium">(850 uses)</span>
+</div>
+<!-- Favorite & Quick Overlay Buttons -->
+<div class="absolute top-3 right-3 flex items-center gap-1.5">
+<button class="badge-blur p-2 rounded-full border border-white/10 text-white/80 hover:text-accent-crimson hover:bg-black/80 transition" title="Add to Favorites">
+<svg class="w-4 h-4 text-slate-300 hover:text-accent-crimson transition" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Model Parameter Specs Ribbon -->
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="badge-blur text-[10px] text-white font-mono px-2 py-0.5 rounded border border-white/30">Mono High-Key</span>
+<span class="badge-blur text-[10px] text-accent-cyan font-mono px-2 py-0.5 rounded border border-accent-cyan/30">CFG: 8.2</span>
+<span class="badge-blur text-[10px] text-violet-300 font-mono px-2 py-0.5 rounded border border-violet-300/30">Steps: 40</span>
+</div>
+</div>
+<!-- Preset Metadata Body -->
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-xs text-slate-400 mb-1.5">
+<span class="font-medium text-slate-300 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                @marcus_b
+              </span>
+<span class="text-[11px] text-slate-400">Architecture / B&amp;W</span>
+</div>
+<h2 class="text-base font-bold text-white group-hover:text-accent-crimson transition-colors line-clamp-1 mb-2">
+              Brutalist Mono &amp; Deep Chiaroscuro
+            </h2>
+<!-- Tag Chips -->
+<div class="flex flex-wrap gap-1 mb-4">
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#BlackAndWhite</span>
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#Architecture</span>
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#Contrast</span>
+<span class="text-[10px] bg-[#1a1f30] text-slate-300 font-medium px-2 py-0.5 rounded border border-borderdark">#HighKey</span>
+</div>
+</div>
+<!-- Bottom Action Buttons -->
+<div class="pt-3 border-t border-borderdark/80 flex items-center gap-2">
+<button class="flex-1 bg-accent-crimson hover:bg-accent-crimsonHover text-white py-2 px-3 rounded-xl text-xs font-semibold shadow-glow-crimson transition flex items-center justify-center gap-1.5">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              Apply Preset
+            </button>
+<button class="p-2 rounded-xl bg-[#161a28] hover:bg-[#1e2336] text-slate-300 hover:text-white border border-borderdark transition" title="Inspect Settings &amp; Prompt Template">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- END: PresetGrid -->
+<!-- BEGIN: WorkflowTray -->
+<div class="mt-10 p-5 rounded-2xl bg-gradient-to-r from-cardbg via-[#161926] to-cardbg border border-borderdark flex flex-col md:flex-row items-center justify-between gap-4" data-purpose="active-engine-bar">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-[#1c2132] border border-borderdark flex items-center justify-center text-accent-cyan shrink-0">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="text-sm font-bold text-white">Preset Chaining &amp; Canvas Sync Active</h3>
+<span class="text-[10px] px-2 py-0.5 bg-emerald-500/10 text-emerald-400 font-semibold border border-emerald-500/20 rounded">Real-Time WebSocket</span>
+</div>
+<p class="text-xs text-slate-400">Selecting any preset synchronizes prompt tokens, positive/negative anchors, and seed control directly into your generative viewport.</p>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<button class="px-4 py-2 rounded-xl text-xs font-semibold bg-[#1a1f30] hover:bg-[#22283e] text-slate-200 border border-borderdark transition">
+          Preset Library Settings
+        </button>
+<button class="px-4 py-2 rounded-xl text-xs font-semibold bg-accent-cyan/10 hover:bg-accent-cyan/20 text-accent-cyan border border-accent-cyan/30 transition flex items-center gap-1.5 shadow-glow-cyan">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+          Import JSON / CivitAI Bundle
+        </button>
+</div>
+</div>
+<!-- END: WorkflowTray -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: FloatingActionButton -->
+<div class="fixed bottom-7 right-7 z-50 flex items-center gap-3" data-purpose="floating-action-container">
+<!-- Context Micro-tooltip -->
+<div class="hidden md:flex items-center px-3 py-1.5 rounded-lg bg-[#0e111a]/95 text-xs text-slate-300 border border-borderdark backdrop-blur shadow-2xl">
+      Press <kbd class="mx-1 px-1 py-0.5 bg-[#1a1f30] rounded text-[10px] text-white font-mono">N</kbd> for quick creation
+    </div>
+<!-- Radiant FAB Button -->
+<button class="flex items-center gap-2.5 px-5 py-3.5 rounded-full bg-gradient-to-r from-accent-crimson via-pink-600 to-accent-violet hover:brightness-110 text-white font-bold text-sm tracking-wide shadow-glow-crimson transition-all duration-300 transform hover:scale-105 active:scale-95 border border-white/20" title="Create New Custom Preset">
+<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<span>Create New Preset</span>
+</button>
+</div>
+<!-- END: FloatingActionButton -->
+</body></html>
