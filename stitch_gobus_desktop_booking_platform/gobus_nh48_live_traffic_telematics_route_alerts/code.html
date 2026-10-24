@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "outline-variant": "#e5bdbd",
+        "on-primary-fixed-variant": "#920024",
+        "on-secondary-fixed": "#410007",
+        "surface-bright": "#faf9fd",
+        "secondary-fixed": "#ffdad8",
+        "secondary-container": "#db313f",
+        "primary-fixed-dim": "#ffb3b4",
+        "surface": "#faf9fd",
+        "on-tertiary": "#ffffff",
+        "surface-container": "#efedf1",
+        "inverse-primary": "#ffb3b4",
+        "tertiary-container": "#127e3a",
+        "tertiary-fixed": "#95f8a5",
+        "on-tertiary-container": "#c5ffc9",
+        "error-container": "#ffdad6",
+        "secondary-fixed-dim": "#ffb3b1",
+        "primary-container": "#d7193f",
+        "surface-container-high": "#e9e7eb",
+        "outline": "#906f6f",
+        "on-background": "#1a1b1e",
+        "tertiary": "#00632a",
+        "on-secondary": "#ffffff",
+        "on-primary-container": "#ffeded",
+        "surface-dim": "#dbd9dd",
+        "on-surface": "#1a1b1e",
+        "surface-container-highest": "#e3e2e6",
+        "surface-variant": "#e3e2e6",
+        "primary": "#ae002d",
+        "on-error-container": "#93000a",
+        "on-primary": "#ffffff",
+        "on-secondary-container": "#fffbff",
+        "inverse-on-surface": "#f1f0f4",
+        "error": "#ba1a1a",
+        "background": "#faf9fd",
+        "primary-fixed": "#ffdada",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f4f3f7",
+        "on-surface-variant": "#5c3f40",
+        "on-secondary-fixed-variant": "#92001c",
+        "on-tertiary-fixed": "#002109",
+        "on-tertiary-fixed-variant": "#005322",
+        "secondary": "#b7102a",
+        "inverse-surface": "#2f3033",
+        "on-error": "#ffffff",
+        "tertiary-fixed-dim": "#7adb8c",
+        "on-primary-fixed": "#40000b",
+        "surface-tint": "#bf0032"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-md": "1rem",
+        "space-sm": "0.5rem",
+        "space-xs": "0.25rem",
+        "space-lg": "1.5rem",
+        "space-xl": "2rem",
+        "gutter": "1.5rem",
+        "margin": "2rem"
+      },
+      "fontFamily": {
+        "label-md": ["Inter"],
+        "label-lg": ["Inter"],
+        "body-md": ["Inter"],
+        "body-sm": ["Inter"],
+        "headline-xl": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "body-lg": ["Inter"],
+        "title-md": ["Plus Jakarta Sans"],
+        "label-sm": ["Inter"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "headline-sm": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "title-md": ["16px", {"lineHeight": "22px", "fontWeight": "600"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+        "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-on-primary py-space-xs px-margin"><div class="max-w-[1440px] mx-auto flex items-center justify-between font-label-sm text-label-sm"><span>24x7 Emergency Bus Support &amp; Instant Live Tracking Assistance</span><span class="font-label-md text-label-md tracking-wide">Toll-Free Helpline: 1800-419-4628</span></div></div><div class="h-20 max-w-[1440px] mx-auto px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-sm"><img alt="GoBus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WC3hbITWpolsdr1e1_sWqqcN0aWwNrtOz_y-6HlSYA9c0hVgRcGcdQxNRbs4grmDUBhrizYaWbGCyGeDy2BkNE2w8CUXvnMdBv_IBCJoZjBF8iTnweXws30vzDsv9SjiE47i_lDJXoMLJeoLftO6pbNTVI4svZjLY-fqswLBE5Siyzb8XP3hAylVQXroUevqmZFiAm2dW_OD5JoxCzx4bdVqqcO59Ny6W3sFR5IF3h8A54KoSmSAbpa3Sg"/><span class="font-headline-md text-headline-md text-primary tracking-tight">GoBus</span></div><nav class="flex items-center gap-space-sm" data-active-classes="bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm"><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="home" href="../gobus_home_1/code.html">Home</a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="search-buses" href="../gobus_search_buses/code.html">Search Buses</a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="my-bookings" href="../gobus_my_bookings/code.html">My Bookings</a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="help" href="../gobus_help_support_desk/code.html">Help</a></nav></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface"><span class="material-symbols-outlined text-secondary text-[18px]">currency_rupee</span><span>INR</span></div><button class="px-space-lg py-space-sm bg-primary hover:bg-secondary active:bg-on-primary-fixed-variant text-on-primary font-label-lg text-label-lg rounded-lg transition-colors flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px]">lock</span><span>Demo Login</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Context / Breadcrumb & Route Summary Ribbon -->
+<section class="w-full bg-surface-container-lowest shadow-sm">
+<div class="max-w-[1440px] mx-auto px-margin py-space-md">
+<!-- Breadcrumb Row -->
+<div class="flex items-center justify-between pb-space-sm">
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="../gobus_home_1/code.html">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>Home</span>
+</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="../gobus_my_bookings/code.html">My Bookings</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-on-surface font-semibold">Route Itinerary &amp; Live Tracking</span>
+</nav>
+<!-- Live Action Buttons -->
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg transition-colors" onclick="shareTrip()">
+<span class="material-symbols-outlined text-primary text-[18px]">share</span>
+<span>Share Live Trip</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg transition-colors">
+<span class="material-symbols-outlined text-primary text-[18px]">cloud_download</span>
+<span>Download Offline Map</span>
+</button>
+</div>
+</div>
+<!-- Route Header Identity Card -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm tracking-wider uppercase">PNR GB-98241029</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Orange Tours &amp; Travels</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Scania AC Multi-Axle Luxury Sleeper (2+1)</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-md text-body-md text-on-surface-variant">
+<span class="font-semibold text-on-surface">Chennai</span>
+<span>(Koyambedu Omni Bus Stand)</span>
+<span class="material-symbols-outlined text-primary text-[18px]">arrow_right_alt</span>
+<span class="font-semibold text-on-surface">Bengaluru</span>
+<span>(Madiwala Drop Point)</span>
+<span class="text-outline">|</span>
+<span class="text-on-surface font-medium">NH 48 / AH 45 Corridor (346 km)</span>
+</div>
+</div>
+<!-- Live Status Pill -->
+<div class="flex items-center gap-space-sm bg-tertiary-container/10 px-space-md py-space-xs rounded-full">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-tertiary"></span>
+</span>
+<span class="font-label-lg text-label-lg text-tertiary">Bus in Transit • Running on Schedule (+0 min delay)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Grid: 60% Map Canvas & Telemetry / 40% Precision Stepper & Station Info -->
+<main class="w-full max-w-[1440px] mx-auto px-margin py-space-xl">
+<div class="grid grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: LIVE RADAR, INTERACTIVE MAP & TELEMETRY (7 Cols / ~60%) -->
+<div class="col-span-12 lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Map & Visualization Container -->
+<div class="relative bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex flex-col">
+<!-- Map Canvas Header Bar -->
+<div class="flex items-center justify-between px-space-lg py-space-sm bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">explore</span>
+<span class="font-title-md text-title-md text-on-surface">Live Sat-Telemetry: NH48 Corridor</span>
+<span class="text-label-sm font-label-sm bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">GPS Refresh: 2s</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface text-on-surface-variant hover:text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm" id="toggleTrafficBtn">
+<span class="material-symbols-outlined text-[16px] text-tertiary">traffic</span>
+<span>Live Traffic: Clear</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm" id="centerBusBtn">
+<span class="material-symbols-outlined text-[16px]">my_location</span>
+<span>Focus Bus</span>
+</button>
+</div>
+</div>
+<!-- High-Fidelity Simulated Geographic GPS Canvas -->
+<div class="relative w-full h-[470px] bg-[#f2ede7] overflow-hidden select-none" id="gpsMapContainer">
+<!-- Map Topography Simulation Layer: Roads, Grids, Landmasses -->
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 800 470" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Geographic Terrain Grid Pattern -->
+<pattern height="40" id="mapGrid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e4ded5" stroke-width="0.8"></path>
+</pattern>
+<lineargradient id="corridorGlow" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#ae002d" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#ae002d" stop-opacity="0.05"></stop>
+</lineargradient>
+</defs>
+<!-- Map Background Base -->
+<rect fill="#f4ede3" height="100%" width="100%"></rect>
+<rect fill="url(#mapGrid)" height="100%" width="100%"></rect>
+<!-- River / Waterways -->
+<path d="M-20,120 Q120,150 240,110 T560,90 T820,130" fill="none" stroke="#d5e3ea" stroke-linecap="round" stroke-width="12"></path>
+<text fill="#9db6c4" font-family="Inter" font-size="9" font-weight="600" letter-spacing="1" x="180" y="105">PALAR RIVER CORRIDOR</text>
+<!-- Forest / Hill Reserve Terrain Shading -->
+<path d="M 320,180 Q 380,140 440,200 T 520,240 T 400,290 Z" fill="#e2ecd8" opacity="0.75"></path>
+<text fill="#7d9b73" font-family="Inter" font-size="10" font-weight="600" x="390" y="225">Jawadhu Hills Reserve</text>
+<!-- Secondary Feeder Highway Networks -->
+<path d="M 120,470 L 170,300 L 195,190 L 180,-10" fill="none" stroke="#ffffff" stroke-linejoin="round" stroke-width="5"></path>
+<path d="M 120,470 L 170,300 L 195,190 L 180,-10" fill="none" stroke="#dfd7cb" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M 350,470 L 390,290 L 375,120 L 410,-10" fill="none" stroke="#ffffff" stroke-linejoin="round" stroke-width="4.5"></path>
+<path d="M 350,470 L 390,290 L 375,120 L 410,-10" fill="none" stroke="#dfd7cb" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M 590,470 L 610,310 L 630,140 L 670,-10" fill="none" stroke="#ffffff" stroke-linejoin="round" stroke-width="4"></path>
+<path d="M 590,470 L 610,310 L 630,140 L 670,-10" fill="none" stroke="#dfd7cb" stroke-linejoin="round" stroke-width="2"></path>
+<!-- Primary Express Highway Corridor (NH48 / AH45) Underlay -->
+<!-- Route Points: Chennai (60, 180) -> Sriperumbudur (185, 205) -> Vellore (380, 240) -> Krishnagiri (520, 275) -> Hosur (640, 260) -> Bengaluru (730, 230) -->
+<path d="M 60,180 C 130,195 160,202 210,210 C 290,225 340,235 400,242 C 470,250 510,270 560,274 C 620,280 645,268 680,255 C 705,245 725,235 735,230" fill="none" id="expresswayBase" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+<!-- Expressway Outer Border -->
+<path d="M 60,180 C 130,195 160,202 210,210 C 290,225 340,235 400,242 C 470,250 510,270 560,274 C 620,280 645,268 680,255 C 705,245 725,235 735,230" fill="none" opacity="0.6" stroke="#d5c8b7" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"></path>
+<!-- Traveled Segment: Chennai to Vellore Bypass (SOLID GO-BUS CRIMSON #ae002d) -->
+<path d="M 60,180 C 130,195 160,202 210,210 C 290,225 340,235 390,240" fill="none" id="traveledSegment" stroke="#ae002d" stroke-linecap="round" stroke-width="6.5"></path>
+<!-- Traveled Segment Inner Core Glow -->
+<path d="M 60,180 C 130,195 160,202 210,210 C 290,225 340,235 390,240" fill="none" opacity="0.9" stroke="#ffb3b4" stroke-linecap="round" stroke-width="2"></path>
+<!-- Upcoming Segment: Vellore Bypass to Bengaluru (DASHED SLATE LINE) -->
+<path d="M 390,240 C 420,244 470,252 560,274 C 620,280 645,268 680,255 C 705,245 725,235 735,230" fill="none" id="remainingSegment" stroke="#906f6f" stroke-dasharray="7 5" stroke-linecap="round" stroke-width="5"></path>
+<!-- Waypoint Anchors & Labels -->
+<!-- 1. Chennai (Origin) -->
+<circle cx="60" cy="180" fill="#ae002d" r="7" stroke="#ffffff" stroke-width="2.5"></circle>
+<text fill="#1a1b1e" font-family="Plus Jakarta Sans" font-size="12" font-weight="700" x="35" y="158">Chennai (Koyambedu)</text>
+<text fill="#00632a" font-family="Inter" font-size="9" font-weight="600" x="45" y="171">Dep 21:30 (On Time)</text>
+<!-- 2. Sriperumbudur -->
+<circle cx="210" cy="210" fill="#ae002d" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<text fill="#5c3f40" font-family="Inter" font-size="10" font-weight="600" x="175" y="235">Sriperumbudur</text>
+<!-- 3. Current Live Point: Vellore Bypass -->
+<circle cx="390" cy="240" fill="#ffdada" r="9" stroke="#ae002d" stroke-width="2.5"></circle>
+<circle cx="390" cy="240" fill="#ae002d" r="4.5"></circle>
+<text fill="#ae002d" font-family="Plus Jakarta Sans" font-size="12" font-weight="700" x="355" y="272">Vellore Bypass</text>
+<text fill="#5c3f40" font-family="Inter" font-size="9.5" font-weight="600" x="358" y="285">KM 138 • Toll Plaza</text>
+<!-- 4. Krishnagiri (Upcoming) -->
+<circle cx="560" cy="274" fill="#ffffff" r="5" stroke="#906f6f" stroke-width="2.5"></circle>
+<text fill="#5c3f40" font-family="Inter" font-size="10" font-weight="600" x="530" y="300">Krishnagiri Toll</text>
+<!-- 5. Hosur (Upcoming) -->
+<circle cx="660" cy="260" fill="#ffffff" r="5" stroke="#906f6f" stroke-width="2.5"></circle>
+<text fill="#5c3f40" font-family="Inter" font-size="10" font-weight="600" x="645" y="285">Hosur Flyover</text>
+<!-- 6. Bengaluru (Madiwala - Destination) -->
+<circle cx="735" cy="230" fill="#127e3a" r="8" stroke="#ffffff" stroke-width="2.5"></circle>
+<text fill="#1a1b1e" font-family="Plus Jakarta Sans" font-size="12" font-weight="700" x="680" y="200">Bengaluru (Madiwala)</text>
+<text fill="#00632a" font-family="Inter" font-size="9.5" font-weight="600" x="705" y="214">ETA: 05:00 AM</text>
+</svg>
+<!-- Animated Pulse Pin for Current Live Bus Location -->
+<div class="absolute left-[390px] top-[240px] -translate-x-1/2 -translate-y-1/2 pointer-events-auto group cursor-pointer z-20">
+<!-- Radial Pulsing Waves -->
+<div class="absolute -inset-5 rounded-full bg-primary/20 animate-ping"></div>
+<div class="absolute -inset-3 rounded-full bg-primary/30"></div>
+<!-- Red Bus Marker Token -->
+<div class="relative w-11 h-11 bg-primary text-on-primary rounded-full shadow-xl flex items-center justify-center transform transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[24px]">directions_bus</span>
+</div>
+<!-- Interactive Floating Radar Tooltip -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 bg-surface-container-lowest p-space-sm rounded-lg shadow-xl text-on-surface pointer-events-none transition-all">
+<div class="flex items-center justify-between font-label-sm text-label-sm pb-1 mb-1 bg-surface-container-low px-2 py-1 rounded">
+<span class="font-bold text-primary flex items-center gap-1">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                    Live Bus GPS
+                  </span>
+<span class="text-on-surface-variant">Speed: <strong class="text-on-surface">78 km/h</strong></span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Vellore Bypass Toll Corridor</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ETA Bengaluru: <span class="font-semibold text-tertiary">05:00 AM</span> (3 hrs 15m remaining)</p>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 40%"></div>
+</div>
+<div class="flex justify-between text-[10px] text-outline mt-1 font-mono">
+<span>138 km done</span>
+<span>208 km left</span>
+</div>
+</div>
+</div>
+<!-- Compass & Distance Scale Overlay (Bottom Left) -->
+<div class="absolute bottom-4 left-4 bg-surface-container-lowest/90 backdrop-blur-sm p-space-xs rounded-lg shadow-sm flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant z-10">
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary text-[10px]">
+                N
+              </div>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">NH 48 Expressway Scale</span>
+<div class="flex items-center gap-1 mt-0.5">
+<div class="w-12 h-1 bg-outline rounded-full"></div>
+<span class="text-[10px] text-outline font-mono">50 KM</span>
+</div>
+</div>
+</div>
+<!-- Weather & Speed Indicator Overlay (Top Right) -->
+<div class="absolute top-4 right-4 bg-surface-container-lowest/95 backdrop-blur-sm px-space-md py-space-xs rounded-lg shadow-sm flex items-center gap-space-md z-10">
+<div class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">bedtime</span>
+<span class="font-label-md text-label-md font-semibold">26°C Clear Sky</span>
+</div>
+<span class="text-outline">|</span>
+<div class="flex items-center gap-1 text-tertiary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">speed</span>
+<span>78 km/h</span>
+</div>
+</div>
+</div>
+<!-- Live Telemetry HUD Bar (Directly below map) -->
+<div class="bg-surface-container-low p-space-md">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- 1. Driver & Crew Info -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm shrink-0">
+                  MS
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-outline">Transit Bus Pilot</span>
+<div class="flex items-center gap-1 truncate">
+<span class="font-title-md text-title-md text-on-surface truncate">Capt. M. Selvam</span>
+<span class="text-[11px] font-bold text-tertiary">★ 4.9</span>
+</div>
+<a class="text-primary hover:text-secondary font-label-sm text-label-sm flex items-center gap-0.5 mt-0.5" href="tel:+919840128910">
+<span class="material-symbols-outlined text-[14px]">call</span>
+<span>+91 98401 28910</span>
+</a>
+</div>
+</div>
+<!-- 2. Next Rest Stop -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/15 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">restaurant</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-outline">Upcoming 20-Min Rest Stop</span>
+<span class="font-title-md text-title-md text-on-surface truncate">Murugan Idli / CCD</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">In 18 km (~18 mins at Vellore Bypass)</span>
+</div>
+</div>
+<!-- 3. Journey Progress Bar Indicator -->
+<div class="flex flex-col justify-center bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div class="flex justify-between items-center font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant font-medium">Distance Covered</span>
+<span class="font-bold text-primary">138 / 346 km (40%)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 40%"></div>
+</div>
+<div class="flex justify-between items-center text-[11px] text-outline mt-1 font-mono">
+<span>Chennai 21:30</span>
+<span>Bengaluru 05:00</span>
+</div>
+</div>
+</div>
+<!-- Action CTA Group -->
+<div class="flex flex-wrap items-center gap-space-md mt-space-md pt-space-xs">
+<button class="flex-1 py-space-sm px-space-lg bg-primary hover:bg-secondary active:scale-[0.99] text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm transition-all flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px]">fullscreen</span>
+<span>View Fullscreen Live GPS</span>
+</button>
+<a class="flex-1 py-space-sm px-space-lg bg-surface-container-lowest hover:bg-surface text-on-surface font-label-lg text-label-lg rounded-lg shadow-sm transition-all flex items-center justify-center gap-space-xs" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-primary text-[20px]">turn_sharp_right</span>
+<span>Get Boarding Point Navigation in Google Maps</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Vehicle Specs & Safety Features Bento Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<h3 class="font-title-md text-title-md text-on-surface">GoBus SafeRide &amp; Scania Coach Health</h3>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary/10 px-2 py-0.5 rounded-full font-semibold">100% Safety Compliance</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm font-body-sm text-body-sm">
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-0.5">
+<span class="text-outline text-label-sm font-label-sm">Coach Reg Number</span>
+<span class="font-semibold text-on-surface font-mono">TN-02-BV-7821</span>
+<span class="text-[11px] text-tertiary">Verified Fitness Valid 2026</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-0.5">
+<span class="text-outline text-label-sm font-label-sm">Engine Telematics</span>
+<span class="font-semibold text-on-surface">Scania K360 Opticruise</span>
+<span class="text-[11px] text-on-surface-variant">Optimal Coolant &amp; Tyre PSI</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-0.5">
+<span class="text-outline text-label-sm font-label-sm">Safety Protocols</span>
+<span class="font-semibold text-on-surface">Dual Breathalyzer</span>
+<span class="text-[11px] text-tertiary">Zero Alcohol Passed</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-0.5">
+<span class="text-outline text-label-sm font-label-sm">In-Bus Emergency</span>
+<span class="font-semibold text-on-surface">3 Panic Buttons</span>
+<span class="text-[11px] text-on-surface-variant">Direct State Police Link</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: STOP-BY-STOP ITINERARY & BOARDING PRECISION GUIDE (5 Cols / ~40%) -->
+<div class="col-span-12 lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Boarding Point Precision Spotlight Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">departure_board</span>
+<h2 class="font-title-md text-title-md text-on-surface">Your Boarding Station Spotlight</h2>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-tertiary-container/15 text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              Departed
+            </span>
+</div>
+<!-- Boarding Detail Box with Street Landmark Graphic -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Chennai (Koyambedu Omni Bus Stand)</h3>
+<p class="font-body-sm text-body-sm text-primary font-semibold mt-0.5">Platform #4 • Opp. Private Bus Terminal Booking Bay</p>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-outline block">Boarding Time</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-mono font-bold">21:30</span>
+</div>
+</div>
+<!-- Landmark Visual Cue Placeholder -->
+<div class="relative w-full h-36 rounded-lg overflow-hidden mt-1 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="High-contrast clear street level daylight photograph of Koyambedu Omni Bus Stand platform bay number 4 in Chennai, showcasing designated passenger boarding queue with high visibility crimson signage and pedestrian walkways." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKr3mbETzeDIwrVU-WM9_MCwjXdm_Gd_zGrZUe1No1SCjNX9dbcv_a2uha-Duh38XRxRoSfRK265Kf9HZNklJooYa7Sa8ugD7_OnGl4R3Y1Nqxukh8-02Wgi0r07g_Z5X_xHlLBID6lVf2D_enG_xjD6Vmt6JefNGd49RqTvlaPPlyWmUtbi81RPHXoNu4ZW31e8nX90ta-4OqkiWm3-1Ja0x16zgrWQLBJfFWpRg8O7YEeUz-9TnjuA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-space-sm">
+<span class="text-on-primary font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">pin_drop</span>
+                  Landmark: Near Pillar 12, behind State Bank ATM &amp; Chai Kiosk
+                </span>
+</div>
+</div>
+<!-- Boarding Assistance & Station Executive -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-semibold text-xs">
+                  BO
+                </div>
+<div class="text-xs">
+<span class="font-medium text-on-surface block">Koyambedu Bay Manager: R. Kumar</span>
+<span class="text-outline">Terminal Contact Help</span>
+</div>
+</div>
+<a class="px-space-sm py-1 bg-surface-container-lowest text-primary hover:bg-surface font-label-sm text-label-sm rounded shadow-sm flex items-center gap-1" href="tel:+914424792340">
+<span class="material-symbols-outlined text-[14px]">call</span>
+<span>Call Bay</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Chronological Step-by-Step Highway Itinerary Tracker -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">route</span>
+<h2 class="font-title-md text-title-md text-on-surface">Stop-by-Stop Highway Schedule</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">7 Waypoints</span>
+</div>
+<!-- Vertical Stepper Timeline -->
+<div class="relative pl-6 flex flex-col gap-space-lg">
+<!-- Continuous Timeline Track Background -->
+<div class="absolute left-2.5 top-3 bottom-4 w-0.5 bg-surface-container-highest"></div>
+<!-- Completed Track Portion (Active Fill) -->
+<div class="absolute left-2.5 top-3 h-[180px] w-0.5 bg-primary"></div>
+<!-- STOP 1: Chennai (Completed) -->
+<div class="relative flex items-start gap-space-md group">
+<!-- Stepper Dot -->
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center ring-4 ring-surface-container-lowest z-10 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+<div class="flex-1 flex flex-col bg-surface-container-low/70 p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">1. Chennai (Koyambedu Omni Stand)</span>
+<span class="font-label-md text-label-md font-mono text-tertiary font-semibold">21:30 Dep</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm text-on-surface-variant mt-1">
+<span>Origin Terminal Departure • 42 Passengers Boarded</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container/15 text-tertiary text-[10px] font-semibold uppercase">Departed (21:30)</span>
+</div>
+</div>
+</div>
+<!-- STOP 2: Sriperumbudur Toll (Completed) -->
+<div class="relative flex items-start gap-space-md group">
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center ring-4 ring-surface-container-lowest z-10 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+<div class="flex-1 flex flex-col bg-surface-container-low/70 p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">2. Sriperumbudur Toll Plaza</span>
+<span class="font-label-md text-label-md font-mono text-tertiary font-semibold">22:15 Pass</span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-body-sm text-on-surface-variant mt-1">
+<span>Fastag Lane 04 • Express Highway Transit</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container/15 text-tertiary text-[10px] font-semibold uppercase">Cleared (22:12)</span>
+</div>
+</div>
+</div>
+<!-- STOP 3: Vellore Bypass (ACTIVE / NEXT STOP) -->
+<div class="relative flex items-start gap-space-md group">
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center ring-4 ring-primary-fixed z-10 shadow-md animate-pulse">
+<span class="material-symbols-outlined text-[12px]">directions_bus</span>
+</div>
+<div class="flex-1 flex flex-col bg-primary-fixed/30 p-space-sm rounded-lg shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-primary">3. Vellore (Green Circle / Bypass)</span>
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary text-[10px] font-semibold uppercase">Next Stop</span>
+</div>
+<span class="font-label-md text-label-md font-mono text-primary font-bold">23:45 ETA</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">
+                  Designated <strong class="text-primary font-semibold">15-minute Refreshment Break</strong> at Murugan Idli &amp; CCD Complex.
+                </p>
+<div class="flex items-center gap-space-sm text-[11px] text-on-surface-variant mt-1.5 pt-1.5">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-tertiary">wc</span> Clean Restrooms</span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-tertiary">coffee</span> Food Court</span>
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px] text-tertiary">local_atm</span> ATM</span>
+</div>
+</div>
+</div>
+<!-- STOP 4: Krishnagiri Toll Plaza (Upcoming) -->
+<div class="relative flex items-start gap-space-md group">
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-surface-container-lowest text-outline flex items-center justify-center ring-4 ring-surface-container-lowest z-10">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+</div>
+<div class="flex-1 flex flex-col bg-surface-container-lowest p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">4. Krishnagiri Toll Plaza</span>
+<span class="font-label-md text-label-md font-mono text-on-surface-variant">02:15 AM</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">High Speed Express Toll • Corridor Non-Stop</span>
+</div>
+</div>
+<!-- STOP 5: Hosur Flyover (Upcoming) -->
+<div class="relative flex items-start gap-space-md group">
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-surface-container-lowest text-outline flex items-center justify-center ring-4 ring-surface-container-lowest z-10">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+</div>
+<div class="flex-1 flex flex-col bg-surface-container-lowest p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">5. Hosur (Near Flyover / Bus Stand)</span>
+<span class="font-label-md text-label-md font-mono text-on-surface-variant">04:15 AM</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Interstate Border Inspection &amp; Early Passenger Drop Point</span>
+</div>
+</div>
+<!-- STOP 6: Electronic City Tollgate (Upcoming) -->
+<div class="relative flex items-start gap-space-md group">
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-surface-container-lowest text-outline flex items-center justify-center ring-4 ring-surface-container-lowest z-10">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+</div>
+<div class="flex-1 flex flex-col bg-surface-container-lowest p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">6. Bengaluru (Electronic City Tollgate)</span>
+<span class="font-label-md text-label-md font-mono text-on-surface-variant">04:45 AM</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Drop Point • Opp. Infosys Gate #1 Flyover ramp</span>
+</div>
+</div>
+<!-- STOP 7: Bengaluru Madiwala (Final Destination) -->
+<div class="relative flex items-start gap-space-md group">
+<div class="absolute -left-6 top-0.5 w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center ring-4 ring-surface-container-lowest z-10 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">flag</span>
+</div>
+<div class="flex-1 flex flex-col bg-surface-container-lowest p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">7. Bengaluru (Madiwala Drop Point)</span>
+<span class="font-label-md text-label-md font-mono text-tertiary font-bold">05:00 AM (Arr)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Hosur Main Road, Opp. Total Mall / St. John's Hospital</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Emergency & Passenger SOS Assistance Floating Panel -->
+<div class="bg-primary text-on-primary p-space-md rounded-xl shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px]">e911_emergency</span>
+<span class="font-title-md text-title-md font-bold">24x7 In-Transit Passenger SOS</span>
+</div>
+<span class="text-xs bg-white/20 px-2 py-0.5 rounded-full">Active Support</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary/90">
+            Experiencing any route deviation, baggage concern, or medical emergency? GoBus Command Desk is monitoring your trip live.
+          </p>
+<div class="flex items-center gap-space-sm pt-1">
+<button class="flex-1 py-space-xs px-space-sm bg-on-primary text-primary hover:bg-surface-container font-label-md text-label-md font-bold rounded-lg transition-colors flex items-center justify-center gap-1 shadow-sm" onclick="triggerSOSAlert()">
+<span class="material-symbols-outlined text-[16px]">crisis_alert</span>
+<span>Trigger SOS / Assistance</span>
+</button>
+<button class="py-space-xs px-space-md bg-tertiary hover:bg-tertiary-container text-on-tertiary font-label-md text-label-md font-bold rounded-lg transition-colors flex items-center gap-1 shadow-sm" onclick="shareWhatsAppLocation()">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>WhatsApp Live Link</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Micro-Interactions Script -->
+<script>
+  function shareTrip() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'GoBus Live Tracking - PNR GB-98241029',
+        text: 'Track my Scania AC Sleeper from Chennai to Bengaluru in real-time. Current location: Vellore Bypass.',
+        url: window.location.href,
+      }).catch(console.error);
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+      alert('Live Trip Tracking URL copied to clipboard!');
+    }
+  }
+
+  function shareWhatsAppLocation() {
+    const text = encodeURIComponent('Hey, track my live GoBus journey (PNR: GB-98241029) from Chennai to Bengaluru: ' + window.location.href);
+    window.open('https://api.whatsapp.com/send?text=' + text, '_blank');
+  }
+
+  function triggerSOSAlert() {
+    const confirmSOS = confirm('Confirm contacting GoBus 24x7 Safety Command Center for PNR GB-98241029? A highway rescue coordinator will call you within 60 seconds.');
+    if (confirmSOS) {
+      alert('SOS signal dispatched to GoBus Highway Patrol & Scania Fleet Operations. Driver notified.');
+    }
+  }
+
+  // Smooth micro-interaction for Focus Bus button
+  document.getElementById('centerBusBtn')?.addEventListener('click', () => {
+    const map = document.getElementById('gpsMapContainer');
+    if (map) {
+      map.classList.add('ring-2', 'ring-primary');
+      setTimeout(() => map.classList.remove('ring-2', 'ring-primary'), 800);
+    }
+  });
+
+  document.getElementById('toggleTrafficBtn')?.addEventListener('click', function() {
+    const isClear = this.innerText.includes('Clear');
+    if (isClear) {
+      this.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary">traffic</span><span>Traffic: Heavy (+10m)</span>';
+      this.classList.add('bg-primary/10', 'text-primary');
+    } else {
+      this.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">traffic</span><span>Live Traffic: Clear</span>';
+      this.classList.remove('bg-primary/10', 'text-primary');
+    }
+  });
+</script></main><footer class="w-full bg-surface-container-lowest mt-space-xl shadow-[0_-1px_8px_rgba(0,0,0,0.03)]"><div class="max-w-[1440px] mx-auto px-margin py-space-xl"><div class="grid grid-cols-12 gap-gutter"><div class="col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="GoBus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WC3hbITWpolsdr1e1_sWqqcN0aWwNrtOz_y-6HlSYA9c0hVgRcGcdQxNRbs4grmDUBhrizYaWbGCyGeDy2BkNE2w8CUXvnMdBv_IBCJoZjBF8iTnweXws30vzDsv9SjiE47i_lDJXoMLJeoLftO6pbNTVI4svZjLY-fqswLBE5Siyzb8XP3hAylVQXroUevqmZFiAm2dW_OD5JoxCzx4bdVqqcO59Ny6W3sFR5IF3h8A54KoSmSAbpa3Sg"/><span class="font-headline-md text-headline-md text-primary">GoBus</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">India's premier high-precision bus ticketing network. Providing real-time seat matrices, safe online bookings, and punctual departures across 50,000+ interconnected routes.</p><div class="flex items-center gap-space-xs font-label-md text-label-md text-tertiary"><span class="material-symbols-outlined text-[18px]">verified</span><span>Verified Operator Network &amp; Safe Travels</span></div></div><div class="col-span-2 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface">Quick Links</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="home" href="../gobus_home_1/code.html">Home</a></li><li><a class="hover:text-primary transition-colors" data-path="search-buses" href="../gobus_search_buses/code.html">Search Buses</a></li><li><a class="hover:text-primary transition-colors" data-path="my-bookings" href="../gobus_my_bookings/code.html">My Bookings</a></li><li><a class="hover:text-primary transition-colors" data-path="operator-directory" href="../gobus_help_support_desk/code.html">Operator Directory</a></li></ul></div><div class="col-span-2 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface">About GoBus</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="about-us" href="../gobus_user_profile_preferences/code.html">Company Profile</a></li><li><a class="hover:text-primary transition-colors" data-path="safety-charter" href="../gobus_help_support_desk/code.html">Safety Charter</a></li><li><a class="hover:text-primary transition-colors" data-path="careers" href="../gobus_help_support_desk/code.html">Careers</a></li><li><a class="hover:text-primary transition-colors" data-path="press" href="../gobus_help_support_desk/code.html">Press Releases</a></li></ul></div><div class="col-span-2 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface">Support &amp; FAQs</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="help" href="../gobus_help_support_desk/code.html">Help Center</a></li><li><a class="hover:text-primary transition-colors" data-path="ticket-cancellation" href="../gobus_help_support_desk/code.html">Ticket Cancellation</a></li><li><a class="hover:text-primary transition-colors" data-path="refund-status" href="../gobus_help_support_desk/code.html">Refund Status</a></li><li><a class="hover:text-primary transition-colors" data-path="insurance-claims" href="../gobus_help_support_desk/code.html">Insurance Claims</a></li></ul></div><div class="col-span-2 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface">Legal &amp; Policies</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="terms-and-conditions" href="../gobus_help_support_desk/code.html">Terms &amp; Conditions</a></li><li><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="../gobus_help_support_desk/code.html">Privacy Policy</a></li><li><a class="hover:text-primary transition-colors" data-path="cancellation-policy" href="../gobus_help_support_desk/code.html">Cancellation Policy</a></li><li><a class="hover:text-primary transition-colors" data-path="user-agreement" href="../gobus_help_support_desk/code.html">User Agreement</a></li></ul></div></div><div class="mt-space-xl pt-space-lg flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant bg-surface-container-low px-space-lg py-space-md rounded-lg"><p>© 2025 GoBus Technologies Ltd. All rights reserved. Registered under Ministry of Road Transport &amp; Highways.</p><div class="flex items-center gap-space-md"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[16px]">call</span><span>24x7 Helpline: +91 (80) 6940 9000</span></span><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[16px]">mail</span><span>support@gobus.in</span></span></div></div></div></footer><div class="fixed inset-0 z-50 flex justify-end overflow-hidden" id="trafficAdvisoryDrawerModal"><div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm transition-opacity duration-300" onclick="document.getElementById('trafficAdvisoryDrawerModal').remove()"></div><aside class="relative w-full max-w-[480px] h-full bg-surface-container-lowest shadow-2xl flex flex-col z-10 border-l border-surface-container-highest animate-slide-left"><div class="p-space-lg bg-surface-container-low border-b border-surface-container flex items-start justify-between"><div class="flex flex-col gap-1"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[22px]">traffic</span><h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">NH48 Corridor Live Traffic &amp; Route Advisories</h2></div><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span>Live Telematics • Updated 45s ago</span></div></div><button aria-label="Close modal" class="w-8 h-8 rounded-full bg-surface-container-highest hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors shrink-0" onclick="document.getElementById('trafficAdvisoryDrawerModal').remove()"><span class="material-symbols-outlined text-[18px]">close</span></button></div><div class="flex-1 overflow-y-auto p-space-lg flex flex-col gap-space-lg"><div class="p-space-md rounded-xl bg-primary-fixed/20 border border-outline-variant/60 flex items-center justify-between"><div class="flex flex-col"><span class="text-label-sm font-label-sm text-outline uppercase font-semibold tracking-wide">Corridor Status</span><span class="font-title-md text-title-md text-primary font-bold">Moderate Flow (+8 mins delay overall)</span><span class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">346 km Total Transit • 2 Minor Highway Bottlenecks</span></div><span class="material-symbols-outlined text-primary text-[32px]">minor_crash</span></div><div class="flex flex-col gap-space-xs"><span class="text-label-sm font-label-sm font-semibold text-outline uppercase tracking-wider">Highway Traffic Legend</span><div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-label-sm font-label-sm"><div class="flex items-center gap-1.5 p-space-xs rounded bg-surface-container-low"><span class="w-2.5 h-2.5 rounded-full bg-tertiary shrink-0"></span><span class="text-on-surface">&gt;70 km/h Smooth</span></div><div class="flex items-center gap-1.5 p-space-xs rounded bg-surface-container-low"><span class="w-2.5 h-2.5 rounded-full bg-[#eab308] shrink-0"></span><span class="text-on-surface">35–69 Moderate</span></div><div class="flex items-center gap-1.5 p-space-xs rounded bg-surface-container-low"><span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span><span class="text-on-surface">&lt;35 km/h Congestion</span></div></div></div><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="text-label-sm font-label-sm font-semibold text-outline uppercase tracking-wider">Segment Breakdown (Chennai → Bengaluru)</span><span class="text-label-sm font-label-sm text-on-surface-variant">5 Highway Zones</span></div><div class="flex flex-col gap-2 font-body-sm text-body-sm"><div class="p-space-sm rounded-lg bg-surface-container-low border-l-4 border-tertiary flex items-center justify-between"><div class="flex flex-col"><span class="font-semibold text-on-surface">1. Chennai Outer Ring → Sriperumbudur (38 km)</span><span class="text-[11px] text-tertiary font-medium">Smooth Flow • Clear multi-lane expressway</span></div><div class="text-right"><span class="font-mono font-bold text-on-surface">74 km/h</span><span class="block text-[11px] text-tertiary font-semibold">+0m delay</span></div></div><div class="p-space-sm rounded-lg bg-surface-container-low border-l-4 border-[#eab308] flex items-center justify-between"><div class="flex flex-col"><span class="font-semibold text-on-surface">2. Vellore Bypass &amp; Toll Plaza (18 km)</span><span class="text-[11px] text-[#b45309] font-medium">Moderate Congestion • Toll queue buildup</span></div><div class="text-right"><span class="font-mono font-bold text-on-surface">42 km/h</span><span class="block text-[11px] text-[#b45309] font-semibold">+6m delay</span></div></div><div class="p-space-sm rounded-lg bg-surface-container-low border-l-4 border-primary flex items-center justify-between"><div class="flex flex-col"><span class="font-semibold text-on-surface">3. Vaniyambadi → Ambur Roadwork Zone (14 km)</span><span class="text-[11px] text-primary font-medium">Heavy Bottleneck • Active single-lane diversion</span></div><div class="text-right"><span class="font-mono font-bold text-primary">24 km/h</span><span class="block text-[11px] text-primary font-semibold">+12m delay</span></div></div><div class="p-space-sm rounded-lg bg-surface-container-low border-l-4 border-tertiary flex items-center justify-between"><div class="flex flex-col"><span class="font-semibold text-on-surface">4. Krishnagiri Ghat Section → Hosur (68 km)</span><span class="text-[11px] text-tertiary font-medium">Smooth Flow • Fast high-elevation descent</span></div><div class="text-right"><span class="font-mono font-bold text-on-surface">76 km/h</span><span class="block text-[11px] text-tertiary font-semibold">+0m delay</span></div></div><div class="p-space-sm rounded-lg bg-surface-container-low border-l-4 border-[#eab308] flex items-center justify-between"><div class="flex flex-col"><span class="font-semibold text-on-surface">5. Attibele Border → Electronic City Elevated (22 km)</span><span class="text-[11px] text-[#b45309] font-medium">Moderate Flow • Interstate commercial transit</span></div><div class="text-right"><span class="font-mono font-bold text-on-surface">48 km/h</span><span class="block text-[11px] text-[#b45309] font-semibold">+4m delay</span></div></div></div></div><div class="flex flex-col gap-space-sm"><span class="text-label-sm font-label-sm font-semibold text-outline uppercase tracking-wider">Active Highway Advisories &amp; Alerts</span><div class="flex flex-col gap-space-sm"><div class="p-space-sm rounded-lg bg-primary-fixed/25 border border-primary/20 flex flex-col gap-1"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[18px]">construction</span><span class="font-label-md text-label-md font-bold text-primary">Roadwork &amp; Single-Lane Diversion at KM 142</span></div><p class="font-body-sm text-body-sm text-on-surface">Ambur Bypass culvert maintenance in progress with heavy machinery. Bus pilot rerouting via outer lane (+12 min impact).</p></div><div class="p-space-sm rounded-lg bg-[#fef3c7] border border-[#fde68a] flex flex-col gap-1"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[#b45309] text-[18px]">toll</span><span class="font-label-md text-label-md font-bold text-[#92400e]">FASTag Gate Sensor Delay at Vellore Plaza</span></div><p class="font-body-sm text-body-sm text-[#78350f]">Queue length ~250m on lanes 03 &amp; 05. Scania bus cleared via prioritized commercial lane 04.</p></div><div class="p-space-sm rounded-lg bg-tertiary-container/10 border border-tertiary/20 flex flex-col gap-1"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary text-[18px]">wb_twilight</span><span class="font-label-md text-label-md font-bold text-tertiary">Night Clear Weather Advisory</span></div><p class="font-body-sm text-body-sm text-on-surface">Dry tarmac, optimal visibility &gt;2 km, ambient temperature 26°C with minimal crosswinds across Jawadhu pass.</p></div></div></div></div><div class="p-space-md bg-surface-container-low border-t border-surface-container flex items-center gap-space-sm"><button class="flex-1 py-space-sm px-space-md bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md rounded-lg shadow-sm transition-colors flex items-center justify-center gap-1.5" onclick="this.querySelector('span:first-child').classList.add('animate-spin'); setTimeout(() =&gt; this.querySelector('span:first-child').classList.remove('animate-spin'), 700);"><span class="material-symbols-outlined text-[18px]">sync</span><span>Refresh Telematics</span></button><button class="py-space-sm px-space-lg bg-surface-container-lowest hover:bg-surface text-on-surface border border-outline-variant font-label-md text-label-md rounded-lg transition-colors" onclick="document.getElementById('trafficAdvisoryDrawerModal').remove()">Dismiss</button></div></aside></div></body></html>
