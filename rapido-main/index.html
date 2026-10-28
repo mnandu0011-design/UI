@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapido Ride Booking</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet Map -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">rapido<span>●</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#booking">Book Ride</a>
+        <a href="#services">Services</a>
+        <a href="#receipt">Receipt</a>
+    </nav>
+
+    <button class="login-btn" onclick="showMessage('Welcome to Rapido!')">
+        Login
+    </button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="tagline">QUICK • SAFE • AFFORDABLE</p>
+
+        <h1>Your city.<br>
+            Your ride.<br>
+            <span>Your Rapido.</span>
+        </h1>
+
+        <p class="description">
+            Book a bike, auto, or cab in just a few clicks.
+            Your journey starts here!
+        </p>
+
+        <a href="#booking" class="primary-btn">Book Your Ride</a>
+    </div>
+
+    <div class="hero-card">
+        <div class="bike-icon">🏍️</div>
+        <h2>Ride Easy</h2>
+        <p>Affordable rides whenever you need them.</p>
+
+        <div class="hero-stats">
+            <div>
+                <h3>24/7</h3>
+                <p>Availability*</p>
+            </div>
+
+            <div>
+                <h3>3</h3>
+                <p>Ride options</p>
+            </div>
+        </div>
+
+        <small>*Availability is simulated in this demo.</small>
+    </div>
+</section>
+
+<section class="booking-section" id="booking">
+    <div class="booking-card">
+        <h2>Book Your Ride</h2>
+        <p class="section-description">
+            Enter your pickup and destination.
+        </p>
+
+        <form id="rideForm">
+            <label for="pickup">Pickup Location</label>
+            <input
+                type="text"
+                id="pickup"
+                placeholder="Enter pickup location"
+                required
+            >
+
+            <label for="drop">Drop Location</label>
+            <input
+                type="text"
+                id="drop"
+                placeholder="Enter destination"
+                required
+            >
+
+            <button type="button" class="location-btn" id="locationBtn">
+                📍 Use My Current Location
+            </button>
+
+            <div class="vehicle-options">
+                <div class="vehicle selected" data-type="Bike">
+                    <span>🏍️</span>
+                    <h3>Bike</h3>
+                    <p>Fast & affordable</p>
+                    <strong id="bikeFare">₹25+</strong>
+                </div>
+
+                <div class="vehicle" data-type="Auto">
+                    <span>🛺</span>
+                    <h3>Auto</h3>
+                    <p>Everyday travel</p>
+                    <strong id="autoFare">₹35+</strong>
+                </div>
+
+                <div class="vehicle" data-type="Cab">
+                    <span>🚕</span>
+                    <h3>Cab</h3>
+                    <p>Comfortable ride</p>
+                    <strong id="cabFare">₹60+</strong>
+                </div>
+            </div>
+
+            <button type="submit" class="primary-btn full-btn">
+                Find My Ride
+            </button>
+        </form>
+
+        <div id="bookingMessage" class="message"></div>
+    </div>
+
+    <div class="map-card">
+        <div class="map-heading">
+            <h2>Live Map</h2>
+            <span class="live-badge">DEMO MAP</span>
+        </div>
+
+        <div id="map"></div>
+
+        <div class="map-info">
+            <span>📍 Pickup and destination</span>
+            <span>🗺️ Route preview</span>
+        </div>
+    </div>
+</section>
+
+<section class="tracking-section" id="tracking">
+    <div class="section-title">
+        <p class="tagline">YOUR JOURNEY</p>
+        <h2>Ride Tracking</h2>
+        <p>Track your demo booking status below.</p>
+    </div>
+
+    <div class="tracking-card" id="trackingCard">
+        <div class="tracking-icon">🏍️</div>
+
+        <div class="tracking-details">
+            <h3 id="trackingTitle">No Active Ride</h3>
+            <p id="trackingStatus">
+                Book a ride to see rider details.
+            </p>
+            <p id="riderDetails"></p>
+        </div>
+
+        <div class="tracking-actions">
+            <button id="cancelBtn" class="secondary-btn" disabled>
+                Cancel Ride
+            </button>
+        </div>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-step active" id="step1">
+            <span>1</span>
+            <p>Searching</p>
+        </div>
+
+        <div class="progress-step" id="step2">
+            <span>2</span>
+            <p>Rider Assigned</p>
+        </div>
+
+        <div class="progress-step" id="step3">
+            <span>3</span>
+            <p>On the Way</p>
+        </div>
+
+        <div class="progress-step" id="step4">
+            <span>4</span>
+            <p>Completed</p>
+        </div>
+    </div>
+</section>
+
+<section class="services-section" id="services">
+    <div class="section-title">
+        <p class="tagline">OUR SERVICES</p>
+        <h2>Choose Your Ride</h2>
+    </div>
+
+    <div class="service-grid">
+        <div class="service-card">
+            <div>🏍️</div>
+            <h3>Bike Taxi</h3>
+            <p>Reach your destination quickly with an affordable bike ride.</p>
+        </div>
+
+        <div class="service-card">
+            <div>🛺</div>
+            <h3>Auto</h3>
+            <p>Convenient transportation for everyday city journeys.</p>
+        </div>
+
+        <div class="service-card">
+            <div>🚕</div>
+            <h3>Cab</h3>
+            <p>Travel comfortably with our simulated cab booking option.</p>
+        </div>
+    </div>
+</section>
+
+<section class="receipt-section" id="receipt">
+    <div class="receipt-card">
+        <h2>Ride Receipt</h2>
+        <p>Your fare breakdown appears after booking.</p>
+
+        <div class="receipt-row">
+            <span>Vehicle</span>
+            <strong id="receiptVehicle">—</strong>
+        </div>
+
+        <div class="receipt-row">
+            <span>Distance</span>
+            <strong id="receiptDistance">—</strong>
+        </div>
+
+        <div class="receipt-row">
+            <span>Base Fare</span>
+            <strong id="receiptBase">—</strong>
+        </div>
+
+        <div class="receipt-row">
+            <span>Distance Fare</span>
+            <strong id="receiptDistanceFare">—</strong>
+        </div>
+
+        <div class="receipt-row total-row">
+            <span>Total Fare</span>
+            <strong id="receiptTotal">—</strong>
+        </div>
+
+        <button id="downloadReceipt" class="primary-btn full-btn" disabled>
+            Download Receipt
+        </button>
+
+        <p class="demo-note">
+            This is a demonstration project. No real booking or payment is made.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <div class="logo">rapido<span>●</span></div>
+    <p>Ride smart. Ride easy.</p>
+    <p>Student Frontend Project | HTML, CSS & JavaScript</p>
+    <small>
+        Independent demo project; not affiliated with the Rapido company.
+    </small>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<!-- Leaflet Map JavaScript -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
