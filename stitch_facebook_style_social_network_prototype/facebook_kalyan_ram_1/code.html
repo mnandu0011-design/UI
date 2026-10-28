@@ -1,0 +1,2243 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Facebook - Connect and Share</title>
+<!-- Google Font: Roboto Flex -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-high": "#e6e8eb",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#f3f8ff",
+            "surface-dim": "#d8dadd",
+            "on-surface": "#191c1e",
+            "on-primary": "#ffffff",
+            "primary-container": "#0866ff",
+            "on-primary-container": "#f9f7ff",
+            "outline-variant": "#c2c6d8",
+            "on-secondary-fixed": "#001a41",
+            "primary-fixed": "#dbe1ff",
+            "on-secondary": "#ffffff",
+            "primary-fixed-dim": "#b3c5ff",
+            "on-primary-fixed": "#00184a",
+            "surface-variant": "#e0e3e6",
+            "outline": "#727687",
+            "tertiary": "#4f5b65",
+            "tertiary-container": "#67737d",
+            "on-error": "#ffffff",
+            "background": "#f7f9fc",
+            "tertiary-fixed-dim": "#bcc8d3",
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "primary": "#0050cd",
+            "on-secondary-container": "#fefcff",
+            "on-secondary-fixed-variant": "#004493",
+            "inverse-surface": "#2d3133",
+            "on-tertiary-fixed-variant": "#3d4852",
+            "surface-container-highest": "#e0e3e6",
+            "surface-bright": "#f7f9fc",
+            "error": "#ba1a1a",
+            "secondary": "#0058bc",
+            "on-primary-fixed-variant": "#003fa5",
+            "on-tertiary-fixed": "#111d25",
+            "surface-tint": "#0054d7",
+            "surface": "#f7f9fc",
+            "surface-container-low": "#f2f4f7",
+            "secondary-fixed": "#d8e2ff",
+            "inverse-primary": "#b3c5ff",
+            "tertiary-fixed": "#d8e4f0",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#191c1e",
+            "surface-container": "#eceef1",
+            "secondary-container": "#0070eb",
+            "secondary-fixed-dim": "#adc6ff",
+            "inverse-on-surface": "#eff1f4",
+            "on-surface-variant": "#424656"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter-desktop": "2rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1rem",
+            "space-md": "0.75rem",
+            "margin": "0.75rem",
+            "gutter": "1rem",
+            "margin-desktop": "2rem"
+          },
+          "fontFamily": {
+            "title-sm": ["Roboto Flex"],
+            "display-lg": ["Roboto Flex"],
+            "label-md": ["Roboto Flex"],
+            "label-sm": ["Roboto Flex"],
+            "body-md": ["Roboto Flex"],
+            "body-lg": ["Roboto Flex"],
+            "headline-lg-mobile": ["Roboto Flex"],
+            "title-md": ["Roboto Flex"],
+            "caption": ["Roboto Flex"],
+            "headline-lg": ["Roboto Flex"]
+          },
+          "fontSize": {
+            "title-sm": ["15px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "display-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-md": ["14px", { "lineHeight": "18px", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "body-md": ["13px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "body-lg": ["15px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["20px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "title-md": ["17px", { "lineHeight": "22px", "fontWeight": "600" }],
+            "caption": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+            "headline-lg": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c2c6d8;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #727687;
+    }
+    .scrollbar-hidden::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hidden {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Material Icon Filled */
+    .icon-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 600;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased h-full flex flex-col font-body-md text-body-md select-none overflow-x-hidden">
+<!-- ================= TOP APP BAR ================= -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm docked full-width top sticky top-0 z-50 h-14">
+<div class="flex justify-between items-center px-4 w-full h-14 max-w-full">
+<!-- Left: Logo & Search -->
+<div class="flex items-center gap-2">
+<!-- Logo -->
+<a class="flex items-center gap-2 group" href="javascript:void(0)" onclick="navigateTo('home')" title="Facebook">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-black text-2xl tracking-tighter shadow-sm group-hover:opacity-95 transition-opacity">
+            f
+          </div>
+</a>
+<!-- Global Search Bar -->
+<div class="relative">
+<div class="flex items-center bg-surface-container-high dark:bg-surface-container rounded-full px-3 py-2 w-10 sm:w-60 md:w-64 transition-all focus-within:w-72">
+<span class="material-symbols-outlined text-tertiary text-xl mr-1">search</span>
+<input class="bg-transparent border-0 p-0 text-on-surface placeholder-tertiary text-body-md font-body-md focus:ring-0 w-full hidden sm:block outline-none" id="global-search-input" onfocus="showSearchDropdown()" onkeydown="handleSearchKey(event)" placeholder="Search Facebook" type="text"/>
+</div>
+<!-- Search History / Suggestions Flyout -->
+<div class="hidden absolute top-12 left-0 w-80 bg-surface-container-lowest dark:bg-inverse-surface rounded-xl shadow-xl border border-outline-variant p-3 z-50" id="search-dropdown">
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-surface-container-high">
+<span class="font-title-sm text-title-sm text-on-surface">Recent Searches</span>
+<button class="text-primary text-caption font-caption hover:underline" onclick="clearRecentSearches()">Edit</button>
+</div>
+<div class="space-y-1" id="recent-search-list">
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-high cursor-pointer" onclick="executeSearch('React developers')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-lg">history</span>
+<span class="text-body-md font-body-md">React developers</span>
+</div>
+<span class="material-symbols-outlined text-outline text-sm hover:text-error" onclick="event.stopPropagation(); this.parentElement.remove()">close</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-high cursor-pointer" onclick="executeSearch('Marketplace bikes')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-lg">history</span>
+<span class="text-body-md font-body-md">Marketplace bikes</span>
+</div>
+<span class="material-symbols-outlined text-outline text-sm hover:text-error" onclick="event.stopPropagation(); this.parentElement.remove()">close</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Center: Main Web Navigation Links -->
+<nav class="hidden md:flex items-center h-full gap-1 lg:gap-2">
+<button class="border-b-4 border-primary text-primary dark:text-primary-fixed flex items-center justify-center h-full px-5 lg:px-7 transition-colors" id="nav-tab-home" onclick="navigateTo('home')" title="Home">
+<span class="material-symbols-outlined text-2xl" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+</button>
+<button class="text-tertiary dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container rounded-lg flex items-center justify-center h-12 px-5 lg:px-7 transition-colors" id="nav-tab-friends" onclick="navigateTo('friends')" title="Friends">
+<span class="material-symbols-outlined text-2xl" data-icon="group">group</span>
+</button>
+<button class="text-tertiary dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container rounded-lg flex items-center justify-center h-12 px-5 lg:px-7 transition-colors" id="nav-tab-watch" onclick="navigateTo('watch')" title="Watch">
+<span class="material-symbols-outlined text-2xl" data-icon="smart_display">smart_display</span>
+</button>
+<button class="text-tertiary dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container rounded-lg flex items-center justify-center h-12 px-5 lg:px-7 transition-colors" id="nav-tab-marketplace" onclick="navigateTo('marketplace')" title="Marketplace">
+<span class="material-symbols-outlined text-2xl" data-icon="storefront">storefront</span>
+</button>
+<button class="text-tertiary dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container rounded-lg flex items-center justify-center h-12 px-5 lg:px-7 transition-colors" id="nav-tab-groups" onclick="navigateTo('groups')" title="Groups">
+<span class="material-symbols-outlined text-2xl" data-icon="groups">groups</span>
+</button>
+<button class="text-tertiary dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container rounded-lg flex items-center justify-center h-12 px-5 lg:px-7 transition-colors" id="nav-tab-gaming" onclick="navigateTo('gaming')" title="Gaming">
+<span class="material-symbols-outlined text-2xl" data-icon="sports_esports">sports_esports</span>
+</button>
+</nav>
+<!-- Right: Trailing Utility Actions & Kalyan Profile -->
+<div class="flex items-center gap-2">
+<!-- 9-Dots Menu Dropdown -->
+<div class="relative">
+<button class="w-10 h-10 rounded-full bg-surface-container-high dark:bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors active:scale-95" id="btn-top-menu" onclick="toggleDropdown('dropdown-apps')">
+<span class="material-symbols-outlined text-xl" data-icon="apps">apps</span>
+</button>
+<!-- Apps / Menu Dropdown Content -->
+<div class="hidden absolute right-0 mt-2 w-80 bg-surface-container-lowest dark:bg-inverse-surface border border-outline-variant rounded-2xl shadow-2xl p-4 z-50" id="dropdown-apps">
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-3">Menu</h3>
+<div class="grid grid-cols-3 gap-2 text-center">
+<button class="p-3 rounded-xl hover:bg-surface-container-high flex flex-col items-center" onclick="openCreatePostModal(); closeAllDropdowns();">
+<span class="material-symbols-outlined text-primary text-2xl">edit_note</span>
+<span class="text-label-sm font-label-sm mt-1">Post</span>
+</button>
+<button class="p-3 rounded-xl hover:bg-surface-container-high flex flex-col items-center" onclick="navigateTo('profile'); closeAllDropdowns();">
+<span class="material-symbols-outlined text-secondary text-2xl">auto_stories</span>
+<span class="text-label-sm font-label-sm mt-1">Story</span>
+</button>
+<button class="p-3 rounded-xl hover:bg-surface-container-high flex flex-col items-center" onclick="openListingModal(); closeAllDropdowns();">
+<span class="material-symbols-outlined text-primary text-2xl">sell</span>
+<span class="text-label-sm font-label-sm mt-1">Listing</span>
+</button>
+<button class="p-3 rounded-xl hover:bg-surface-container-high flex flex-col items-center" onclick="openGroupModal(); closeAllDropdowns();">
+<span class="material-symbols-outlined text-secondary text-2xl">group_add</span>
+<span class="text-label-sm font-label-sm mt-1">Group</span>
+</button>
+<button class="p-3 rounded-xl hover:bg-surface-container-high flex flex-col items-center" onclick="navigateTo('events'); closeAllDropdowns();">
+<span class="material-symbols-outlined text-primary text-2xl">event</span>
+<span class="text-label-sm font-label-sm mt-1">Event</span>
+</button>
+<button class="p-3 rounded-xl hover:bg-surface-container-high flex flex-col items-center" onclick="navigateTo('saved'); closeAllDropdowns();">
+<span class="material-symbols-outlined text-primary text-2xl">bookmark</span>
+<span class="text-label-sm font-label-sm mt-1">Saved</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Chat / Messenger Dropdown -->
+<div class="relative">
+<button class="w-10 h-10 rounded-full bg-surface-container-high dark:bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors active:scale-95 relative" id="btn-top-chat" onclick="toggleDropdown('dropdown-chat')">
+<span class="material-symbols-outlined text-xl" data-icon="chat">chat</span>
+<span class="absolute -top-1 -right-1 bg-error text-on-error font-caption text-caption font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-surface-container-lowest" id="chat-badge">3</span>
+</button>
+<!-- Chat Dropdown -->
+<div class="hidden absolute right-0 mt-2 w-88 sm:w-96 bg-surface-container-lowest dark:bg-inverse-surface border border-outline-variant rounded-2xl shadow-2xl p-4 z-50" id="dropdown-chat">
+<div class="flex items-center justify-between pb-3 border-b border-surface-container-high">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Chats</h3>
+<div class="flex items-center gap-2">
+<button class="text-primary hover:underline text-label-md font-label-md" onclick="navigateTo('messenger'); closeAllDropdowns();">Open Messenger</button>
+</div>
+</div>
+<div class="mt-2 space-y-1 max-h-80 overflow-y-auto" id="chat-dropdown-list">
+<!-- Populated via JS -->
+</div>
+</div>
+</div>
+<!-- Notifications Dropdown -->
+<div class="relative">
+<button class="w-10 h-10 rounded-full bg-surface-container-high dark:bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors active:scale-95 relative" id="btn-top-notifications" onclick="toggleDropdown('dropdown-notifications')">
+<span class="material-symbols-outlined text-xl" data-icon="notifications">notifications</span>
+<span class="absolute -top-1 -right-1 bg-error text-on-error font-caption text-caption font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-surface-container-lowest" id="notification-badge">4</span>
+</button>
+<!-- Notification Dropdown -->
+<div class="hidden absolute right-0 mt-2 w-88 sm:w-96 bg-surface-container-lowest dark:bg-inverse-surface border border-outline-variant rounded-2xl shadow-2xl p-4 z-50" id="dropdown-notifications">
+<div class="flex items-center justify-between pb-3 border-b border-surface-container-high">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Notifications</h3>
+<button class="text-primary hover:underline text-label-sm font-label-sm" onclick="markAllNotificationsRead()">Mark all as read</button>
+</div>
+<div class="mt-2 space-y-1 max-h-80 overflow-y-auto" id="notifications-dropdown-list">
+<!-- Populated via JS -->
+</div>
+<div class="pt-2 text-center border-t border-surface-container-high mt-2">
+<button class="text-primary text-label-md font-label-md hover:underline" onclick="navigateTo('notifications'); closeAllDropdowns();">See all notifications</button>
+</div>
+</div>
+</div>
+<!-- User Profile Avatar Pill & Dropdown -->
+<div class="relative">
+<button class="flex items-center rounded-full p-0.5 hover:ring-2 hover:ring-primary-container transition-all" id="btn-profile-dropdown" onclick="toggleDropdown('dropdown-profile')" title="Kalyan Ram default silhouette profile avatar">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center overflow-hidden">
+<!-- Blank Facebook Silhouette Avatar -->
+<svg class="w-7 h-7 text-outline" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+</svg>
+</div>
+</button>
+<!-- Profile Dropdown Content -->
+<div class="hidden absolute right-0 mt-2 w-72 bg-surface-container-lowest dark:bg-inverse-surface border border-outline-variant rounded-2xl shadow-2xl p-3 z-50" id="dropdown-profile">
+<div class="flex items-center gap-3 p-2 rounded-xl hover:bg-surface-container-high cursor-pointer transition-colors" onclick="navigateTo('profile'); closeAllDropdowns();">
+<div class="w-12 h-12 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center">
+<svg class="w-8 h-8 text-outline" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+</svg>
+</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface">Kalyan Ram</h4>
+<p class="text-caption font-caption text-tertiary">See your profile</p>
+</div>
+</div>
+<hr class="my-2 border-surface-container-high"/>
+<div class="space-y-1">
+<button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-container-high text-on-surface text-label-md font-label-md text-left" onclick="navigateTo('settings'); closeAllDropdowns();">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span>Settings &amp; privacy</span>
+</button>
+<button class="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-surface-container-high text-on-surface text-label-md font-label-md text-left" onclick="toggleDarkMode()">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-xl">dark_mode</span>
+<span>Display &amp; accessibility</span>
+</div>
+<span class="text-caption font-caption text-tertiary" id="dark-mode-indicator">Off</span>
+</button>
+<button class="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-container-high text-on-surface text-label-md font-label-md text-left" onclick="showToast('Logged out of session. Session restored as Kalyan Ram.')">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span>Log Out</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- ================= MAIN APP CANVAS ================= -->
+<div class="flex-1 flex overflow-hidden relative">
+<!-- ================= LEFT RAIL (SideNavBar) ================= -->
+<aside class="fixed top-14 left-0 h-[calc(100vh-3.5rem)] w-72 overflow-y-auto hidden lg:block bg-transparent select-none z-30 p-2 scrollbar-hidden hover:scrollbar-default" id="side-nav-bar">
+<div class="flex flex-col gap-1 w-full h-full">
+<!-- User Profile Pill Link -->
+<a class="text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container rounded-xl px-3 py-2.5 flex items-center gap-3 transition-colors active:scale-[0.98]" href="javascript:void(0)" onclick="navigateTo('profile')">
+<div class="w-9 h-9 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center">
+<svg class="w-6 h-6 text-outline" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Kalyan Ram</span>
+<span class="text-caption font-caption text-tertiary">@kalyan.ram</span>
+</div>
+</a>
+<!-- SideNav Core Tabs -->
+<button class="text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container rounded-xl px-3 py-2.5 flex items-center gap-3 transition-colors active:scale-[0.98]" id="side-tab-friends" onclick="navigateTo('friends')">
+<div class="w-9 h-9 rounded-full bg-blue-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="group">group</span>
+</div>
+<span class="font-title-sm text-title-sm">Friends</span>
+</button>
+<button class="text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container rounded-xl px-3 py-2.5 flex items-center gap-3 transition-colors active:scale-[0.98]" id="side-tab-feeds" onclick="navigateTo('home')">
+<div class="w-9 h-9 rounded-full bg-blue-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="dynamic_feed">dynamic_feed</span>
+</div>
+<span class="font-title-sm text-title-sm">Feeds</span>
+</button>
+<button class="text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container rounded-xl px-3 py-2.5 flex items-center gap-3 transition-colors active:scale-[0.98]" id="side-tab-groups" onclick="navigateTo('groups')">
+<div class="w-9 h-9 rounded-full bg-blue-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="groups">groups</span>
+</div>
+<span class="font-title-sm text-title-sm">Groups</span>
+</button>
+<button class="text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container rounded-xl px-3 py-2.5 flex items-center gap-3 transition-colors active:scale-[0.98]" id="side-tab-marketplace" onclick="navigateTo('marketplace')">
+<div class="w-9 h-9 rounded-full bg-blue-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="storefront">storefront</span>
+</div>
+<span class="font-title-sm text-title-sm">Marketplace</span>
+</button>
+<button class="text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container rounded-xl px-3 py-2.5 flex items-center gap-3 transition-colors active:scale-[0.98]" id="side-tab-watch" onclick="navigateTo('watch')">
+<div class="w-9 h-9 rounded-full bg-blue-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="smart_display">smart_display</span>
+</div>
+<span class="font-title-sm text-title-sm">Watch</span>
+</button>
+<button class="text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container rounded-xl px-3 py-2.5 flex items-center gap-3 transition-colors active:scale-[0.98]" id="side-tab-memories" onclick="navigateTo('memories')">
+<div class="w-9 h-9 rounded-full bg-blue-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="history">history</span>
+</div>
+<span class="font-title-sm text-title-sm">Memories</span>
+</button>
+<button class="text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container rounded-xl px-3 py-2.5 flex items-center gap-3 transition-colors active:scale-[0.98]" id="side-tab-saved" onclick="navigateTo('saved')">
+<div class="w-9 h-9 rounded-full bg-blue-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="bookmark">bookmark</span>
+</div>
+<span class="font-title-sm text-title-sm">Saved</span>
+</button>
+<hr class="my-2 border-surface-container-high"/>
+<!-- Footer Tab Labels -->
+<button class="text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container rounded-xl px-3 py-2.5 flex items-center gap-3 transition-colors active:scale-[0.98]" id="side-tab-events" onclick="navigateTo('events')">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-xl" data-icon="calendar_month">calendar_month</span>
+</div>
+<span class="font-body-md text-body-md">Events</span>
+</button>
+<button class="text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container rounded-xl px-3 py-2.5 flex items-center gap-3 transition-colors active:scale-[0.98]" id="side-tab-gaming" onclick="navigateTo('gaming')">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-xl" data-icon="sports_esports">sports_esports</span>
+</div>
+<span class="font-body-md text-body-md">Gaming</span>
+</button>
+<button class="text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container rounded-xl px-3 py-2.5 flex items-center gap-3 transition-colors active:scale-[0.98]" id="side-tab-settings" onclick="navigateTo('settings')">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-xl" data-icon="settings">settings</span>
+</div>
+<span class="font-body-md text-body-md">Settings</span>
+</button>
+<div class="p-3 text-caption font-caption text-tertiary">
+          Privacy · Terms · Advertising · Cookies · Kalyan Ram © 2025 Meta Platforms
+        </div>
+</div>
+</aside>
+<!-- ================= DYNAMIC VIEWS CONTAINER ================= -->
+<main class="flex-1 lg:pl-72 overflow-y-auto h-[calc(100vh-3.5rem)] pb-16 md:pb-0 scroll-smooth" id="main-content-canvas">
+<!-- ================= 1. HOME VIEW ================= -->
+<section class="view-panel block w-full py-4 px-2 sm:px-4 lg:px-6" id="view-home">
+<div class="max-w-7xl mx-auto flex flex-col xl:flex-row gap-6 justify-center">
+<!-- Central Feed (Fluid Width) -->
+<div class="w-full max-w-[640px] mx-auto flex flex-col gap-4">
+<!-- Stories Carousel -->
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-3 shadow-sm border border-outline-variant/40">
+<div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hidden">
+<!-- Create Story Card for Kalyan Ram -->
+<div class="min-w-[110px] w-28 h-48 rounded-xl bg-surface-container-low border border-outline-variant flex flex-col relative overflow-hidden group cursor-pointer flex-shrink-0 transition-transform hover:scale-[1.02]" onclick="openCreatePostModal('story')">
+<div class="h-32 bg-surface-container-high flex items-center justify-center">
+<svg class="w-12 h-12 text-outline" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+</svg>
+</div>
+<div class="absolute top-28 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center border-2 border-surface-container-lowest shadow-md">
+<span class="material-symbols-outlined text-lg">add</span>
+</div>
+<div class="mt-auto pb-2 text-center">
+<span class="font-label-sm text-label-sm text-on-surface">Create Story</span>
+</div>
+</div>
+<!-- Story 1: Priya Sharma -->
+<div class="min-w-[110px] w-28 h-48 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 p-2 flex flex-col justify-between cursor-pointer flex-shrink-0 relative overflow-hidden group shadow transition-transform hover:scale-[1.02]" onclick="openStoryViewer('Priya Sharma', 'Celebrating the launch of our new open source project! 🚀', 'grad-1')">
+<div class="w-9 h-9 rounded-full ring-4 ring-primary-container bg-surface-container-lowest flex items-center justify-center text-primary font-bold text-xs">PS</div>
+<div class="text-white text-xs font-semibold drop-shadow-md">Priya Sharma</div>
+</div>
+<!-- Story 2: Vikram Singh -->
+<div class="min-w-[110px] w-28 h-48 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-700 p-2 flex flex-col justify-between cursor-pointer flex-shrink-0 relative overflow-hidden group shadow transition-transform hover:scale-[1.02]" onclick="openStoryViewer('Vikram Singh', 'Weekend roadtrip into the western ghats 🏔️✨', 'grad-2')">
+<div class="w-9 h-9 rounded-full ring-4 ring-primary-container bg-surface-container-lowest flex items-center justify-center text-emerald-600 font-bold text-xs">VS</div>
+<div class="text-white text-xs font-semibold drop-shadow-md">Vikram Singh</div>
+</div>
+<!-- Story 3: Anita Rao -->
+<div class="min-w-[110px] w-28 h-48 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 p-2 flex flex-col justify-between cursor-pointer flex-shrink-0 relative overflow-hidden group shadow transition-transform hover:scale-[1.02]" onclick="openStoryViewer('Anita Rao', 'Design systems sprint day 3! Wireframes complete.', 'grad-3')">
+<div class="w-9 h-9 rounded-full ring-4 ring-primary-container bg-surface-container-lowest flex items-center justify-center text-rose-600 font-bold text-xs">AR</div>
+<div class="text-white text-xs font-semibold drop-shadow-md">Anita Rao</div>
+</div>
+<!-- Story 4: Rahul Verma -->
+<div class="min-w-[110px] w-28 h-48 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 p-2 flex flex-col justify-between cursor-pointer flex-shrink-0 relative overflow-hidden group shadow transition-transform hover:scale-[1.02]" onclick="openStoryViewer('Rahul Verma', 'Hyderabad Tech Meetup 2025 starting now!', 'grad-4')">
+<div class="w-9 h-9 rounded-full ring-4 ring-primary-container bg-surface-container-lowest flex items-center justify-center text-amber-600 font-bold text-xs">RV</div>
+<div class="text-white text-xs font-semibold drop-shadow-md">Rahul Verma</div>
+</div>
+</div>
+</div>
+<!-- "What's on your mind, Kalyan?" Card -->
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-3 shadow-sm border border-outline-variant/40">
+<div class="flex items-center gap-2 pb-3 border-b border-surface-container-high">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center flex-shrink-0">
+<svg class="w-6 h-6 text-outline" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+</svg>
+</div>
+<button class="w-full text-left bg-surface-container hover:bg-surface-container-high rounded-full px-4 py-2.5 text-tertiary text-body-md font-body-md transition-colors" onclick="openCreatePostModal()">
+                  What's on your mind, Kalyan?
+                </button>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-2">
+<button class="flex items-center justify-center gap-2 py-1.5 rounded-lg hover:bg-surface-container-high text-tertiary hover:text-error transition-colors" onclick="openCreatePostModal('live')">
+<span class="material-symbols-outlined text-error">videocam</span>
+<span class="text-label-sm font-label-sm font-semibold">Live video</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-1.5 rounded-lg hover:bg-surface-container-high text-tertiary hover:text-emerald-600 transition-colors" onclick="openCreatePostModal('photo')">
+<span class="material-symbols-outlined text-emerald-500">photo_library</span>
+<span class="text-label-sm font-label-sm font-semibold">Photo/video</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-1.5 rounded-lg hover:bg-surface-container-high text-tertiary hover:text-amber-500 transition-colors" onclick="openCreatePostModal('feeling')">
+<span class="material-symbols-outlined text-amber-500">mood</span>
+<span class="text-label-sm font-label-sm font-semibold">Feeling/activity</span>
+</button>
+</div>
+</div>
+<!-- Feed Stream Container (Dynamically Injected via JS) -->
+<div class="space-y-4" id="news-feed-posts">
+<!-- Rendered via JavaScript -->
+</div>
+</div>
+<!-- Right Sidebar (Contacts & Sponsored) -->
+<div class="hidden xl:block w-80 space-y-4 flex-shrink-0">
+<!-- Sponsored Card -->
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-3 shadow-sm border border-outline-variant/40">
+<span class="text-label-sm font-label-sm text-tertiary uppercase tracking-wide">Sponsored</span>
+<div class="mt-3 flex items-center gap-3 group cursor-pointer" onclick="showToast('Navigating to Meta AI Suite')">
+<div class="w-24 h-20 rounded-lg bg-gradient-to-tr from-primary to-blue-400 flex items-center justify-center text-white flex-shrink-0 font-bold text-sm shadow">
+                  Meta AI
+                </div>
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface group-hover:text-primary transition-colors">Accelerate Workflow with AI</h4>
+<p class="text-caption font-caption text-tertiary">meta.ai · Next-gen multimodal assistance for creators.</p>
+</div>
+</div>
+</div>
+<!-- Birthdays -->
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-3 shadow-sm border border-outline-variant/40">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-pink-500 text-2xl">cake</span>
+<p class="text-body-md font-body-md text-on-surface">
+<span class="font-bold">Priya Sharma</span> and <span class="font-bold">2 others</span> have birthdays today.
+                </p>
+</div>
+</div>
+<!-- Real-time Contacts List -->
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-3 shadow-sm border border-outline-variant/40">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-high">
+<span class="font-title-sm text-title-sm text-on-surface">Contacts</span>
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-lg cursor-pointer hover:text-on-surface">search</span>
+<span class="material-symbols-outlined text-lg cursor-pointer hover:text-on-surface">more_horiz</span>
+</div>
+</div>
+<div class="mt-2 space-y-1" id="home-contacts-list">
+<!-- Rendered dynamically -->
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= 2. PROFILE VIEW (Kalyan Ram) ================= -->
+<section class="view-panel hidden w-full" id="view-profile">
+<!-- Cover Photo Banner -->
+<div class="w-full bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant">
+<div class="max-w-5xl mx-auto">
+<!-- Cover Photo with abstract blue gradient and geometric overlay -->
+<div class="h-64 sm:h-80 w-full rounded-b-2xl bg-gradient-to-r from-blue-700 via-primary to-indigo-800 relative overflow-hidden shadow-inner flex items-end justify-end p-4">
+<!-- Geometric overlay patterns -->
+<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+<button class="bg-surface-container-lowest/90 backdrop-blur hover:bg-surface-container-lowest text-on-surface font-label-md text-label-md px-3 py-1.5 rounded-lg flex items-center gap-2 shadow transition-all" onclick="showToast('Edit cover photo updated!')">
+<span class="material-symbols-outlined text-lg">photo_camera</span>
+<span>Edit cover photo</span>
+</button>
+</div>
+<!-- Profile Info Bar -->
+<div class="px-6 pb-4">
+<div class="flex flex-col md:flex-row items-center md:items-end justify-between -mt-16 md:-mt-20 gap-4">
+<!-- Avatar & Names -->
+<div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
+<!-- Silhouette Avatar with presence ring and camera badge -->
+<div class="relative">
+<div class="w-36 h-36 md:w-40 md:h-40 rounded-full bg-surface-container-high border-4 border-surface-container-lowest shadow-xl flex items-center justify-center overflow-hidden">
+<svg class="w-24 h-24 text-outline" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+</svg>
+</div>
+<button class="absolute bottom-1 right-2 w-9 h-9 rounded-full bg-surface-container-high hover:bg-surface-variant border-2 border-surface-container-lowest flex items-center justify-center shadow" onclick="showToast('Profile photo options')">
+<span class="material-symbols-outlined text-lg">photo_camera</span>
+</button>
+</div>
+<div>
+<h1 class="font-display-lg text-display-lg text-on-surface">Kalyan Ram</h1>
+<p class="font-caption text-caption text-tertiary">1,428 friends · 35 mutual</p>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1" id="profile-bio-text">Software Architect &amp; Open Source Contributor. Passionate about web engineering.</p>
+</div>
+</div>
+<!-- Action CTA Buttons -->
+<div class="flex items-center gap-2">
+<button class="bg-primary-container text-on-primary hover:bg-secondary transition-colors px-4 py-2 rounded-lg font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95" onclick="openCreatePostModal('story')">
+<span class="material-symbols-outlined text-lg">add</span>
+<span>Add to Story</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-variant text-on-surface px-4 py-2 rounded-lg font-label-md text-label-md flex items-center gap-1.5 transition-colors active:scale-95" onclick="openEditProfileModal()">
+<span class="material-symbols-outlined text-lg">edit</span>
+<span>Edit Profile</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-variant text-on-surface px-3 py-2 rounded-lg flex items-center justify-center" onclick="showToast('Post management opened')">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Profile Nav Tabs -->
+<div class="flex items-center gap-1 border-t border-surface-container-high mt-6 pt-1 overflow-x-auto">
+<button class="px-4 py-3 font-title-sm text-title-sm text-primary border-b-4 border-primary">Posts</button>
+<button class="px-4 py-3 font-title-sm text-title-sm text-tertiary hover:bg-surface-container rounded-lg" onclick="showToast('About tab')">About</button>
+<button class="px-4 py-3 font-title-sm text-title-sm text-tertiary hover:bg-surface-container rounded-lg" onclick="navigateTo('friends')">Friends</button>
+<button class="px-4 py-3 font-title-sm text-title-sm text-tertiary hover:bg-surface-container rounded-lg" onclick="showToast('Photos view')">Photos</button>
+<button class="px-4 py-3 font-title-sm text-title-sm text-tertiary hover:bg-surface-container rounded-lg" onclick="navigateTo('watch')">Videos</button>
+<button class="px-4 py-3 font-title-sm text-title-sm text-tertiary hover:bg-surface-container rounded-lg" onclick="showToast('Check-ins view')">Check-ins</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Profile Content 2-Column Grid -->
+<div class="max-w-5xl mx-auto py-4 px-4 grid grid-cols-1 md:grid-cols-12 gap-4">
+<!-- Left Intro Column (5 cols) -->
+<div class="md:col-span-5 space-y-4">
+<!-- Intro Box -->
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-4 shadow-sm border border-outline-variant/40">
+<h3 class="font-title-md text-title-md text-on-surface mb-3">Intro</h3>
+<div class="space-y-3 text-body-md font-body-md text-on-surface">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">work</span>
+<span>Lead Architect at <span class="font-semibold">Tech Solutions Global</span></span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">school</span>
+<span>Studied Computer Science at <span class="font-semibold">JNTU Hyderabad</span></span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">home</span>
+<span>Lives in <span class="font-semibold">Hyderabad, India</span></span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">location_on</span>
+<span>From <span class="font-semibold">Hyderabad, India</span></span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">schedule</span>
+<span>Joined Facebook in <span class="font-semibold">January 2011</span></span>
+</div>
+</div>
+<button class="w-full mt-4 py-2 bg-surface-container hover:bg-surface-container-high font-label-md text-label-md rounded-lg text-on-surface transition-colors" onclick="openEditProfileModal()">
+                Edit details
+              </button>
+</div>
+<!-- Photos Thumbnail Preview -->
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-4 shadow-sm border border-outline-variant/40">
+<div class="flex items-center justify-between mb-3">
+<h3 class="font-title-md text-title-md text-on-surface">Photos</h3>
+<button class="text-primary text-label-sm font-label-sm hover:underline" onclick="showToast('Viewing all photos')">See all photos</button>
+</div>
+<div class="grid grid-cols-3 gap-1 rounded-lg overflow-hidden">
+<div class="h-20 bg-blue-100 flex items-center justify-center text-primary font-bold text-xs">Tech Lab</div>
+<div class="h-20 bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold text-xs">Summit 24</div>
+<div class="h-20 bg-purple-100 flex items-center justify-center text-purple-700 font-bold text-xs">CodeFest</div>
+<div class="h-20 bg-amber-100 flex items-center justify-center text-amber-700 font-bold text-xs">Office Day</div>
+<div class="h-20 bg-rose-100 flex items-center justify-center text-rose-700 font-bold text-xs">Hackathon</div>
+<div class="h-20 bg-sky-100 flex items-center justify-center text-sky-700 font-bold text-xs">Graduation</div>
+</div>
+</div>
+</div>
+<!-- Right Timeline Posts Column (7 cols) -->
+<div class="md:col-span-7 space-y-4">
+<!-- Composer inside Profile -->
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-3 shadow-sm border border-outline-variant/40">
+<div class="flex items-center gap-2 pb-3 border-b border-surface-container-high">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center flex-shrink-0">
+<svg class="w-6 h-6 text-outline" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+</svg>
+</div>
+<button class="w-full text-left bg-surface-container hover:bg-surface-container-high rounded-full px-4 py-2.5 text-tertiary text-body-md font-body-md transition-colors" onclick="openCreatePostModal()">
+                  What's on your mind?
+                </button>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-2 text-center">
+<button class="flex items-center justify-center gap-2 py-1.5 rounded-lg hover:bg-surface-container-high text-tertiary font-label-sm text-label-sm" onclick="openCreatePostModal('photo')">
+<span class="material-symbols-outlined text-emerald-500">photo_camera</span>
+<span>Photo/video</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-1.5 rounded-lg hover:bg-surface-container-high text-tertiary font-label-sm text-label-sm" onclick="openCreatePostModal('life-event')">
+<span class="material-symbols-outlined text-primary">star</span>
+<span>Life event</span>
+</button>
+</div>
+</div>
+<!-- Profile Timeline Stream -->
+<div class="space-y-4" id="profile-posts-stream">
+<!-- Rendered via JS -->
+</div>
+</div>
+</div>
+</section>
+<!-- ================= 3. FRIENDS VIEW ================= -->
+<section class="view-panel hidden w-full p-4 lg:p-6 max-w-6xl mx-auto" id="view-friends">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-surface-container-high gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Friends</h2>
+<p class="text-caption font-caption text-tertiary">Manage requests and find people you may know</p>
+</div>
+<!-- Subtabs -->
+<div class="flex items-center gap-2 overflow-x-auto">
+<button class="px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm" id="ftab-requests" onclick="switchFriendsTab('requests')">Friend Requests</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md" id="ftab-suggestions" onclick="switchFriendsTab('suggestions')">Suggestions</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md" id="ftab-all" onclick="switchFriendsTab('all')">All Friends</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md" id="ftab-birthdays" onclick="switchFriendsTab('birthdays')">Birthdays</button>
+</div>
+</div>
+<!-- Friends Content Area -->
+<div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="friends-grid-container">
+<!-- Rendered via JS -->
+</div>
+</section>
+<!-- ================= 4. WATCH / VIDEO VIEW ================= -->
+<section class="view-panel hidden w-full p-4 lg:p-6 max-w-4xl mx-auto space-y-6" id="view-watch">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Watch</h2>
+<!-- Category Chips -->
+<div class="flex items-center gap-2 overflow-x-auto">
+<button class="px-4 py-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">For You</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-sm text-label-sm">Live</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-sm text-label-sm">Gaming</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-sm text-label-sm">Music</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-sm text-label-sm">Following</button>
+</div>
+</div>
+<!-- Video Player Post 1 -->
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl shadow-sm border border-outline-variant/40 overflow-hidden">
+<div class="p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center">NG</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface">National Geographic Tech</h4>
+<p class="text-caption font-caption text-tertiary">3 hours ago · Public</p>
+</div>
+</div>
+<button class="text-tertiary hover:bg-surface-container p-2 rounded-full"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+<p class="px-4 pb-2 text-body-lg font-body-lg text-on-surface">Exploring deep oceanic autonomous drones mapping unexplored Mariana Trench zones 🌊🛰️</p>
+<!-- Video Screen Simulator -->
+<div class="relative bg-black h-80 flex items-center justify-center group cursor-pointer" onclick="togglePlaySimulatedVideo(this)">
+<div class="text-white text-center">
+<span class="material-symbols-outlined text-6xl group-hover:scale-110 transition-transform">play_circle</span>
+<p class="text-sm font-semibold mt-2">Click to Watch Reel (Simulated)</p>
+</div>
+<div class="absolute bottom-2 right-3 bg-black/75 text-white text-caption font-caption px-2 py-0.5 rounded">04:18</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-surface-container-high">
+<div class="h-full bg-primary-container w-2/5"></div>
+</div>
+</div>
+<div class="p-3 flex items-center justify-between text-tertiary text-body-md font-body-md border-t border-surface-container-high">
+<span>👍 ❤️ 2.4K reactions</span>
+<span>412 comments · 89 shares</span>
+</div>
+</div>
+<!-- Video Player Post 2 -->
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl shadow-sm border border-outline-variant/40 overflow-hidden">
+<div class="p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-purple-600 text-white font-bold flex items-center justify-center">TC</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface">TechCrunch Disrupt</h4>
+<p class="text-caption font-caption text-tertiary">Yesterday · Public</p>
+</div>
+</div>
+<button class="text-tertiary hover:bg-surface-container p-2 rounded-full"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+<p class="px-4 pb-2 text-body-lg font-body-lg text-on-surface">Keynote highlights: The evolution of spatial computing and high-density holographic displays.</p>
+<div class="relative bg-slate-900 h-80 flex items-center justify-center group cursor-pointer" onclick="togglePlaySimulatedVideo(this)">
+<div class="text-white text-center">
+<span class="material-symbols-outlined text-6xl group-hover:scale-110 transition-transform">play_circle</span>
+<p class="text-sm font-semibold mt-2">Spatial Architecture Demo</p>
+</div>
+<div class="absolute bottom-2 right-3 bg-black/75 text-white text-caption font-caption px-2 py-0.5 rounded">12:45</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-surface-container-high">
+<div class="h-full bg-primary-container w-1/4"></div>
+</div>
+</div>
+<div class="p-3 flex items-center justify-between text-tertiary text-body-md font-body-md border-t border-surface-container-high">
+<span>👍 8.9K reactions</span>
+<span>1.1K comments · 340 shares</span>
+</div>
+</div>
+</section>
+<!-- ================= 5. MARKETPLACE VIEW ================= -->
+<section class="view-panel hidden w-full p-4 lg:p-6 max-w-6xl mx-auto space-y-6" id="view-marketplace">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Marketplace</h2>
+<p class="text-caption font-caption text-tertiary">Buy and sell items in Hyderabad &amp; nearby</p>
+</div>
+<button class="bg-primary-container text-on-primary hover:bg-secondary font-label-md text-label-md px-4 py-2 rounded-lg flex items-center gap-2 shadow-sm" onclick="openListingModal()">
+<span class="material-symbols-outlined text-lg">add</span>
+<span>Create New Listing</span>
+</button>
+</div>
+<!-- Filter Chips -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1">
+<button class="px-4 py-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">All Items</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">Electronics</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">Vehicles</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">Property</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">Apparel</button>
+</div>
+<!-- Marketplace Products Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" id="marketplace-grid">
+<!-- Rendered via JS -->
+</div>
+</section>
+<!-- ================= 6. GROUPS VIEW ================= -->
+<section class="view-panel hidden w-full p-4 lg:p-6 max-w-5xl mx-auto space-y-6" id="view-groups">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Groups</h2>
+<p class="text-caption font-caption text-tertiary">Communities centered around your passions</p>
+</div>
+<button class="bg-primary-container text-on-primary hover:bg-secondary font-label-md text-label-md px-4 py-2 rounded-lg flex items-center gap-2 shadow-sm" onclick="openGroupModal()">
+<span class="material-symbols-outlined text-lg">add</span>
+<span>Create New Group</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="groups-container">
+<!-- Rendered via JS -->
+</div>
+</section>
+<!-- ================= 7. MESSENGER VIEW ================= -->
+<section class="view-panel hidden w-full h-[calc(100vh-3.5rem)] flex flex-col md:flex-row bg-surface-container-lowest dark:bg-inverse-surface" id="view-messenger">
+<!-- Chats Left List -->
+<div class="w-full md:w-80 lg:w-96 border-r border-outline-variant flex flex-col h-full flex-shrink-0">
+<div class="p-4 border-b border-surface-container-high">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Chats</h2>
+<div class="mt-3 flex items-center bg-surface-container-high rounded-full px-3 py-1.5">
+<span class="material-symbols-outlined text-tertiary text-lg mr-2">search</span>
+<input class="bg-transparent border-0 p-0 text-body-md font-body-md w-full focus:ring-0 outline-none" placeholder="Search Messenger" type="text"/>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto space-y-1 p-2" id="messenger-threads-list">
+<!-- Rendered via JS -->
+</div>
+</div>
+<!-- Center Active Chat Window -->
+<div class="flex-1 flex flex-col h-full">
+<!-- Chat Header -->
+<div class="h-16 border-b border-outline-variant px-4 flex items-center justify-between bg-surface-container-lowest dark:bg-inverse-surface">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary font-bold flex items-center justify-center" id="active-chat-avatar">PS</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface" id="active-chat-name">Priya Sharma</h4>
+<p class="text-caption font-caption text-emerald-600 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Active Now
+                </p>
+</div>
+</div>
+<div class="flex items-center gap-2 text-primary">
+<button class="p-2 rounded-full hover:bg-surface-container-high" onclick="showToast('Starting voice call...')"><span class="material-symbols-outlined">call</span></button>
+<button class="p-2 rounded-full hover:bg-surface-container-high" onclick="showToast('Starting video call...')"><span class="material-symbols-outlined">videocam</span></button>
+<button class="p-2 rounded-full hover:bg-surface-container-high" onclick="showToast('Contact info opened')"><span class="material-symbols-outlined">info</span></button>
+</div>
+</div>
+<!-- Messages Stream -->
+<div class="flex-1 overflow-y-auto p-4 space-y-3 bg-surface-container-low dark:bg-inverse-surface/80" id="active-messages-container">
+<!-- Messages rendered dynamically -->
+</div>
+<!-- Message Composer Bar -->
+<div class="p-3 bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant flex items-center gap-2">
+<button class="text-primary hover:bg-surface-container-high p-2 rounded-full" onclick="showToast('Attach media')"><span class="material-symbols-outlined">image</span></button>
+<button class="text-primary hover:bg-surface-container-high p-2 rounded-full" onclick="showToast('Stickers picker')"><span class="material-symbols-outlined">sentiment_satisfied</span></button>
+<input class="flex-1 bg-surface-container-high rounded-full px-4 py-2 border-0 text-body-md font-body-md text-on-surface focus:ring-0 outline-none" id="messenger-input" onkeydown="if(event.key === 'Enter') sendActiveMessage();" placeholder="Aa" type="text"/>
+<button class="text-primary hover:bg-surface-container-high p-2 rounded-full" onclick="sendActiveMessage()"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</section>
+<!-- ================= 8. NOTIFICATIONS VIEW ================= -->
+<section class="view-panel hidden w-full p-4 lg:p-6 max-w-3xl mx-auto space-y-4" id="view-notifications">
+<div class="flex items-center justify-between pb-3 border-b border-surface-container-high">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Notifications</h2>
+<button class="text-primary text-label-md font-label-md hover:underline" onclick="markAllNotificationsRead()">Mark all as read</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">All</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">Unread</button>
+</div>
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl shadow-sm border border-outline-variant/40 divide-y divide-surface-container-high" id="full-notifications-list">
+<!-- Rendered via JS -->
+</div>
+</section>
+<!-- ================= 9. SAVED VIEW ================= -->
+<section class="view-panel hidden w-full p-4 lg:p-6 max-w-4xl mx-auto space-y-4" id="view-saved">
+<div class="flex items-center justify-between pb-3 border-b border-surface-container-high">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Saved</h2>
+<p class="text-caption font-caption text-tertiary">Posts, listings, and videos you saved for later</p>
+</div>
+</div>
+<div class="space-y-3" id="saved-items-container">
+<!-- Rendered dynamically -->
+</div>
+</section>
+<!-- ================= 10. MEMORIES VIEW ================= -->
+<section class="view-panel hidden w-full p-4 lg:p-6 max-w-3xl mx-auto space-y-4" id="view-memories">
+<div class="flex items-center gap-3 pb-3 border-b border-surface-container-high">
+<div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">history</span>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Memories</h2>
+<p class="text-caption font-caption text-tertiary">Look back on what you shared on Facebook today</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-4 shadow-sm border border-outline-variant/40 space-y-3">
+<span class="text-label-sm font-label-sm text-primary font-bold uppercase tracking-wider">3 Years Ago Today</span>
+<p class="font-body-lg text-body-lg text-on-surface">"Honored to present our scalable cloud architecture blueprint at the Global Developers Summit! Thank you team for making this possible."</p>
+<div class="h-44 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-700 flex items-center justify-center text-white font-bold">
+            Cloud Summit 2022 Stage Keynote
+          </div>
+<div class="pt-2 flex items-center justify-between text-tertiary text-caption font-caption">
+<span>May 18, 2022 · 148 likes · 22 comments</span>
+<button class="bg-primary-container text-on-primary px-3 py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-1" onclick="showToast('Shared memory to your feed!')">
+<span class="material-symbols-outlined text-sm">share</span> Share Memory
+            </button>
+</div>
+</div>
+</section>
+<!-- ================= 11. EVENTS VIEW ================= -->
+<section class="view-panel hidden w-full p-4 lg:p-6 max-w-4xl mx-auto space-y-4" id="view-events">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Upcoming Events</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl overflow-hidden shadow-sm border border-outline-variant/40 flex flex-col">
+<div class="h-32 bg-gradient-to-br from-indigo-500 to-blue-600 flex items-end p-3 text-white font-bold text-lg">
+              Hyderabad Tech Fest 2025
+            </div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<p class="text-error font-bold text-caption font-caption uppercase">SAT, JUN 14 AT 10:00 AM IST</p>
+<h4 class="font-title-sm text-title-sm text-on-surface mt-1">HITEC City Convention Hall</h4>
+<p class="text-caption font-caption text-tertiary mt-1">2,300 people interested · 58 friends going</p>
+</div>
+<button class="mt-4 w-full bg-surface-container hover:bg-surface-container-high py-2 rounded-lg font-label-md text-label-md text-on-surface" onclick="showToast('Marked as Interested!')">
+                Interested
+              </button>
+</div>
+</div>
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl overflow-hidden shadow-sm border border-outline-variant/40 flex flex-col">
+<div class="h-32 bg-gradient-to-br from-emerald-500 to-teal-700 flex items-end p-3 text-white font-bold text-lg">
+              Open Source Hackathon #4
+            </div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<p class="text-error font-bold text-caption font-caption uppercase">SUN, JUN 22 AT 9:00 AM IST</p>
+<h4 class="font-title-sm text-title-sm text-on-surface mt-1">Online Event / Remote Stream</h4>
+<p class="text-caption font-caption text-tertiary mt-1">890 people registered</p>
+</div>
+<button class="mt-4 w-full bg-primary-container text-on-primary py-2 rounded-lg font-label-md text-label-md" onclick="showToast('Registered for Hackathon!')">
+                Going
+              </button>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= 12. GAMING VIEW ================= -->
+<section class="view-panel hidden w-full p-4 lg:p-6 max-w-5xl mx-auto space-y-6" id="view-gaming">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Gaming Hub</h2>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-3 border border-outline-variant text-center cursor-pointer hover:shadow-md transition-shadow" onclick="showToast('Launching Chess Master...')">
+<div class="h-28 rounded-lg bg-amber-700 flex items-center justify-center text-white text-3xl font-black">♟️</div>
+<h4 class="font-title-sm text-title-sm text-on-surface mt-2">Chess Master</h4>
+<span class="text-caption font-caption text-tertiary">340k players</span>
+</div>
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-3 border border-outline-variant text-center cursor-pointer hover:shadow-md transition-shadow" onclick="showToast('Launching Cyber Racer...')">
+<div class="h-28 rounded-lg bg-indigo-700 flex items-center justify-center text-white text-3xl font-black">🏎️</div>
+<h4 class="font-title-sm text-title-sm text-on-surface mt-2">Cyber Racer</h4>
+<span class="text-caption font-caption text-tertiary">1.2M players</span>
+</div>
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-3 border border-outline-variant text-center cursor-pointer hover:shadow-md transition-shadow" onclick="showToast('Launching Word Clash...')">
+<div class="h-28 rounded-lg bg-emerald-700 flex items-center justify-center text-white text-3xl font-black">🔤</div>
+<h4 class="font-title-sm text-title-sm text-on-surface mt-2">Word Clash</h4>
+<span class="text-caption font-caption text-tertiary">580k players</span>
+</div>
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-3 border border-outline-variant text-center cursor-pointer hover:shadow-md transition-shadow" onclick="showToast('Launching Pixel Quest...')">
+<div class="h-28 rounded-lg bg-rose-700 flex items-center justify-center text-white text-3xl font-black">⚔️</div>
+<h4 class="font-title-sm text-title-sm text-on-surface mt-2">Pixel Quest</h4>
+<span class="text-caption font-caption text-tertiary">890k players</span>
+</div>
+</div>
+</section>
+<!-- ================= 13. SETTINGS VIEW ================= -->
+<section class="view-panel hidden w-full p-4 lg:p-6 max-w-4xl mx-auto space-y-6" id="view-settings">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Settings &amp; Privacy</h2>
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-5 border border-outline-variant/40 space-y-6">
+<!-- General Settings -->
+<div>
+<h3 class="font-title-md text-title-md text-on-surface mb-3">General Profile Settings</h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div>
+<span class="font-title-sm text-title-sm block">Name</span>
+<span class="text-caption font-caption text-tertiary">Kalyan Ram</span>
+</div>
+<button class="text-primary font-label-md text-label-md" onclick="openEditProfileModal()">Edit</button>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div>
+<span class="font-title-sm text-title-sm block">Username</span>
+<span class="text-caption font-caption text-tertiary">facebook.com/kalyan.ram</span>
+</div>
+<button class="text-primary font-label-md text-label-md" onclick="showToast('Username is verified')">Edit</button>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div>
+<span class="font-title-sm text-title-sm block">Contact</span>
+<span class="text-caption font-caption text-tertiary">Primary: kalyan.ram@example.com</span>
+</div>
+<button class="text-primary font-label-md text-label-md" onclick="showToast('Contact settings')">Manage</button>
+</div>
+</div>
+</div>
+<!-- Privacy Settings -->
+<div class="border-t border-surface-container-high pt-4">
+<h3 class="font-title-md text-title-md text-on-surface mb-3">Privacy &amp; Security</h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface">Who can see your future posts?</h4>
+<p class="text-caption font-caption text-tertiary">Current setting: Public</p>
+</div>
+<button class="bg-surface-container px-3 py-1.5 rounded-lg text-label-sm font-label-sm" onclick="showToast('Audience set to Public')">Edit</button>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface">Two-Factor Authentication</h4>
+<p class="text-caption font-caption text-emerald-600">Active and protecting your account</p>
+</div>
+<button class="bg-surface-container px-3 py-1.5 rounded-lg text-label-sm font-label-sm" onclick="showToast('2FA settings managed')">Configure</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= 14. SEARCH RESULTS VIEW ================= -->
+<section class="view-panel hidden w-full p-4 lg:p-6 max-w-4xl mx-auto space-y-4" id="view-search">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Search Results</h2>
+<p class="text-caption font-caption text-tertiary" id="search-query-label">Showing results for "React"</p>
+</div>
+<div class="space-y-3" id="search-results-list">
+<!-- Populated by JS -->
+</div>
+</section>
+</main>
+</div>
+<!-- ================= MOBILE BOTTOM NAVIGATION BAR ================= -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-1 pb-safe md:hidden bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant h-14">
+<button class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-bold py-1" id="mob-nav-home" onclick="navigateTo('home')">
+<span class="material-symbols-outlined text-2xl" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-caption font-caption">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1" id="mob-nav-watch" onclick="navigateTo('watch')">
+<span class="material-symbols-outlined text-2xl" data-icon="smart_display">smart_display</span>
+<span class="text-caption font-caption">Watch</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1" id="mob-nav-marketplace" onclick="navigateTo('marketplace')">
+<span class="material-symbols-outlined text-2xl" data-icon="storefront">storefront</span>
+<span class="text-caption font-caption">Marketplace</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1" id="mob-nav-groups" onclick="navigateTo('groups')">
+<span class="material-symbols-outlined text-2xl" data-icon="groups">groups</span>
+<span class="text-caption font-caption">Groups</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1" id="mob-nav-menu" onclick="navigateTo('profile')">
+<span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+<span class="text-caption font-caption">Menu</span>
+</button>
+</nav>
+<!-- ================= MODALS & OVERLAYS ================= -->
+<!-- 1. Create Post Modal -->
+<div class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 backdrop-blur-sm" id="modal-create-post">
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden border border-outline-variant">
+<!-- Modal Header -->
+<div class="px-4 py-3 border-b border-surface-container-high flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface">Create Post</h3>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-surface-variant" onclick="closeModal('modal-create-post')">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-4 space-y-3">
+<!-- Kalyan Ram Author Info -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center">
+<svg class="w-6 h-6 text-outline" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+</svg>
+</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface">Kalyan Ram</h4>
+<div class="inline-flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-md text-caption font-caption text-on-surface">
+<span class="material-symbols-outlined text-xs">public</span> Public
+            </div>
+</div>
+</div>
+<!-- Textarea -->
+<textarea class="w-full border-0 p-0 text-body-lg font-body-lg text-on-surface placeholder-tertiary focus:ring-0 resize-none outline-none" id="create-post-textarea" placeholder="What's on your mind, Kalyan?" rows="4"></textarea>
+<!-- Optional Image URL Input or Style Preset -->
+<div class="p-2 border border-outline-variant rounded-xl flex items-center justify-between">
+<span class="text-caption font-caption text-tertiary">Add to your post:</span>
+<div class="flex items-center gap-2">
+<button class="p-1.5 rounded-full hover:bg-surface-container text-emerald-500" onclick="togglePostMediaOption()"><span class="material-symbols-outlined">photo_library</span></button>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-primary" onclick="showToast('Tag people')"><span class="material-symbols-outlined">person_add</span></button>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-amber-500" onclick="showToast('Feeling/Activity picker')"><span class="material-symbols-outlined">mood</span></button>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-error" onclick="showToast('Location tag')"><span class="material-symbols-outlined">location_on</span></button>
+</div>
+</div>
+<div class="hidden" id="post-media-input-box">
+<input class="w-full text-caption font-caption border border-outline-variant rounded-lg px-3 py-1.5 focus:ring-1 focus:ring-primary" id="post-media-tag" placeholder="Media caption or style (e.g., 'Modern Architecture', 'Tech Workspace')" type="text"/>
+</div>
+<button class="w-full bg-primary-container text-on-primary py-2.5 rounded-lg font-label-md text-label-md hover:bg-secondary shadow transition-colors" onclick="submitNewPost()">
+          Post
+        </button>
+</div>
+</div>
+</div>
+<!-- 2. Story Viewer Modal -->
+<div class="hidden fixed inset-0 z-50 bg-black/95 flex flex-col items-center justify-center p-4" id="modal-story-viewer">
+<div class="w-full max-w-sm h-[580px] bg-slate-900 rounded-2xl relative overflow-hidden flex flex-col justify-between p-4 shadow-2xl border border-outline/30">
+<!-- Story Top Progress Bars -->
+<div class="w-full flex items-center gap-1">
+<div class="h-1 bg-white/40 flex-1 rounded-full overflow-hidden">
+<div class="h-full bg-white animate-[pulse_5s_ease-in-out_infinite] w-full"></div>
+</div>
+</div>
+<!-- Story Author -->
+<div class="flex items-center justify-between mt-2">
+<div class="flex items-center gap-2 text-white">
+<div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center font-bold text-xs" id="story-modal-avatar">PS</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-white" id="story-modal-author">Priya Sharma</h4>
+<span class="text-caption font-caption text-white/70">4h ago</span>
+</div>
+</div>
+<button class="text-white hover:text-outline p-1" onclick="closeModal('modal-story-viewer')"><span class="material-symbols-outlined">close</span></button>
+</div>
+<!-- Story Center Content Graphic -->
+<div class="flex-1 flex items-center justify-center text-center px-4">
+<p class="text-white font-headline-lg text-headline-lg drop-shadow-md" id="story-modal-text">
+          Weekend project successfully deployed! 🚀✨
+        </p>
+</div>
+<!-- Story Controls Bottom -->
+<div class="flex items-center gap-2 pt-2">
+<input class="flex-1 bg-white/20 rounded-full px-4 py-2 text-white placeholder-white/60 text-body-md font-body-md border-0 focus:ring-0 outline-none" placeholder="Send a reply..." type="text"/>
+<button class="text-white p-2 hover:scale-120 transition-transform" onclick="showToast('Liked story ❤️')">❤️</button>
+<button class="text-white p-2 hover:scale-120 transition-transform" onclick="showToast('Sent fire 🔥')">🔥</button>
+</div>
+</div>
+</div>
+<!-- 3. Edit Profile Modal -->
+<div class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 backdrop-blur-sm" id="modal-edit-profile">
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden border border-outline-variant">
+<div class="px-4 py-3 border-b border-surface-container-high flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface">Edit Profile</h3>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-surface-variant" onclick="closeModal('modal-edit-profile')">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<div class="p-4 space-y-4 max-h-[768px] overflow-y-auto">
+<!-- Edit Bio -->
+<div>
+<label class="block font-title-sm text-title-sm text-on-surface mb-1">Bio</label>
+<textarea class="w-full rounded-lg border-outline-variant text-body-md font-body-md focus:border-primary focus:ring-primary" id="edit-bio-input" rows="3"></textarea>
+</div>
+<!-- Edit Occupation -->
+<div>
+<label class="block font-title-sm text-title-sm text-on-surface mb-1">Workplace</label>
+<input class="w-full rounded-lg border-outline-variant text-body-md font-body-md focus:border-primary focus:ring-primary" id="edit-work-input" type="text" value="Tech Solutions Global"/>
+</div>
+<!-- Edit Location -->
+<div>
+<label class="block font-title-sm text-title-sm text-on-surface mb-1">City / Location</label>
+<input class="w-full rounded-lg border-outline-variant text-body-md font-body-md focus:border-primary focus:ring-primary" id="edit-city-input" type="text" value="Hyderabad, India"/>
+</div>
+<button class="w-full bg-primary-container text-on-primary py-2.5 rounded-lg font-label-md text-label-md hover:bg-secondary shadow transition-colors" onclick="saveProfileChanges()">
+          Save Changes
+        </button>
+</div>
+</div>
+</div>
+<!-- 4. Create Marketplace Listing Modal -->
+<div class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 backdrop-blur-sm" id="modal-create-listing">
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-2xl w-full max-w-md shadow-2xl overflow-hidden border border-outline-variant">
+<div class="px-4 py-3 border-b border-surface-container-high flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface">Create New Listing</h3>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center" onclick="closeModal('modal-create-listing')">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<div class="p-4 space-y-3">
+<input class="w-full rounded-lg border-outline-variant text-body-md font-body-md focus:border-primary focus:ring-primary" id="listing-title" placeholder="Item Title (e.g., Apple iPad Pro 11-inch)" type="text"/>
+<input class="w-full rounded-lg border-outline-variant text-body-md font-body-md focus:border-primary focus:ring-primary" id="listing-price" placeholder="Price (e.g., ₹38,000)" type="text"/>
+<input class="w-full rounded-lg border-outline-variant text-body-md font-body-md focus:border-primary focus:ring-primary" id="listing-location" placeholder="Location (e.g., Jubilee Hills, Hyderabad)" type="text"/>
+<select class="w-full rounded-lg border-outline-variant text-body-md font-body-md focus:border-primary focus:ring-primary" id="listing-category">
+<option>Electronics</option>
+<option>Vehicles</option>
+<option>Home Goods</option>
+<option>Apparel</option>
+</select>
+<button class="w-full bg-primary-container text-on-primary py-2.5 rounded-lg font-label-md text-label-md hover:bg-secondary shadow" onclick="submitNewListing()">
+          Publish Listing
+        </button>
+</div>
+</div>
+</div>
+<!-- 5. Create Group Modal -->
+<div class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 backdrop-blur-sm" id="modal-create-group">
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-2xl w-full max-w-md shadow-2xl overflow-hidden border border-outline-variant">
+<div class="px-4 py-3 border-b border-surface-container-high flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface">Create Group</h3>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center" onclick="closeModal('modal-create-group')">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<div class="p-4 space-y-3">
+<input class="w-full rounded-lg border-outline-variant text-body-md font-body-md focus:border-primary focus:ring-primary" id="group-name-input" placeholder="Name your group" type="text"/>
+<select class="w-full rounded-lg border-outline-variant text-body-md font-body-md focus:border-primary focus:ring-primary" id="group-privacy-select">
+<option>Public · Anyone can see who's in the group</option>
+<option>Private · Only members can see who's in the group</option>
+</select>
+<button class="w-full bg-primary-container text-on-primary py-2.5 rounded-lg font-label-md text-label-md hover:bg-secondary shadow" onclick="submitNewGroup()">
+          Create Group
+        </button>
+</div>
+</div>
+</div>
+<!-- 6. Share Post Dialog -->
+<div class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 backdrop-blur-sm" id="modal-share">
+<div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-2xl w-full max-w-md shadow-2xl overflow-hidden border border-outline-variant">
+<div class="px-4 py-3 border-b border-surface-container-high flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface">Share</h3>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center" onclick="closeModal('modal-share')">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<div class="p-4 space-y-2">
+<button class="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-surface-container-high text-left" onclick="executeShare('feed')">
+<span class="material-symbols-outlined text-primary text-2xl">feed</span>
+<div>
+<h4 class="font-title-sm text-title-sm">Share to Feed</h4>
+<p class="text-caption font-caption text-tertiary">Share now to your personal timeline</p>
+</div>
+</button>
+<button class="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-surface-container-high text-left" onclick="executeShare('messenger')">
+<span class="material-symbols-outlined text-primary text-2xl">send</span>
+<div>
+<h4 class="font-title-sm text-title-sm">Send in Messenger</h4>
+<p class="text-caption font-caption text-tertiary">Send privately to a friend</p>
+</div>
+</button>
+<button class="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-surface-container-high text-left" onclick="executeShare('group')">
+<span class="material-symbols-outlined text-primary text-2xl">groups</span>
+<div>
+<h4 class="font-title-sm text-title-sm">Share to a Group</h4>
+<p class="text-caption font-caption text-tertiary">Post to a community you manage or belong to</p>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Global Toast Notification Component -->
+<div class="fixed bottom-16 md:bottom-6 right-6 z-50 pointer-events-none flex flex-col gap-2" id="toast-container"></div>
+<!-- ================= CLIENT JAVASCRIPT APPLICATION CORE ================= -->
+<script>
+    /* -------------------------------------------------------------
+       STATE MANAGEMENT & LOCAL STORAGE INITIALIZATION
+    -------------------------------------------------------------- */
+    const STORAGE_KEY_POSTS = "fb_kalyan_posts_v1";
+    const STORAGE_KEY_SAVED = "fb_kalyan_saved_v1";
+    const STORAGE_KEY_CHATS = "fb_kalyan_chats_v1";
+    const STORAGE_KEY_NOTIFS = "fb_kalyan_notifs_v1";
+    const STORAGE_KEY_PROFILE = "fb_kalyan_profile_v1";
+    const STORAGE_KEY_GROUPS = "fb_kalyan_groups_v1";
+    const STORAGE_KEY_MARKET = "fb_kalyan_marketplace_v1";
+
+    // Default Seed Posts
+    const INITIAL_POSTS = [
+      {
+        id: "post-101",
+        authorName: "Kalyan Ram",
+        isSelf: true,
+        timeAgo: "2 hours ago",
+        privacy: "public",
+        content: "Thrilled to share our team's research paper on deterministic reactive state engines at scale! Clean separation of concerns makes large distributed clients a joy to construct. Check out the repository and give feedback.",
+        cardStyle: "gradient-blue",
+        likes: 42,
+        isLiked: false,
+        isSaved: false,
+        comments: [
+          { author: "Priya Sharma", text: "Brilliant breakdown Kalyan! Testing it right away on our test clusters." },
+          { author: "Vikram Singh", text: "Great architectural patterns, love the micro-state management." }
+        ]
+      },
+      {
+        id: "post-102",
+        authorName: "Anita Rao",
+        isSelf: false,
+        timeAgo: "5 hours ago",
+        privacy: "public",
+        content: "Hyderabad Design Systems Meetup was electric yesterday! Over 120 designers and UI developers gathered at HITEC City to discuss fluid typography and high-density social networks.",
+        cardStyle: "gradient-emerald",
+        likes: 88,
+        isLiked: false,
+        isSaved: false,
+        comments: [
+          { author: "Rahul Verma", text: "The presentation on design tokens was gold!" }
+        ]
+      },
+      {
+        id: "post-103",
+        authorName: "Vikram Singh",
+        isSelf: false,
+        timeAgo: "Yesterday at 6:40 PM",
+        privacy: "public",
+        content: "Weekend bike ride across Ananthagiri Hills! Nothing beats clear skies, windy roads, and South Indian filter coffee after a 70km pedal. ☕🚴",
+        cardStyle: "gradient-sunset",
+        likes: 124,
+        isLiked: false,
+        isSaved: false,
+        comments: [
+          { author: "Kalyan Ram", text: "Next time I'm joining the pack Vikram!" }
+        ]
+      }
+    ];
+
+    const INITIAL_CONTACTS = [
+      { id: "c1", name: "Priya Sharma", initials: "PS", color: "bg-blue-600", online: true, lastMsg: "See you at the sync!" },
+      { id: "c2", name: "Vikram Singh", initials: "VS", color: "bg-emerald-600", online: true, lastMsg: "Sounds good brother" },
+      { id: "c3", name: "Anita Rao", initials: "AR", color: "bg-pink-600", online: false, lastMsg: "Sent over the Figma tokens" },
+      { id: "c4", name: "Rahul Verma", initials: "RV", color: "bg-amber-600", online: true, lastMsg: "Let's review the PR" },
+      { id: "c5", name: "Sunita Reddy", initials: "SR", color: "bg-purple-600", online: false, lastMsg: "Happy Birthday Kalyan!" }
+    ];
+
+    const INITIAL_MARKETPLACE = [
+      { id: "m1", title: "Apple MacBook Pro M3 (16GB, 512GB)", price: "₹1,24,000", location: "Gachibowli, Hyderabad", category: "Electronics", style: "from-blue-600 to-indigo-800" },
+      { id: "m2", title: "Trek Marlin 7 Mountain Bike", price: "₹38,500", location: "Jubilee Hills, Hyderabad", category: "Vehicles", style: "from-emerald-600 to-teal-800" },
+      { id: "m3", title: "Ergonomic Mesh Office Chair", price: "₹6,800", location: "Madhapur, Hyderabad", category: "Home Goods", style: "from-purple-600 to-pink-800" },
+      { id: "m4", title: "Sony WH-1000XM5 Headphones", price: "₹19,000", location: "Banjara Hills, Hyderabad", category: "Electronics", style: "from-slate-700 to-slate-900" }
+    ];
+
+    const INITIAL_GROUPS = [
+      { id: "g1", name: "Hyderabad React & TypeScript Developers", members: "18.4K members", joined: true, desc: "A vibrant community for frontend architects, React developers, and web engineers." },
+      { id: "g2", name: "South India Photography Collective", members: "42.1K members", joined: false, desc: "Sharing landscape, street, and architectural captures across South India." },
+      { id: "g3", name: "HITEC City Cyclists & Runners", members: "9.2K members", joined: true, desc: "Morning rides and fitness group based around Hyderabad tech corridor." }
+    ];
+
+    const INITIAL_FRIEND_REQUESTS = [
+      { id: "fr1", name: "Divya Patel", mutual: "12 mutual friends", initials: "DP" },
+      { id: "fr2", name: "Arjun Reddy", mutual: "4 mutual friends", initials: "AR" }
+    ];
+
+    let appState = {
+      currentView: 'home',
+      posts: JSON.parse(localStorage.getItem(STORAGE_KEY_POSTS)) || INITIAL_POSTS,
+      savedIds: JSON.parse(localStorage.getItem(STORAGE_KEY_SAVED)) || ["post-101"],
+      marketplace: JSON.parse(localStorage.getItem(STORAGE_KEY_MARKET)) || INITIAL_MARKETPLACE,
+      groups: JSON.parse(localStorage.getItem(STORAGE_KEY_GROUPS)) || INITIAL_GROUPS,
+      friendRequests: INITIAL_FRIEND_REQUESTS,
+      activeChatUser: INITIAL_CONTACTS[0],
+      chatMessages: {
+        "Priya Sharma": [
+          { sender: "them", text: "Hey Kalyan! Did you inspect the new state migration PR?" },
+          { sender: "me", text: "Yes Priya! Left a few minor inline comments regarding garbage collection on unmount." },
+          { sender: "them", text: "Awesome! Merging right now for the staging build." }
+        ]
+      },
+      notifications: [
+        { id: 1, text: "Priya Sharma commented on your post.", time: "10m ago", read: false },
+        { id: 2, text: "Vikram Singh reacted to your research paper update.", time: "1h ago", read: false },
+        { id: 3, text: "Anita Rao invited you to join Design Systems Hyderabad.", time: "2h ago", read: false },
+        { id: 4, text: "Reminder: HITEC City Tech Fest starts this Saturday.", time: "1d ago", read: true }
+      ],
+      bio: "Software Architect & Open Source Contributor. Passionate about web engineering.",
+      darkMode: false
+    };
+
+    function savePosts() {
+      localStorage.setItem(STORAGE_KEY_POSTS, JSON.stringify(appState.posts));
+    }
+    function saveSaved() {
+      localStorage.setItem(STORAGE_KEY_SAVED, JSON.stringify(appState.savedIds));
+    }
+
+    /* -------------------------------------------------------------
+       SPA ROUTING & NAVIGATION ENGINE
+    -------------------------------------------------------------- */
+    function navigateTo(viewId) {
+      // Hide all panels
+      document.querySelectorAll('.view-panel').forEach(panel => {
+        panel.classList.add('hidden');
+      });
+
+      // Show destination panel
+      const targetPanel = document.getElementById(`view-${viewId}`);
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+        appState.currentView = viewId;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Update Top Nav Tab States
+      const navTabs = ['home', 'friends', 'watch', 'marketplace', 'groups', 'gaming'];
+      navTabs.forEach(tab => {
+        const el = document.getElementById(`nav-tab-${tab}`);
+        if (el) {
+          if (tab === viewId) {
+            el.className = "border-b-4 border-primary text-primary dark:text-primary-fixed flex items-center justify-center h-full px-5 lg:px-7 transition-colors";
+          } else {
+            el.className = "text-tertiary dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-container rounded-lg flex items-center justify-center h-12 px-5 lg:px-7 transition-colors";
+          }
+        }
+      });
+
+      // Update Side Nav Tab Active States
+      const sideTabs = ['friends', 'feeds', 'groups', 'marketplace', 'watch', 'memories', 'saved', 'events', 'gaming', 'settings'];
+      sideTabs.forEach(sTab => {
+        const sideEl = document.getElementById(`side-tab-${sTab}`);
+        if (sideEl) {
+          const isActive = (sTab === viewId) || (sTab === 'feeds' && viewId === 'home');
+          if (isActive) {
+            sideEl.className = "bg-surface-container-high dark:bg-surface-container font-semibold text-on-surface dark:text-inverse-on-surface rounded-xl px-3 py-2.5 flex items-center gap-3";
+          } else {
+            sideEl.className = "text-on-surface dark:text-inverse-on-surface hover:bg-surface-container-high dark:hover:bg-surface-container rounded-xl px-3 py-2.5 flex items-center gap-3 transition-colors active:scale-[0.98]";
+          }
+        }
+      });
+
+      // Update Mobile Bottom Nav States
+      const mobTabs = ['home', 'watch', 'marketplace', 'groups', 'menu'];
+      mobTabs.forEach(mTab => {
+        const mobEl = document.getElementById(`mob-nav-${mTab}`);
+        if (mobEl) {
+          const isActive = (mTab === viewId) || (mTab === 'menu' && viewId === 'profile');
+          if (isActive) {
+            mobEl.className = "flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-bold py-1";
+          } else {
+            mobEl.className = "flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1";
+          }
+        }
+      });
+
+      // Context renders
+      if (viewId === 'home') renderHomeFeed();
+      if (viewId === 'profile') renderProfilePosts();
+      if (viewId === 'saved') renderSavedItems();
+      if (viewId === 'friends') renderFriendsView();
+      if (viewId === 'marketplace') renderMarketplaceView();
+      if (viewId === 'groups') renderGroupsView();
+      if (viewId === 'messenger') renderMessengerView();
+      if (viewId === 'notifications') renderFullNotifications();
+
+      closeAllDropdowns();
+    }
+
+    /* -------------------------------------------------------------
+       FEED & POST RENDERING ENGINE
+    -------------------------------------------------------------- */
+    function renderHomeFeed() {
+      const container = document.getElementById('news-feed-posts');
+      if (!container) return;
+
+      container.innerHTML = appState.posts.map(post => generatePostCardHTML(post)).join('');
+    }
+
+    function renderProfilePosts() {
+      const container = document.getElementById('profile-posts-stream');
+      if (!container) return;
+      const kalyanPosts = appState.posts.filter(p => p.isSelf);
+      if (kalyanPosts.length === 0) {
+        container.innerHTML = `<div class="p-8 text-center bg-surface-container-lowest rounded-xl text-tertiary">No timeline posts yet. Create your first post!</div>`;
+      } else {
+        container.innerHTML = kalyanPosts.map(post => generatePostCardHTML(post)).join('');
+      }
+    }
+
+    function generatePostCardHTML(post) {
+      const isSaved = appState.savedIds.includes(post.id);
+      return `
+        <article class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl shadow-sm border border-outline-variant/40 overflow-hidden transition-all" id="post-card-${post.id}">
+          <!-- Header -->
+          <div class="p-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              ${post.isSelf ? `
+                <div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center">
+                  <svg class="w-6 h-6 text-outline" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                  </svg>
+                </div>
+              ` : `
+                <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary font-bold flex items-center justify-center text-sm shadow">
+                  ${post.authorName.split(' ').map(n=>n[0]).join('')}
+                </div>
+              `}
+              <div>
+                <h4 class="font-title-sm text-title-sm text-on-surface hover:underline cursor-pointer" onclick="${post.isSelf ? "navigateTo('profile')" : ""}">${post.authorName}</h4>
+                <div class="flex items-center gap-1 text-caption font-caption text-tertiary">
+                  <span>${post.timeAgo}</span>
+                  <span>·</span>
+                  <span class="material-symbols-outlined text-xs">public</span>
+                </div>
+              </div>
+            </div>
+            <!-- More Utility Menu -->
+            <div class="relative">
+              <button onclick="togglePostMenu('${post.id}')" class="w-8 h-8 rounded-full hover:bg-surface-container-high flex items-center justify-center text-tertiary">
+                <span class="material-symbols-outlined text-lg">more_horiz</span>
+              </button>
+              <div id="post-menu-${post.id}" class="hidden absolute right-0 mt-1 w-44 bg-surface-container-lowest dark:bg-inverse-surface border border-outline-variant rounded-xl shadow-xl p-1 z-30">
+                <button onclick="toggleSavePost('${post.id}')" class="w-full text-left px-3 py-2 text-label-sm font-label-sm rounded-lg hover:bg-surface-container-high flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sm">${isSaved ? 'bookmark_remove' : 'bookmark'}</span>
+                  <span>${isSaved ? 'Unsave Post' : 'Save Post'}</span>
+                </button>
+                ${post.isSelf ? `
+                  <button onclick="deletePost('${post.id}')" class="w-full text-left px-3 py-2 text-label-sm font-label-sm rounded-lg hover:bg-error-container text-error flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">delete</span>
+                    <span>Delete Post</span>
+                  </button>
+                ` : ''}
+              </div>
+            </div>
+          </div>
+
+          <!-- Post Content -->
+          <div class="px-4 pb-3">
+            <p class="text-body-lg font-body-lg text-on-surface whitespace-pre-line">${post.content}</p>
+          </div>
+
+          <!-- Rich Decorative Banner/Card -->
+          ${post.cardStyle ? `
+            <div class="w-full h-44 bg-gradient-to-r from-blue-700 via-primary to-indigo-800 flex items-center justify-center text-white p-6 relative overflow-hidden">
+              <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 16px 16px;"></div>
+              <div class="text-center z-10">
+                <span class="material-symbols-outlined text-4xl mb-1">code_blocks</span>
+                <p class="font-bold text-sm tracking-wide uppercase opacity-90">Meta System Engineering Insights</p>
+              </div>
+            </div>
+          ` : ''}
+
+          <!-- Reactions Count Bar -->
+          <div class="px-4 py-2 flex items-center justify-between text-caption font-caption text-tertiary border-b border-surface-container-high/60">
+            <div class="flex items-center gap-1.5">
+              <span class="w-4 h-4 rounded-full bg-primary-container text-white flex items-center justify-center text-[10px]">👍</span>
+              <span id="likes-count-${post.id}">${post.likes}</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span>${post.comments.length} comments</span>
+              <span>1 share</span>
+            </div>
+          </div>
+
+          <!-- Post Action Buttons (Like, Comment, Share) -->
+          <div class="grid grid-cols-3 p-1 border-b border-surface-container-high/60">
+            <button onclick="toggleLikePost('${post.id}')" id="btn-like-${post.id}" class="py-2 rounded-lg flex items-center justify-center gap-2 font-label-md text-label-md transition-colors ${post.isLiked ? 'text-primary font-bold' : 'text-tertiary hover:bg-surface-container-high'}">
+              <span class="material-symbols-outlined text-xl ${post.isLiked ? 'icon-fill' : ''}">thumb_up</span>
+              <span>Like</span>
+            </button>
+            <button onclick="focusCommentInput('${post.id}')" class="py-2 rounded-lg flex items-center justify-center gap-2 text-tertiary hover:bg-surface-container-high font-label-md text-label-md transition-colors">
+              <span class="material-symbols-outlined text-xl">chat_bubble</span>
+              <span>Comment</span>
+            </button>
+            <button onclick="openShareModal('${post.id}')" class="py-2 rounded-lg flex items-center justify-center gap-2 text-tertiary hover:bg-surface-container-high font-label-md text-label-md transition-colors">
+              <span class="material-symbols-outlined text-xl">share</span>
+              <span>Share</span>
+            </button>
+          </div>
+
+          <!-- Inline Comments Section -->
+          <div class="p-3 bg-surface-container-low/40 space-y-2">
+            <!-- Comments List -->
+            <div id="comments-list-${post.id}" class="space-y-2">
+              ${post.comments.map(c => `
+                <div class="flex items-start gap-2">
+                  <div class="w-8 h-8 rounded-full bg-surface-container-high font-bold text-xs flex items-center justify-center text-on-surface flex-shrink-0">
+                    ${c.author.split(' ').map(n=>n[0]).join('')}
+                  </div>
+                  <div class="bg-surface-container-high dark:bg-surface-container rounded-2xl px-3 py-2 max-w-[85%]">
+                    <span class="font-title-sm text-title-sm text-on-surface block cursor-pointer">${c.author}</span>
+                    <p class="text-body-md font-body-md text-on-surface">${c.text}</p>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+
+            <!-- Comment Input -->
+            <div class="flex items-center gap-2 pt-1">
+              <div class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-outline" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </div>
+              <div class="flex-1 flex items-center bg-surface-container-high rounded-full px-3 py-1.5">
+                <input type="text" id="comment-input-${post.id}" placeholder="Write a comment..." class="bg-transparent border-0 p-0 text-body-md font-body-md w-full focus:ring-0 outline-none" onkeydown="if(event.key === 'Enter') submitComment('${post.id}')">
+                <button onclick="submitComment('${post.id}')" class="text-primary hover:opacity-80 p-1"><span class="material-symbols-outlined text-lg">send</span></button>
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    /* -------------------------------------------------------------
+       INTERACTIVE ACTIONS (Like, Comment, Post Creation, Delete)
+    -------------------------------------------------------------- */
+    function toggleLikePost(postId) {
+      const post = appState.posts.find(p => p.id === postId);
+      if (!post) return;
+      post.isLiked = !post.isLiked;
+      post.likes += post.isLiked ? 1 : -1;
+      savePosts();
+
+      const btn = document.getElementById(`btn-like-${postId}`);
+      const counter = document.getElementById(`likes-count-${postId}`);
+      if (btn && counter) {
+        counter.textContent = post.likes;
+        if (post.isLiked) {
+          btn.className = "py-2 rounded-lg flex items-center justify-center gap-2 font-label-md text-label-md transition-colors text-primary font-bold";
+          btn.querySelector('.material-symbols-outlined').classList.add('icon-fill');
+        } else {
+          btn.className = "py-2 rounded-lg flex items-center justify-center gap-2 font-label-md text-label-md transition-colors text-tertiary hover:bg-surface-container-high";
+          btn.querySelector('.material-symbols-outlined').classList.remove('icon-fill');
+        }
+      }
+    }
+
+    function focusCommentInput(postId) {
+      const input = document.getElementById(`comment-input-${postId}`);
+      if (input) input.focus();
+    }
+
+    function submitComment(postId) {
+      const input = document.getElementById(`comment-input-${postId}`);
+      if (!input || !input.value.trim()) return;
+
+      const post = appState.posts.find(p => p.id === postId);
+      if (!post) return;
+
+      const newComment = {
+        author: "Kalyan Ram",
+        text: input.value.trim()
+      };
+      post.comments.push(newComment);
+      savePosts();
+      input.value = "";
+
+      const list = document.getElementById(`comments-list-${postId}`);
+      if (list) {
+        const item = document.createElement('div');
+        item.className = "flex items-start gap-2";
+        item.innerHTML = `
+          <div class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-outline" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </div>
+          <div class="bg-surface-container-high dark:bg-surface-container rounded-2xl px-3 py-2 max-w-[85%]">
+            <span class="font-title-sm text-title-sm text-on-surface block">Kalyan Ram</span>
+            <p class="text-body-md font-body-md text-on-surface">${newComment.text}</p>
+          </div>
+        `;
+        list.appendChild(item);
+      }
+      showToast("Comment posted!");
+    }
+
+    function toggleSavePost(postId) {
+      const idx = appState.savedIds.indexOf(postId);
+      if (idx > -1) {
+        appState.savedIds.splice(idx, 1);
+        showToast("Removed from Saved items.");
+      } else {
+        appState.savedIds.push(postId);
+        showToast("Post saved successfully!");
+      }
+      saveSaved();
+      closePostMenus();
+      if (appState.currentView === 'home') renderHomeFeed();
+      if (appState.currentView === 'saved') renderSavedItems();
+    }
+
+    function deletePost(postId) {
+      appState.posts = appState.posts.filter(p => p.id !== postId);
+      savePosts();
+      showToast("Post deleted from your timeline.");
+      renderHomeFeed();
+      renderProfilePosts();
+    }
+
+    function togglePostMenu(postId) {
+      const menu = document.getElementById(`post-menu-${postId}`);
+      if (menu) {
+        const isClosed = menu.classList.contains('hidden');
+        closePostMenus();
+        if (isClosed) menu.classList.remove('hidden');
+      }
+    }
+    function closePostMenus() {
+      document.querySelectorAll('[id^="post-menu-"]').forEach(m => m.classList.add('hidden'));
+    }
+
+    function openCreatePostModal(flavor) {
+      const modal = document.getElementById('modal-create-post');
+      const textarea = document.getElementById('create-post-textarea');
+      if (modal) {
+        modal.classList.remove('hidden');
+        if (flavor === 'live') textarea.value = "Starting a live developer Q&A session! Drop your questions below.";
+        else if (flavor === 'feeling') textarea.value = "Feeling inspired 💡 building modern social apps.";
+        else if (flavor === 'story') textarea.value = "Sharing a quick highlight for Kalyan's story!";
+        textarea.focus();
+      }
+    }
+
+    function submitNewPost() {
+      const textarea = document.getElementById('create-post-textarea');
+      if (!textarea || !textarea.value.trim()) {
+        showToast("Please enter text for your post.");
+        return;
+      }
+
+      const newPost = {
+        id: "post-" + Date.now(),
+        authorName: "Kalyan Ram",
+        isSelf: true,
+        timeAgo: "Just now",
+        privacy: "public",
+        content: textarea.value.trim(),
+        cardStyle: null,
+        likes: 1,
+        isLiked: true,
+        isSaved: false,
+        comments: []
+      };
+
+      appState.posts.unshift(newPost);
+      savePosts();
+      textarea.value = "";
+      closeModal('modal-create-post');
+      showToast("Post published to your feed!");
+      renderHomeFeed();
+      renderProfilePosts();
+    }
+
+    function togglePostMediaOption() {
+      const box = document.getElementById('post-media-input-box');
+      if (box) box.classList.toggle('hidden');
+    }
+
+    /* -------------------------------------------------------------
+       STORIES VIEWER ENGINE
+    -------------------------------------------------------------- */
+    function openStoryViewer(author, text, theme) {
+      const modal = document.getElementById('modal-story-viewer');
+      const authorEl = document.getElementById('story-modal-author');
+      const textEl = document.getElementById('story-modal-text');
+      const avatarEl = document.getElementById('story-modal-avatar');
+
+      if (modal && authorEl && textEl) {
+        authorEl.textContent = author;
+        textEl.textContent = text;
+        avatarEl.textContent = author.split(' ').map(n=>n[0]).join('');
+        modal.classList.remove('hidden');
+      }
+    }
+
+    /* -------------------------------------------------------------
+       FRIENDS VIEW LOGIC
+    -------------------------------------------------------------- */
+    function renderFriendsView() {
+      const container = document.getElementById('friends-grid-container');
+      if (!container) return;
+
+      container.innerHTML = appState.friendRequests.map(fr => `
+        <div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl overflow-hidden border border-outline-variant shadow-sm flex flex-col justify-between" id="fr-card-${fr.id}">
+          <div class="h-36 bg-surface-container-high flex items-center justify-center">
+            <div class="w-16 h-16 rounded-full bg-primary-container text-white font-bold text-xl flex items-center justify-center">
+              ${fr.initials}
+            </div>
+          </div>
+          <div class="p-3">
+            <h4 class="font-title-sm text-title-sm text-on-surface">${fr.name}</h4>
+            <p class="text-caption font-caption text-tertiary">${fr.mutual}</p>
+            <div class="mt-3 space-y-2">
+              <button onclick="confirmFriend('${fr.id}')" class="w-full bg-primary-container text-on-primary py-1.5 rounded-lg font-label-md text-label-md hover:bg-secondary transition-colors">
+                Confirm
+              </button>
+              <button onclick="deleteFriendRequest('${fr.id}')" class="w-full bg-surface-container-high text-on-surface py-1.5 rounded-lg font-label-md text-label-md hover:bg-surface-variant transition-colors">
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function confirmFriend(id) {
+      appState.friendRequests = appState.friendRequests.filter(f => f.id !== id);
+      showToast("Friend request accepted!");
+      renderFriendsView();
+    }
+    function deleteFriendRequest(id) {
+      appState.friendRequests = appState.friendRequests.filter(f => f.id !== id);
+      showToast("Friend request deleted.");
+      renderFriendsView();
+    }
+
+    function switchFriendsTab(tab) {
+      ['requests', 'suggestions', 'all', 'birthdays'].forEach(t => {
+        const btn = document.getElementById(`ftab-${t}`);
+        if (btn) {
+          if (t === tab) {
+            btn.className = "px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-sm";
+          } else {
+            btn.className = "px-4 py-2 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md";
+          }
+        }
+      });
+      showToast(`Showing ${tab} tab`);
+    }
+
+    /* -------------------------------------------------------------
+       MARKETPLACE VIEW LOGIC
+    -------------------------------------------------------------- */
+    function renderMarketplaceView() {
+      const grid = document.getElementById('marketplace-grid');
+      if (!grid) return;
+
+      grid.innerHTML = appState.marketplace.map(item => `
+        <div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl overflow-hidden border border-outline-variant shadow-sm group cursor-pointer hover:shadow-md transition-shadow" onclick="showProductDetails('${item.id}')">
+          <div class="h-36 bg-gradient-to-tr ${item.style} flex items-center justify-center text-white font-bold p-3 text-center">
+            ${item.title.split(' ')[0]} ${item.title.split(' ')[1] || ''}
+          </div>
+          <div class="p-3">
+            <h4 class="font-title-sm text-title-sm text-on-surface font-bold text-primary">${item.price}</h4>
+            <p class="text-body-md font-body-md text-on-surface line-clamp-1">${item.title}</p>
+            <p class="text-caption font-caption text-tertiary mt-1">${item.location}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openListingModal() {
+      const modal = document.getElementById('modal-create-listing');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function submitNewListing() {
+      const title = document.getElementById('listing-title').value.trim();
+      const price = document.getElementById('listing-price').value.trim();
+      const loc = document.getElementById('listing-location').value.trim() || "Hyderabad";
+      const cat = document.getElementById('listing-category').value;
+
+      if (!title || !price) {
+        showToast("Please provide product title and price.");
+        return;
+      }
+
+      const item = {
+        id: "m-" + Date.now(),
+        title,
+        price,
+        location: loc,
+        category: cat,
+        style: "from-blue-600 to-indigo-700"
+      };
+
+      appState.marketplace.unshift(item);
+      localStorage.setItem(STORAGE_KEY_MARKET, JSON.stringify(appState.marketplace));
+      closeModal('modal-create-listing');
+      showToast("Listing created on Marketplace!");
+      renderMarketplaceView();
+    }
+
+    function showProductDetails(id) {
+      const item = appState.marketplace.find(m => m.id === id);
+      if (item) {
+        showToast(`Listing: ${item.title} (${item.price}). Clicked Message Seller.`);
+      }
+    }
+
+    /* -------------------------------------------------------------
+       GROUPS VIEW LOGIC
+    -------------------------------------------------------------- */
+    function renderGroupsView() {
+      const cont = document.getElementById('groups-container');
+      if (!cont) return;
+
+      cont.innerHTML = appState.groups.map(g => `
+        <div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-4 border border-outline-variant shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <h4 class="font-title-md text-title-md text-on-surface">${g.name}</h4>
+              <span class="text-caption font-caption text-tertiary">${g.members}</span>
+            </div>
+            <p class="text-body-md font-body-md text-tertiary mt-2">${g.desc}</p>
+          </div>
+          <div class="mt-4 flex items-center justify-between pt-3 border-t border-surface-container-high">
+            <button onclick="toggleGroupJoin('${g.id}')" class="px-4 py-1.5 rounded-lg font-label-md text-label-md ${g.joined ? 'bg-surface-container text-on-surface' : 'bg-primary-container text-on-primary'}">
+              ${g.joined ? 'Joined' : 'Join Group'}
+            </button>
+            <button onclick="showToast('Opened group community')" class="text-primary font-label-md text-label-md hover:underline">Visit Group</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function toggleGroupJoin(id) {
+      const g = appState.groups.find(group => group.id === id);
+      if (g) {
+        g.joined = !g.joined;
+        localStorage.setItem(STORAGE_KEY_GROUPS, JSON.stringify(appState.groups));
+        showToast(g.joined ? `Joined ${g.name}` : `Left group`);
+        renderGroupsView();
+      }
+    }
+
+    function openGroupModal() {
+      document.getElementById('modal-create-group').classList.remove('hidden');
+    }
+    function submitNewGroup() {
+      const name = document.getElementById('group-name-input').value.trim();
+      if (!name) return;
+      appState.groups.unshift({
+        id: "g-" + Date.now(),
+        name,
+        members: "1 member (You)",
+        joined: true,
+        desc: "Newly created group on Facebook."
+      });
+      closeModal('modal-create-group');
+      showToast("Group created successfully!");
+      renderGroupsView();
+    }
+
+    /* -------------------------------------------------------------
+       SAVED POSTS VIEW
+    -------------------------------------------------------------- */
+    function renderSavedItems() {
+      const cont = document.getElementById('saved-items-container');
+      if (!cont) return;
+
+      const savedPosts = appState.posts.filter(p => appState.savedIds.includes(p.id));
+      if (savedPosts.length === 0) {
+        cont.innerHTML = `<div class="p-8 text-center bg-surface-container-lowest rounded-xl text-tertiary">No saved items yet. Click the three dots on any post to bookmark it.</div>`;
+      } else {
+        cont.innerHTML = savedPosts.map(p => `
+          <div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-4 border border-outline-variant shadow-sm flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-3xl">bookmark</span>
+              <div>
+                <h4 class="font-title-sm text-title-sm text-on-surface">${p.authorName}'s Post</h4>
+                <p class="text-body-md font-body-md text-tertiary line-clamp-1">${p.content}</p>
+              </div>
+            </div>
+            <button onclick="toggleSavePost('${p.id}')" class="text-error font-label-md text-label-md hover:underline">Unsave</button>
+          </div>
+        `).join('');
+      }
+    }
+
+    /* -------------------------------------------------------------
+       MESSENGER LOGIC
+    -------------------------------------------------------------- */
+    function renderMessengerView() {
+      const list = document.getElementById('messenger-threads-list');
+      if (!list) return;
+
+      list.innerHTML = INITIAL_CONTACTS.map(contact => `
+        <div onclick="selectActiveChat('${contact.name}', '${contact.initials}')" class="flex items-center gap-3 p-3 rounded-xl hover:bg-surface-container-high cursor-pointer transition-colors ${appState.activeChatUser.name === contact.name ? 'bg-surface-container-high' : ''}">
+          <div class="relative">
+            <div class="w-12 h-12 rounded-full ${contact.color} text-white font-bold flex items-center justify-center">
+              ${contact.initials}
+            </div>
+            ${contact.online ? `<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>` : ''}
+          </div>
+          <div class="flex-1 min-w-0">
+            <h4 class="font-title-sm text-title-sm text-on-surface truncate">${contact.name}</h4>
+            <p class="text-caption font-caption text-tertiary truncate">${contact.lastMsg}</p>
+          </div>
+        </div>
+      `).join('');
+
+      renderActiveChatMessages();
+    }
+
+    function selectActiveChat(name, initials) {
+      appState.activeChatUser = { name, initials };
+      document.getElementById('active-chat-name').textContent = name;
+      document.getElementById('active-chat-avatar').textContent = initials;
+      renderActiveChatMessages();
+    }
+
+    function renderActiveChatMessages() {
+      const cont = document.getElementById('active-messages-container');
+      if (!cont) return;
+      const msgs = appState.chatMessages[appState.activeChatUser.name] || [
+        { sender: "them", text: `Hi Kalyan! How's your week going?` }
+      ];
+
+      cont.innerHTML = msgs.map(m => `
+        <div class="flex ${m.sender === 'me' ? 'justify-end' : 'justify-start'}">
+          <div class="max-w-[75%] rounded-2xl px-4 py-2 text-body-md font-body-md ${m.sender === 'me' ? 'bg-primary-container text-on-primary' : 'bg-surface-container-lowest dark:bg-inverse-surface text-on-surface border border-outline-variant'} shadow-sm">
+            ${m.text}
+          </div>
+        </div>
+      `).join('');
+      cont.scrollTop = cont.scrollHeight;
+    }
+
+    function sendActiveMessage() {
+      const input = document.getElementById('messenger-input');
+      if (!input || !input.value.trim()) return;
+
+      const userName = appState.activeChatUser.name;
+      if (!appState.chatMessages[userName]) {
+        appState.chatMessages[userName] = [];
+      }
+      appState.chatMessages[userName].push({
+        sender: "me",
+        text: input.value.trim()
+      });
+      input.value = "";
+      renderActiveChatMessages();
+    }
+
+    /* -------------------------------------------------------------
+       NOTIFICATIONS ENGINE
+    -------------------------------------------------------------- */
+    function renderTopNotifications() {
+      const cont = document.getElementById('notifications-dropdown-list');
+      if (!cont) return;
+
+      cont.innerHTML = appState.notifications.map(n => `
+        <div class="p-2 rounded-xl hover:bg-surface-container-high flex items-center justify-between cursor-pointer ${n.read ? 'opacity-70' : 'bg-blue-50/50'}">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary text-xl">notifications</span>
+            <div>
+              <p class="text-body-md font-body-md text-on-surface">${n.text}</p>
+              <span class="text-caption font-caption text-tertiary">${n.time}</span>
+            </div>
+          </div>
+          ${!n.read ? `<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>` : ''}
+        </div>
+      `).join('');
+    }
+
+    function renderFullNotifications() {
+      const cont = document.getElementById('full-notifications-list');
+      if (!cont) return;
+
+      cont.innerHTML = appState.notifications.map(n => `
+        <div class="p-4 flex items-center justify-between hover:bg-surface-container-high/50 cursor-pointer ${n.read ? '' : 'bg-blue-50/40'}">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-100 text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined">mark_chat_unread</span>
+            </div>
+            <div>
+              <h4 class="font-title-sm text-title-sm text-on-surface">${n.text}</h4>
+              <span class="text-caption font-caption text-tertiary">${n.time}</span>
+            </div>
+          </div>
+          <button class="text-tertiary hover:text-on-surface"><span class="material-symbols-outlined">more_horiz</span></button>
+        </div>
+      `).join('');
+    }
+
+    function markAllNotificationsRead() {
+      appState.notifications.forEach(n => n.read = true);
+      const badge = document.getElementById('notification-badge');
+      if (badge) badge.classList.add('hidden');
+      renderTopNotifications();
+      renderFullNotifications();
+      showToast("All notifications marked as read.");
+    }
+
+    /* -------------------------------------------------------------
+       PROFILE EDIT MODAL
+    -------------------------------------------------------------- */
+    function openEditProfileModal() {
+      const modal = document.getElementById('modal-edit-profile');
+      const bioInput = document.getElementById('edit-bio-input');
+      if (modal && bioInput) {
+        bioInput.value = appState.bio;
+        modal.classList.remove('hidden');
+      }
+    }
+    function saveProfileChanges() {
+      const bioInput = document.getElementById('edit-bio-input');
+      if (bioInput) {
+        appState.bio = bioInput.value;
+        document.getElementById('profile-bio-text').textContent = appState.bio;
+        closeModal('modal-edit-profile');
+        showToast("Profile bio updated!");
+      }
+    }
+
+    /* -------------------------------------------------------------
+       SEARCH ENGINE INTERACTION
+    -------------------------------------------------------------- */
+    function showSearchDropdown() {
+      document.getElementById('search-dropdown').classList.remove('hidden');
+    }
+    function handleSearchKey(e) {
+      if (e.key === 'Enter') {
+        executeSearch(e.target.value);
+      }
+    }
+    function executeSearch(query) {
+      if (!query.trim()) return;
+      document.getElementById('search-dropdown').classList.add('hidden');
+      document.getElementById('search-query-label').textContent = `Showing results for "${query}"`;
+
+      const list = document.getElementById('search-results-list');
+      if (list) {
+        list.innerHTML = `
+          <div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-4 border border-outline-variant shadow-sm flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-primary-container text-white font-bold flex items-center justify-center">RC</div>
+              <div>
+                <h4 class="font-title-sm text-title-sm text-on-surface">React Developers Hyderabad</h4>
+                <p class="text-caption font-caption text-tertiary">Group · 18K members</p>
+              </div>
+            </div>
+            <button onclick="showToast('Navigating to group')" class="bg-primary-container text-on-primary px-3 py-1.5 rounded-lg text-label-sm font-label-sm">Join</button>
+          </div>
+          <div class="bg-surface-container-lowest dark:bg-inverse-surface rounded-xl p-4 border border-outline-variant shadow-sm">
+            <h4 class="font-title-sm text-title-sm text-on-surface">Post matching "${query}"</h4>
+            <p class="text-body-md font-body-md text-tertiary mt-1">"Exploring cutting-edge state machines and rendering loops in production systems."</p>
+          </div>
+        `;
+      }
+      navigateTo('search');
+    }
+    function clearRecentSearches() {
+      document.getElementById('recent-search-list').innerHTML = `<p class="text-caption font-caption text-tertiary p-2">Search history cleared.</p>`;
+    }
+
+    /* -------------------------------------------------------------
+       SHARE MODAL LOGIC
+    -------------------------------------------------------------- */
+    function openShareModal(postId) {
+      document.getElementById('modal-share').classList.remove('hidden');
+    }
+    function executeShare(target) {
+      closeModal('modal-share');
+      showToast(`Shared post to ${target}!`);
+    }
+
+    /* -------------------------------------------------------------
+       POPUP FLYOUTS & UTILITIES
+    -------------------------------------------------------------- */
+    function toggleDropdown(id) {
+      const drop = document.getElementById(id);
+      if (!drop) return;
+      const isHidden = drop.classList.contains('hidden');
+      closeAllDropdowns();
+      if (isHidden) drop.classList.remove('hidden');
+    }
+
+    function closeAllDropdowns() {
+      ['dropdown-apps', 'dropdown-chat', 'dropdown-notifications', 'dropdown-profile', 'search-dropdown'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.add('hidden');
+      });
+      closePostMenus();
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function toggleDarkMode() {
+      appState.darkMode = !appState.darkMode;
+      document.documentElement.classList.toggle('dark', appState.darkMode);
+      const ind = document.getElementById('dark-mode-indicator');
+      if (ind) ind.textContent = appState.darkMode ? "On" : "Off";
+      showToast(appState.darkMode ? "Dark mode activated" : "Light mode activated");
+    }
+
+    function togglePlaySimulatedVideo(el) {
+      showToast("Toggling video playback stream ⏯️");
+    }
+
+    function showToast(message) {
+      const cont = document.getElementById('toast-container');
+      if (!cont) return;
+
+      const toast = document.createElement('div');
+      toast.className = "bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-xl shadow-2xl flex items-center gap-2 text-body-md font-body-md border border-outline-variant/30 animate-bounce transition-all";
+      toast.innerHTML = `
+        <span class="material-symbols-outlined text-primary-fixed text-lg">check_circle</span>
+        <span>${message}</span>
+      `;
+      cont.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 300);
+      }, 2800);
+    }
+
+    // Render contacts on home right sidebar
+    function renderHomeContacts() {
+      const cont = document.getElementById('home-contacts-list');
+      if (!cont) return;
+
+      cont.innerHTML = INITIAL_CONTACTS.map(c => `
+        <div onclick="navigateTo('messenger'); selectActiveChat('${c.name}', '${c.initials}')" class="flex items-center gap-3 p-2 rounded-xl hover:bg-surface-container-high cursor-pointer transition-colors">
+          <div class="relative">
+            <div class="w-9 h-9 rounded-full ${c.color} text-white font-bold text-xs flex items-center justify-center">
+              ${c.initials}
+            </div>
+            ${c.online ? `<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>` : ''}
+          </div>
+          <span class="font-title-sm text-title-sm text-on-surface">${c.name}</span>
+        </div>
+      `).join('');
+    }
+
+    // Render quick chat dropdown
+    function renderChatDropdownList() {
+      const cont = document.getElementById('chat-dropdown-list');
+      if (!cont) return;
+
+      cont.innerHTML = INITIAL_CONTACTS.map(c => `
+        <div onclick="navigateTo('messenger'); selectActiveChat('${c.name}', '${c.initials}'); closeAllDropdowns();" class="flex items-center gap-3 p-2 rounded-xl hover:bg-surface-container-high cursor-pointer">
+          <div class="w-9 h-9 rounded-full ${c.color} text-white font-bold text-xs flex items-center justify-center">
+            ${c.initials}
+          </div>
+          <div class="flex-1 min-w-0">
+            <h5 class="font-title-sm text-title-sm text-on-surface truncate">${c.name}</h5>
+            <p class="text-caption font-caption text-tertiary truncate">${c.lastMsg}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Global Click Listener to close flyouts
+    window.addEventListener('click', (e) => {
+      if (!e.target.closest('header') && !e.target.closest('[id^="post-menu-"]') && !e.target.closest('#search-dropdown')) {
+        closeAllDropdowns();
+      }
+    });
+
+    // App Initialization
+    document.addEventListener('DOMContentLoaded', () => {
+      renderHomeFeed();
+      renderHomeContacts();
+      renderTopNotifications();
+      renderChatDropdownList();
+    });
+  </script>
+</body></html>
