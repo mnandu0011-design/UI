@@ -213,13 +213,13 @@ Example:
 <img src="https://drive.google.com/uc?export=view&id=1pvbH5I0OJtpCAWIuFo2rxAnEF-xucxoz" alt="InstaConnect preview" width="600">
 
 ### 🛵 Rapido
-<img src="https://drive.google.com/file/d/1I9m0UBdTcFe4J8z4VryKqeq3aPFi7ahw/view?usp=drive_link" alt="Rapido preview" width="600">
+<img src="https://drive.google.com/uc?export=view&id=1I9m0UBdTcFe4J8z4VryKqeq3aPFi7ahw" alt="Rapido preview" width="600">
 
 ### 🤝 Social Connect
-<img src="https://drive.google.com/file/d/1_ZfSyeNkTv5GAdTA9pdZP5AdTn0Yi2pS/view?usp=drive_link" alt="Social Connect preview" width="600">
+<img src="https://drive.google.com/uc?export=view&id=1_ZfSyeNkTv5GAdTA9pdZP5AdTn0Yi2pS" alt="Social Connect preview" width="600">
 
 ### 🚌 GoBus
-<img src="https://drive.google.com/file/d/1GUBbXFlmsdDkIiQ7ya-dmmSmXHXC2v3K/view?usp=drive_link" alt="GoBus preview" width="600">
+<img src="https://drive.google.com/uc?export=view&id=1GUBbXFlmsdDkIiQ7ya-dmmSmXHXC2v3K" alt="GoBus preview" width="600">
 
 Use screenshots created from your own implementations. Make sure the image paths match the actual files in the repository.
 
