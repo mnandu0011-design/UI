@@ -200,11 +200,11 @@ Example:
 ```markdown
 ![InstaConnect preview](https://drive.google.com/open?id=1pvbH5I0OJtpCAWIuFo2rxAnEF-xucxoz&usp=drive_copy
 )
-![Rapido preview](<img width="1906" height="902" alt="Screenshot 2026-10-29 002004" src="https://github.com/user-attachments/assets/dba4fa8b-525b-48f7-be12-6ad24e4373b1" />
+![Rapido preview](https://drive.google.com/open?id=1pvbH5I0OJtpCAWIuFo2rxAnEF-xucxoz&usp=drive_copy
 )
-![Social Connect preview](<img width="1910" height="915" alt="Screenshot 2026-10-29 002021" src="https://github.com/user-attachments/assets/cb3b7853-05bd-40cd-90b8-1e35325b824b" />
+![Social Connect preview](https://drive.google.com/open?id=1pvbH5I0OJtpCAWIuFo2rxAnEF-xucxoz&usp=drive_copy
 )
-![GoBus preview](<img width="1911" height="911" alt="Screenshot 2026-10-29 001947" src="https://github.com/user-attachments/assets/b3b1c072-a37f-474b-baa9-da75757da60c" />
+![GoBus preview](https://drive.google.com/open?id=1pvbH5I0OJtpCAWIuFo2rxAnEF-xucxoz&usp=drive_copy
 )
 ```
 
