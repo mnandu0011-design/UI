@@ -198,10 +198,14 @@ Add screenshots to a folder such as `screenshots/` and link them here when avail
 Example:
 
 ```markdown
-![InstaConnect preview](screenshots/instaconnect.png)
-![Rapido preview](screenshots/rapido.png)
-![Social Connect preview](screenshots/social-connect.png)
-![GoBus preview](screenshots/gobus.png)
+![InstaConnect preview](<img width="1910" height="908" alt="Screenshot 2026-10-29 002037" src="https://github.com/user-attachments/assets/91d70d24-08b1-4e60-891b-1a21c7e5e7e3" />
+)
+![Rapido preview](<img width="1906" height="902" alt="Screenshot 2026-10-29 002004" src="https://github.com/user-attachments/assets/dba4fa8b-525b-48f7-be12-6ad24e4373b1" />
+)
+![Social Connect preview](<img width="1910" height="915" alt="Screenshot 2026-10-29 002021" src="https://github.com/user-attachments/assets/cb3b7853-05bd-40cd-90b8-1e35325b824b" />
+)
+![GoBus preview](<img width="1911" height="911" alt="Screenshot 2026-10-29 001947" src="https://github.com/user-attachments/assets/b3b1c072-a37f-474b-baa9-da75757da60c" />
+)
 ```
 
 Use screenshots created from your own implementations. Make sure the image paths match the actual files in the repository.
