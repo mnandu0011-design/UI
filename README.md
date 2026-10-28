@@ -198,7 +198,7 @@ Add screenshots to a folder such as `screenshots/` and link them here when avail
 Example:
 
 ```markdown
-![InstaConnect preview](<img src="https://github.com/user-attachments/assets/91d70d24-08b1-4e60-891b-1a21c7e5e7e3" alt="InstaConnect preview" width="800" />
+![InstaConnect preview](https://drive.google.com/open?id=1pvbH5I0OJtpCAWIuFo2rxAnEF-xucxoz&usp=drive_copy
 )
 ![Rapido preview](<img width="1906" height="902" alt="Screenshot 2026-10-29 002004" src="https://github.com/user-attachments/assets/dba4fa8b-525b-48f7-be12-6ad24e4373b1" />
 )
