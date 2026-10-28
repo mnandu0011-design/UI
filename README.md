@@ -207,6 +207,19 @@ Example:
 ![GoBus preview](https://drive.google.com/open?id=1pvbH5I0OJtpCAWIuFo2rxAnEF-xucxoz&usp=drive_copy
 )
 ```
+## 🚀 Project Previews
+
+### 📸 InstaConnect
+<img src="https://drive.google.com/uc?export=view&id=1pvbH5I0OJtpCAWIuFo2rxAnEF-xucxoz" alt="InstaConnect preview" width="600">
+
+### 🛵 Rapido
+<img src="https://drive.google.com/uc?export=view&id=1pvbH5I0OJtpCAWIuFo2rxAnEF-xucxoz" alt="Rapido preview" width="600">
+
+### 🤝 Social Connect
+<img src="https://drive.google.com/uc?export=view&id=1pvbH5I0OJtpCAWIuFo2rxAnEF-xucxoz" alt="Social Connect preview" width="600">
+
+### 🚌 GoBus
+<img src="https://drive.google.com/uc?export=view&id=1pvbH5I0OJtpCAWIuFo2rxAnEF-xucxoz" alt="GoBus preview" width="600">
 
 Use screenshots created from your own implementations. Make sure the image paths match the actual files in the repository.
 
