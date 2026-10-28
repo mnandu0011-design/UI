@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-primary-container": "#ffeded",
+        "secondary-fixed": "#ffdad8",
+        "on-error": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "surface-tint": "#bf0032",
+        "on-error-container": "#93000a",
+        "surface-container-low": "#f4f3f7",
+        "secondary": "#b7102a",
+        "tertiary": "#00632a",
+        "outline-variant": "#e5bdbd",
+        "surface-dim": "#dbd9dd",
+        "surface-variant": "#e3e2e6",
+        "on-tertiary-fixed": "#002109",
+        "inverse-on-surface": "#f1f0f4",
+        "primary-fixed": "#ffdada",
+        "tertiary-fixed": "#95f8a5",
+        "on-tertiary-container": "#c5ffc9",
+        "on-primary": "#ffffff",
+        "tertiary-fixed-dim": "#7adb8c",
+        "surface-container-high": "#e9e7eb",
+        "error-container": "#ffdad6",
+        "primary-fixed-dim": "#ffb3b4",
+        "on-primary-fixed-variant": "#920024",
+        "secondary-fixed-dim": "#ffb3b1",
+        "inverse-primary": "#ffb3b4",
+        "on-tertiary-fixed-variant": "#005322",
+        "on-tertiary": "#ffffff",
+        "on-surface": "#1a1b1e",
+        "surface-bright": "#faf9fd",
+        "surface-container-highest": "#e3e2e6",
+        "surface": "#faf9fd",
+        "on-primary-fixed": "#40000b",
+        "on-secondary": "#ffffff",
+        "on-secondary-container": "#fffbff",
+        "tertiary-container": "#127e3a",
+        "on-secondary-fixed": "#410007",
+        "background": "#faf9fd",
+        "on-surface-variant": "#5c3f40",
+        "error": "#ba1a1a",
+        "inverse-surface": "#2f3033",
+        "primary": "#ae002d",
+        "secondary-container": "#db313f",
+        "on-background": "#1a1b1e",
+        "outline": "#906f6f",
+        "surface-container": "#efedf1",
+        "on-secondary-fixed-variant": "#92001c",
+        "primary-container": "#d7193f"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.5rem",
+        "space-xl": "2rem",
+        "space-lg": "1.5rem",
+        "margin": "2rem",
+        "space-xs": "0.25rem",
+        "space-md": "1rem",
+        "gutter": "1.5rem"
+      },
+      "fontFamily": {
+        "headline-sm": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "body-sm": ["Inter"],
+        "body-lg": ["Inter"],
+        "label-md": ["Inter"],
+        "headline-xl": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "label-lg": ["Inter"],
+        "label-sm": ["Inter"],
+        "title-md": ["Plus Jakarta Sans"],
+        "body-md": ["Inter"]
+      },
+      "fontSize": {
+        "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+        "title-md": ["16px", {"lineHeight": "22px", "fontWeight": "600"}],
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+      }
+    }
+  }
+}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-on-primary py-space-xs px-margin"><div class="max-w-[1440px] mx-auto flex items-center justify-between font-label-sm text-label-sm"><span>24x7 Emergency Bus Support &amp; Instant Live Tracking Assistance</span><span class="font-label-md text-label-md tracking-wide">Toll-Free Helpline: 1800-419-4628</span></div></div><div class="h-20 max-w-[1440px] mx-auto px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-sm"><img alt="GoBus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WC3hbITWpolsdr1e1_sWqqcN0aWwNrtOz_y-6HlSYA9c0hVgRcGcdQxNRbs4grmDUBhrizYaWbGCyGeDy2BkNE2w8CUXvnMdBv_IBCJoZjBF8iTnweXws30vzDsv9SjiE47i_lDJXoMLJeoLftO6pbNTVI4svZjLY-fqswLBE5Siyzb8XP3hAylVQXroUevqmZFiAm2dW_OD5JoxCzx4bdVqqcO59Ny6W3sFR5IF3h8A54KoSmSAbpa3Sg"/><span class="font-headline-md text-headline-md text-primary tracking-tight">GoBus</span></div><nav class="flex items-center gap-space-sm" data-active-classes="bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg"><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg" data-path="home" href="../gobus_home_1/code.html">Home</a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="search-buses" href="../gobus_search_buses/code.html">Search Buses</a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="my-bookings" href="../gobus_my_bookings/code.html">My Bookings</a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="help" href="../gobus_help_support_desk/code.html">Help</a></nav></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface"><span class="material-symbols-outlined text-secondary text-[18px]">currency_rupee</span><span>INR</span></div><button class="px-space-lg py-space-sm bg-primary hover:bg-secondary active:bg-on-primary-fixed-variant text-on-primary font-label-lg text-label-lg rounded-lg transition-colors flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px]">lock</span><span>Demo Login</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Notification Flash / Urgency Bar -->
+<section class="w-full bg-secondary text-on-secondary px-margin py-2 shadow-sm">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-surface-container-lowest text-primary text-[12px] font-bold">₹</span>
+<span>Festive Express Sale: Flat <strong>18% OFF</strong> with coupon code <span class="bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded font-label-sm font-semibold tracking-wide">GOBUSFEST</span> on Volvo 9600 &amp; Scania Multi-Axles.</span>
+</div>
+<div class="flex items-center gap-space-lg text-label-sm font-label-sm">
+<span class="flex items-center gap-1 opacity-90"><span class="material-symbols-outlined text-[16px]">schedule</span> 12,480 tickets booked today</span>
+<span class="flex items-center gap-1 text-tertiary-fixed font-semibold"><span class="material-symbols-outlined text-[16px]">check_circle</span> Live Seat Inventory Connected</span>
+</div>
+</div>
+</section>
+<!-- Section A: Hero Stage (Asymmetric High Visual Impact) -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low via-surface to-background py-space-xl px-margin">
+<div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 left-1/3 w-80 h-80 rounded-full bg-secondary-fixed/20 blur-2xl pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto grid grid-cols-12 gap-gutter items-center relative z-10">
+<!-- Left Content (7 Cols) -->
+<div class="col-span-7 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 bg-surface-container-lowest text-primary rounded-full shadow-sm w-fit font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span>India's Most Reliable Intercity Fleet Network</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-tight">
+          Your Journey Starts Here.
+          <span class="block text-primary">Travel Smarter &amp; Safer.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Book intercity bus tickets with guaranteed seats, live GPS tracking, and zero booking fees across 10,000+ certified routes in India.
+        </p>
+<!-- Feature Badges -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs px-3.5 py-1.5 bg-surface-container-lowest text-on-surface rounded-lg shadow-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-tertiary text-[18px]">bolt</span>
+<span>Instant E-Tickets</span>
+</div>
+<div class="flex items-center gap-space-xs px-3.5 py-1.5 bg-surface-container-lowest text-on-surface rounded-lg shadow-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-tertiary text-[18px]">assignment_return</span>
+<span>Free Cancellation Options</span>
+</div>
+<div class="flex items-center gap-space-xs px-3.5 py-1.5 bg-surface-container-lowest text-on-surface rounded-lg shadow-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-tertiary text-[18px]">support_agent</span>
+<span>24x7 Customer Support</span>
+</div>
+</div>
+<!-- Metric strip -->
+<div class="grid grid-cols-3 gap-space-md pt-space-md max-w-lg">
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm">
+<div class="font-headline-md text-headline-md text-primary">3,500+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Verified Fleet Operators</div>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm">
+<div class="font-headline-md text-headline-md text-on-surface">99.2%</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">On-Time Departure Rate</div>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm">
+<div class="font-headline-md text-headline-md text-tertiary">4.8 / 5</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Over 1.8M Passenger Reviews</div>
+</div>
+</div>
+</div>
+<!-- Right Graphic / Premium Bus Showcase (5 Cols) -->
+<div class="col-span-5 relative">
+<div class="relative bg-surface-container-lowest p-4 rounded-xl shadow-xl overflow-hidden group">
+<div class="relative h-64 w-full rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="Modern ultra-luxurious multi-axle Volvo 9600 sleeper coach in metallic deep crimson red and platinum white livery cruising on a wide smooth illuminated express highway at dusk with subtle motion blur speed lines, photorealistic commercial bus advertising shot with crystal sharp detail and atmospheric glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADZA0xx6xvTSG1YSnQzO0wGpwAAdI521cPd7a_7cuEXrN0-4E9d6M0lJMPfJhewrCdVApjQyuXw7AwUYIMBAQe6YIX5h_XkySGmNpPX3t2qpt5Uue02WCPpyI473Y-FTYCqhJRsSEpXboRHKMI4WuoYL6ixqEf8TS5iqZnjqrL78bDH2wR6w3PnEBT2j_gfXsBWpYsFNCRzYPA-vbwZf5KMRV9s7Mh1KodTHUvskm8J8FsCl8NRS9f0g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<!-- Floating overlay tag -->
+<div class="absolute top-3 left-3 bg-primary text-on-primary px-3 py-1 rounded-full text-label-sm font-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[14px]">directions_bus</span>
+<span>Volvo 9600 Multi-Axle Premium</span>
+</div>
+<!-- Route badge bottom overlay -->
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary">
+<div>
+<span class="text-label-sm font-label-sm opacity-80 uppercase tracking-wider block">Realtime Active Trip</span>
+<span class="font-headline-sm text-headline-sm">Bengaluru ➔ Hyderabad</span>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm font-semibold">Track Live GPS</span>
+</div>
+</div>
+</div>
+<!-- Speedlines visual decorative footer inside card -->
+<div class="mt-3 flex items-center justify-between px-2 pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span> Live Fleet Telemetry Active</span>
+<span class="font-label-md text-label-md text-primary">Certified BS6 Fleet</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section B: Full Horizontal Search Widget (Laptop-Optimized Floating Stage) -->
+<section class="w-full px-margin -mt-6 relative z-30">
+<div class="max-w-[1440px] mx-auto bg-surface-container-lowest p-space-lg rounded-xl shadow-xl">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">directions_bus</span>
+<span>Bus Ticket Booking</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md bg-surface-container px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Zero Processing Surcharge Guaranteed</span>
+</div>
+</div>
+<div class="hidden text-error font-label-md text-label-md flex items-center gap-1 animate-pulse" id="search-alert">
+<span class="material-symbols-outlined text-[16px]">error</span>
+<span id="search-alert-text">Please verify your journey details.</span>
+</div>
+</div>
+<!-- Main Input Bar Grid -->
+<form class="grid grid-cols-12 gap-space-sm items-center" id="bus-search-form">
+<!-- Origin City Input (3 Cols) -->
+<div class="col-span-3 relative">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wide">From (Origin City)</label>
+<div class="relative flex items-center bg-surface-container-low rounded-lg px-3 py-2.5 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_2px_#ae002d] transition-all">
+<span class="material-symbols-outlined text-primary text-[20px] mr-2">trip_origin</span>
+<select class="w-full bg-transparent text-on-surface font-title-md text-title-md focus:outline-none cursor-pointer" id="origin-city">
+<option selected="" value="Chennai">Chennai (MAA)</option>
+<option value="Bengaluru">Bengaluru (BLR)</option>
+<option value="Hyderabad">Hyderabad (HYD)</option>
+<option value="Vijayawada">Vijayawada (VJA)</option>
+<option value="Coimbatore">Coimbatore (CJB)</option>
+<option value="Pune">Pune (PNQ)</option>
+<option value="Mumbai">Mumbai (BOM)</option>
+</select>
+</div>
+</div>
+<!-- Quick Swap Origin/Destination Button (Center Icon Button) -->
+<div class="col-span-auto flex justify-center -mx-2 z-10 pt-5">
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest text-primary shadow-md hover:bg-primary-fixed hover:scale-105 active:scale-95 transition-all flex items-center justify-center group" id="swap-cities-btn" title="Swap Origin and Destination" type="button">
+<span class="material-symbols-outlined text-[20px] group-hover:rotate-180 transition-transform duration-300">swap_horiz</span>
+</button>
+</div>
+<!-- Destination City Input (3 Cols) -->
+<div class="col-span-3 relative">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wide">To (Destination City)</label>
+<div class="relative flex items-center bg-surface-container-low rounded-lg px-3 py-2.5 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_2px_#ae002d] transition-all">
+<span class="material-symbols-outlined text-secondary text-[20px] mr-2">location_on</span>
+<select class="w-full bg-transparent text-on-surface font-title-md text-title-md focus:outline-none cursor-pointer" id="dest-city">
+<option selected="" value="Bengaluru">Bengaluru (BLR)</option>
+<option value="Chennai">Chennai (MAA)</option>
+<option value="Hyderabad">Hyderabad (HYD)</option>
+<option value="Vijayawada">Vijayawada (VJA)</option>
+<option value="Coimbatore">Coimbatore (CJB)</option>
+<option value="Pune">Pune (PNQ)</option>
+<option value="Mumbai">Mumbai (BOM)</option>
+</select>
+</div>
+</div>
+<!-- Journey Date Picker (2 Cols) -->
+<div class="col-span-2">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wide">Journey Date</label>
+<div class="relative flex items-center bg-surface-container-low rounded-lg px-3 py-2 focus-within:bg-surface-container-lowest focus-within:shadow-[0_0_0_2px_#ae002d] transition-all">
+<span class="material-symbols-outlined text-primary text-[18px] mr-1.5">calendar_month</span>
+<input class="w-full bg-transparent text-on-surface font-title-md text-title-md focus:outline-none cursor-pointer text-sm" id="journey-date" type="date"/>
+</div>
+</div>
+<!-- Return Date Picker / Toggle (Optional 2 Cols) -->
+<div class="col-span-2">
+<div class="flex items-center justify-between mb-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">Return</label>
+<label class="flex items-center gap-1 cursor-pointer font-label-sm text-label-sm text-primary">
+<input class="accent-primary cursor-pointer" id="toggle-return" type="checkbox"/>
+<span>Add</span>
+</label>
+</div>
+<div class="relative flex items-center bg-surface-container-low opacity-50 rounded-lg px-3 py-2 transition-all" id="return-date-container">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-1.5">event_repeat</span>
+<input class="w-full bg-transparent text-on-surface font-title-md text-title-md focus:outline-none text-sm cursor-not-allowed" disabled="" id="return-date" type="date"/>
+</div>
+</div>
+<!-- Passengers Selector & CTA (2 Cols) -->
+<div class="col-span-2 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">Seats</label>
+<select class="bg-surface-container-low text-on-surface font-label-md text-label-md px-2 py-0.5 rounded focus:outline-none" id="passenger-count">
+<option value="1">1 Seat</option>
+<option value="2">2 Seats</option>
+<option value="3">3 Seats</option>
+<option value="4">4 Seats</option>
+<option value="5">5 Seats</option>
+<option value="6">6 Seats</option>
+</select>
+</div>
+<button class="w-full bg-primary hover:bg-secondary active:bg-on-primary-fixed-variant text-on-primary font-label-lg text-label-lg py-2.5 px-4 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-xs mt-1" id="search-buses-btn" onclick="window.location.href='../gobus_search_buses/code.html'" type="submit">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span>Search Buses</span>
+</button>
+</div>
+</form>
+<!-- Quick Route Selector Filters / Micro-chips -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Frequent:</span>
+<button class="quick-filter-chip px-2.5 py-1 bg-surface-container rounded-md hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors font-label-sm" data-from="Chennai" data-to="Bengaluru" type="button">Chennai ➔ Bengaluru</button>
+<button class="quick-filter-chip px-2.5 py-1 bg-surface-container rounded-md hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors font-label-sm" data-from="Bengaluru" data-to="Hyderabad" type="button">Bengaluru ➔ Hyderabad</button>
+<button class="quick-filter-chip px-2.5 py-1 bg-surface-container rounded-md hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors font-label-sm" data-from="Hyderabad" data-to="Vijayawada" type="button">Hyderabad ➔ Vijayawada</button>
+<button class="quick-filter-chip px-2.5 py-1 bg-surface-container rounded-md hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors font-label-sm" data-from="Chennai" data-to="Coimbatore" type="button">Chennai ➔ Coimbatore</button>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">format_image_left</span>
+<span>Free ₹5 Lakh Passenger Travel Insurance Included</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section C: Popular Bus Routes Grid (Laptop 3-Column Bento) -->
+<section class="w-full px-margin py-space-xl">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-lg">
+<div class="flex items-end justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">High Density Corridors</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Popular Bus Routes</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Instant booking with live seat layouts, sleeper selections &amp; guaranteed departure timings.</p>
+</div>
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-primary">
+<span>Viewing Top 6 Southern Trunk Routes</span>
+<span class="material-symbols-outlined text-[18px]">trending_flat</span>
+</div>
+</div>
+<!-- 3 Columns x 2 Rows Grid for 1366x768 display clarity -->
+<div class="grid grid-cols-3 gap-space-md">
+<!-- Route 1: Chennai to Bengaluru -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">45 Buses Daily</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer</span> 6h 30m avg
+              </span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Chennai</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Koyambedu / Guindy</span>
+</div>
+<div class="flex flex-col items-center px-2">
+<span class="material-symbols-outlined text-primary text-[20px]">arrow_forward</span>
+<span class="text-[10px] text-on-surface-variant tracking-wider uppercase font-semibold">Express</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface">Bengaluru</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Majestic / Madiwala</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">AC Sleeper</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Volvo B11R</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Scania</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Fares starting at</span>
+<span class="font-headline-sm text-headline-sm text-primary">₹499</span>
+</div>
+<button class="route-book-btn px-4 py-2 bg-primary hover:bg-secondary text-on-primary rounded-lg font-label-md text-label-md shadow-sm transition-colors flex items-center gap-1" data-from="Chennai" data-to="Bengaluru" onclick="window.location.href='../gobus_search_buses/code.html'" type="button">
+<span>Book Now</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Route 2: Bengaluru to Hyderabad -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">38 Buses Daily</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer</span> 8h 15m avg
+              </span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Bengaluru</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hebbal / Anand Rao</span>
+</div>
+<div class="flex flex-col items-center px-2">
+<span class="material-symbols-outlined text-primary text-[20px]">arrow_forward</span>
+<span class="text-[10px] text-on-surface-variant tracking-wider uppercase font-semibold">Express</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface">Hyderabad</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ameerpet / Gachibowli</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Multi-Axle</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Free WiFi</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Night Non-Stop</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Fares starting at</span>
+<span class="font-headline-sm text-headline-sm text-primary">₹699</span>
+</div>
+<button class="route-book-btn px-4 py-2 bg-primary hover:bg-secondary text-on-primary rounded-lg font-label-md text-label-md shadow-sm transition-colors flex items-center gap-1" data-from="Bengaluru" data-to="Hyderabad" onclick="window.location.href='../gobus_search_buses/code.html'" type="button">
+<span>Book Now</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Route 3: Chennai to Hyderabad -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">24 Buses Daily</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer</span> 10h 00m avg
+              </span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Chennai</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Madhavaram / CMBT</span>
+</div>
+<div class="flex flex-col items-center px-2">
+<span class="material-symbols-outlined text-primary text-[20px]">arrow_forward</span>
+<span class="text-[10px] text-on-surface-variant tracking-wider uppercase font-semibold">Overnight</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface">Hyderabad</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">MGBS / LB Nagar</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Bharat Benz</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">2+1 Sleeper</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Snack Kit</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Fares starting at</span>
+<span class="font-headline-sm text-headline-sm text-primary">₹899</span>
+</div>
+<button class="route-book-btn px-4 py-2 bg-primary hover:bg-secondary text-on-primary rounded-lg font-label-md text-label-md shadow-sm transition-colors flex items-center gap-1" data-from="Chennai" data-to="Hyderabad" onclick="window.location.href='../gobus_search_buses/code.html'" type="button">
+<span>Book Now</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Route 4: Chennai to Coimbatore -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">32 Buses Daily</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer</span> 7h 45m avg
+              </span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Chennai</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tambaram / Perungalathur</span>
+</div>
+<div class="flex flex-col items-center px-2">
+<span class="material-symbols-outlined text-primary text-[20px]">arrow_forward</span>
+<span class="text-[10px] text-on-surface-variant tracking-wider uppercase font-semibold">Express</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface">Coimbatore</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gandhipuram / Omni Bus</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">AC Executive</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Water Bottle</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Charging Point</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Fares starting at</span>
+<span class="font-headline-sm text-headline-sm text-primary">₹549</span>
+</div>
+<button class="route-book-btn px-4 py-2 bg-primary hover:bg-secondary text-on-primary rounded-lg font-label-md text-label-md shadow-sm transition-colors flex items-center gap-1" data-from="Chennai" data-to="Coimbatore" onclick="window.location.href='../gobus_search_buses/code.html'" type="button">
+<span>Book Now</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Route 5: Hyderabad to Vijayawada -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">50 Buses Daily</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer</span> 5h 00m avg
+              </span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Hyderabad</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dilsukhnagar / KPHB</span>
+</div>
+<div class="flex flex-col items-center px-2">
+<span class="material-symbols-outlined text-primary text-[20px]">arrow_forward</span>
+<span class="text-[10px] text-on-surface-variant tracking-wider uppercase font-semibold">High Frequency</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface">Vijayawada</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pandit Nehru Bus Station</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Volvo Electric</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">AC Seater</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Fast Highway</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Fares starting at</span>
+<span class="font-headline-sm text-headline-sm text-primary">₹399</span>
+</div>
+<button class="route-book-btn px-4 py-2 bg-primary hover:bg-secondary text-on-primary rounded-lg font-label-md text-label-md shadow-sm transition-colors flex items-center gap-1" data-from="Hyderabad" data-to="Vijayawada" onclick="window.location.href='../gobus_search_buses/code.html'" type="button">
+<span>Book Now</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Route 6: Bengaluru to Coimbatore -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">28 Buses Daily</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer</span> 6h 15m avg
+              </span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Bengaluru</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Electronic City / Silk Board</span>
+</div>
+<div class="flex flex-col items-center px-2">
+<span class="material-symbols-outlined text-primary text-[20px]">arrow_forward</span>
+<span class="text-[10px] text-on-surface-variant tracking-wider uppercase font-semibold">Scenic Express</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface">Coimbatore</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hopes College / Gandhipuram</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Scania AC</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Sleeper Upper/Lower</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low rounded text-[11px]">Punctual</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Fares starting at</span>
+<span class="font-headline-sm text-headline-sm text-primary">₹449</span>
+</div>
+<button class="route-book-btn px-4 py-2 bg-primary hover:bg-secondary text-on-primary rounded-lg font-label-md text-label-md shadow-sm transition-colors flex items-center gap-1" data-from="Bengaluru" data-to="Coimbatore" onclick="window.location.href='../gobus_search_buses/code.html'" type="button">
+<span>Book Now</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section D: Top-Rated Bus Operators (Horizontal Wide Cards) -->
+<section class="w-full bg-surface-container-low py-space-xl px-margin">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-lg">
+<div class="flex items-end justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Premium Fleet Partners</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Top-Rated Bus Operators</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Curated operators meeting GoBus Gold Safety Charters with verified hygiene and punctuality scores.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">verified</span> ISO 9001:2015 Fleet Safety Verified
+          </span>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-space-md">
+<!-- Operator 1: SRS Travels -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-md text-title-md text-on-surface">SRS Travels</span>
+<span class="flex items-center gap-1 bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.8
+              </span>
+</div>
+<div class="font-body-sm text-body-sm text-primary font-medium mb-space-sm">Volvo Multi-Axle AC Sleeper</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md line-clamp-2">Over 40 years of pioneering road travel across South &amp; Western India. Known for prompt boarding and trained drivers.</p>
+<!-- Amenities Icons -->
+<div class="flex items-center gap-space-sm text-on-surface-variant pt-space-xs">
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Air Conditioning"><span class="material-symbols-outlined text-[16px] text-primary">ac_unit</span> AC</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Free High-Speed WiFi"><span class="material-symbols-outlined text-[16px] text-primary">wifi</span> WiFi</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Power Charging Socket"><span class="material-symbols-outlined text-[16px] text-primary">electrical_services</span> Plug</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Clean Blankets Provided"><span class="material-symbols-outlined text-[16px] text-primary">hotel</span> Bed</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">42,800+ Ratings</span>
+<span class="text-tertiary font-semibold flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">done_all</span> 98% On-Time</span>
+</div>
+</div>
+<!-- Operator 2: KPN Travels -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-md text-title-md text-on-surface">KPN Travels</span>
+<span class="flex items-center gap-1 bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.7
+              </span>
+</div>
+<div class="font-body-sm text-body-sm text-primary font-medium mb-space-sm">Bharat Benz Scania Executive</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md line-clamp-2">Exclusive overnight trunk connections across Tamil Nadu, Karnataka &amp; Kerala with comfortable ergonomic berths.</p>
+<!-- Amenities Icons -->
+<div class="flex items-center gap-space-sm text-on-surface-variant pt-space-xs">
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Air Conditioning"><span class="material-symbols-outlined text-[16px] text-primary">ac_unit</span> AC</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Water Bottle"><span class="material-symbols-outlined text-[16px] text-primary">water_drop</span> Water</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Live GPS Tracking"><span class="material-symbols-outlined text-[16px] text-primary">near_me</span> GPS</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Emergency SOS Button"><span class="material-symbols-outlined text-[16px] text-primary">emergency</span> SOS</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">36,120+ Ratings</span>
+<span class="text-tertiary font-semibold flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">done_all</span> 96% On-Time</span>
+</div>
+</div>
+<!-- Operator 3: Orange Tours -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-md text-title-md text-on-surface">Orange Tours</span>
+<span class="flex items-center gap-1 bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.9
+              </span>
+</div>
+<div class="font-body-sm text-body-sm text-primary font-medium mb-space-sm">Premium Sleeper 2+1 Custom</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md line-clamp-2">India's flagship ultra-luxury fleet with individual privacy curtains, noise-dampened cabins, and personal LED screens.</p>
+<!-- Amenities Icons -->
+<div class="flex items-center gap-space-sm text-on-surface-variant pt-space-xs">
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Air Conditioning"><span class="material-symbols-outlined text-[16px] text-primary">ac_unit</span> AC</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="In-Seat Entertainment"><span class="material-symbols-outlined text-[16px] text-primary">tv</span> Media</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Free WiFi"><span class="material-symbols-outlined text-[16px] text-primary">wifi</span> WiFi</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Snack Pack"><span class="material-symbols-outlined text-[16px] text-primary">lunch_dining</span> Snacks</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">51,400+ Ratings</span>
+<span class="text-tertiary font-semibold flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">done_all</span> 99% On-Time</span>
+</div>
+</div>
+<!-- Operator 4: VRL Travels -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-title-md text-title-md text-on-surface">VRL Travels</span>
+<span class="flex items-center gap-1 bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">star</span> 4.8
+              </span>
+</div>
+<div class="font-body-sm text-body-sm text-primary font-medium mb-space-sm">I-Shift AC Semi-Sleeper &amp; Sleeper</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md line-clamp-2">Largest commercial bus fleet operator in the country with spotless hygiene records and dual co-driver long haul setups.</p>
+<!-- Amenities Icons -->
+<div class="flex items-center gap-space-sm text-on-surface-variant pt-space-xs">
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Air Conditioning"><span class="material-symbols-outlined text-[16px] text-primary">ac_unit</span> AC</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Power Charging"><span class="material-symbols-outlined text-[16px] text-primary">power</span> Charger</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="CCTV Monitored"><span class="material-symbols-outlined text-[16px] text-primary">videocam</span> CCTV</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm" title="Spacious Legroom"><span class="material-symbols-outlined text-[16px] text-primary">airline_seat_legroom_extra</span> Legroom</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">78,900+ Ratings</span>
+<span class="text-tertiary font-semibold flex items-center gap-0.5"><span class="material-symbols-outlined text-[14px]">done_all</span> 97% On-Time</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section E: Why Choose GoBus (4 Structured Horizontal Value Props) -->
+<section class="w-full px-margin py-space-xl bg-background">
+<div class="max-w-[1440px] mx-auto flex flex-col gap-space-lg">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Engineered For Zero Friction</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Why Millions Trust GoBus Every Day</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We build technology directly into highway transport so you experience predictable, serene travel.</p>
+</div>
+<div class="grid grid-cols-4 gap-space-md">
+<!-- Prop 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined text-[28px]">lock_clock</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">100% Secure &amp; Instant Demo Booking</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct operator reservation links with instant seat locking. No ghost seats, no duplicate bookings, and zero convenience hidden fees.</p>
+<div class="mt-auto pt-space-xs text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span>Instant Confirmation</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Prop 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary mb-1">
+<span class="material-symbols-outlined text-[28px]">radar</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Live Bus Tracking &amp; Real-time Updates</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Precision GPS telemetry on your smartphone. Track exact bus location, traffic delays, and boarding point approach alerts in real-time.</p>
+<div class="mt-auto pt-space-xs text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span>Live Satellite Feeds</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Prop 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined text-[28px]">price_check</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Transparent Pricing, Zero Hidden Charges</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The price you see on the seat matrix is what you pay. Full breakdown of GST and toll components with no sneaky add-on opt-ins.</p>
+<div class="mt-auto pt-space-xs text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span>Guaranteed Best Rates</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Prop 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary mb-1">
+<span class="material-symbols-outlined text-[28px]">support_agent</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">24/7 Helpline &amp; Easy Rescheduling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dedicated on-ground operations desk in all major bus terminals. 1-click date changes, swift cancellations, and automated refund deposits.</p>
+<div class="mt-auto pt-space-xs text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span>Immediate Toll-Free Help</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Client-side Script for Widget & Navigation Handling -->
+<script>
+    (function initGoBus() {
+      const originSelect = document.getElementById('origin-city');
+      const destSelect = document.getElementById('dest-city');
+      const swapBtn = document.getElementById('swap-cities-btn');
+      const journeyDateInput = document.getElementById('journey-date');
+      const returnDateInput = document.getElementById('return-date');
+      const toggleReturn = document.getElementById('toggle-return');
+      const returnContainer = document.getElementById('return-date-container');
+      const passengerCount = document.getElementById('passenger-count');
+      const searchForm = document.getElementById('bus-search-form');
+      const alertBox = document.getElementById('search-alert');
+      const alertText = document.getElementById('search-alert-text');
+
+      // Set default journey date to tomorrow
+      const today = new Date();
+      const tomorrow = new Date(today);
+      tomorrow.setDate(tomorrow.getDate() + 1);
+
+      const formatDate = (dateObj) => {
+        const yyyy = dateObj.getFullYear();
+        const mm = String(dateObj.getMonth() + 1).padStart(2, '0');
+        const dd = String(dateObj.getDate()).padStart(2, '0');
+        return `${yyyy}-${mm}-${dd}`;
+      };
+
+      const minDateStr = formatDate(today);
+      journeyDateInput.min = minDateStr;
+      journeyDateInput.value = formatDate(tomorrow);
+      returnDateInput.min = formatDate(tomorrow);
+
+      // Return date toggle handler
+      toggleReturn.addEventListener('change', () => {
+        if (toggleReturn.checked) {
+          returnDateInput.disabled = false;
+          returnDateInput.classList.remove('cursor-not-allowed');
+          returnContainer.classList.remove('opacity-50');
+          // Default return to +2 days from journey
+          const returnDay = new Date(tomorrow);
+          returnDay.setDate(returnDay.getDate() + 2);
+          returnDateInput.value = formatDate(returnDay);
+          returnDateInput.min = journeyDateInput.value || minDateStr;
+        } else {
+          returnDateInput.disabled = true;
+          returnDateInput.classList.add('cursor-not-allowed');
+          returnContainer.classList.add('opacity-50');
+          returnDateInput.value = '';
+        }
+      });
+
+      // Update return date min constraint when journey date changes
+      journeyDateInput.addEventListener('change', () => {
+        if (journeyDateInput.value < minDateStr) {
+          journeyDateInput.value = minDateStr;
+        }
+        if (toggleReturn.checked) {
+          returnDateInput.min = journeyDateInput.value;
+          if (returnDateInput.value && returnDateInput.value < journeyDateInput.value) {
+            returnDateInput.value = journeyDateInput.value;
+          }
+        }
+      });
+
+      // City swap handler
+      swapBtn.addEventListener('click', () => {
+        const temp = originSelect.value;
+        originSelect.value = destSelect.value;
+        destSelect.value = temp;
+      });
+
+      // Prevent selecting the same city
+      function checkSameCity() {
+        if (originSelect.value === destSelect.value) {
+          showAlert('Origin and Destination cannot be the same city.');
+          return false;
+        }
+        hideAlert();
+        return true;
+      }
+
+      originSelect.addEventListener('change', checkSameCity);
+      destSelect.addEventListener('change', checkSameCity);
+
+      function showAlert(msg) {
+        alertText.textContent = msg;
+        alertBox.classList.remove('hidden');
+      }
+
+      function hideAlert() {
+        alertBox.classList.add('hidden');
+      }
+
+      // Execute search and save params to localStorage
+      function triggerSearch(origin, destination, date, passengers, returnDate = null) {
+        if (origin === destination) {
+          showAlert('Source and destination cannot be identical. Please choose differing hubs.');
+          return;
+        }
+
+        const criteria = {
+          from: origin,
+          to: destination,
+          journeyDate: date,
+          passengers: passengers,
+          returnDate: returnDate,
+          timestamp: new Date().toISOString()
+        };
+
+        try {
+          localStorage.setItem('gobus_search_criteria', JSON.stringify(criteria));
+        } catch (e) {
+          console.warn('LocalStorage unavailable', e);
+        }
+
+        // Smooth transition/redirect to search-buses view
+        const searchBusLink = document.querySelector('nav a[data-path="search-buses"]');
+        if (searchBusLink) {
+          searchBusLink.click();
+        } else {
+          window.location.hash = '#search-buses';
+        }
+      }
+
+      searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (!checkSameCity()) return;
+
+        if (!journeyDateInput.value) {
+          showAlert('Please select your departure date.');
+          return;
+        }
+
+        const retDate = toggleReturn.checked ? returnDateInput.value : null;
+        triggerSearch(
+          originSelect.value,
+          destSelect.value,
+          journeyDateInput.value,
+          passengerCount.value,
+          retDate
+        );
+      });
+
+      // Quick frequent route chips
+      const quickChips = document.querySelectorAll('.quick-filter-chip');
+      quickChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          const from = chip.getAttribute('data-from');
+          const to = chip.getAttribute('data-to');
+          originSelect.value = from;
+          destSelect.value = to;
+          hideAlert();
+        });
+      });
+
+      // Route card "Book Now" buttons
+      const routeBtns = document.querySelectorAll('.route-book-btn');
+      routeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const from = btn.getAttribute('data-from');
+          const to = btn.getAttribute('data-to');
+          originSelect.value = from;
+          destSelect.value = to;
+          triggerSearch(from, to, journeyDateInput.value || formatDate(tomorrow), passengerCount.value || 1);
+        });
+      });
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest mt-space-xl shadow-[0_-1px_8px_rgba(0,0,0,0.03)]"><div class="max-w-[1440px] mx-auto px-margin py-space-xl"><div class="grid grid-cols-12 gap-gutter"><div class="col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="GoBus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WC3hbITWpolsdr1e1_sWqqcN0aWwNrtOz_y-6HlSYA9c0hVgRcGcdQxNRbs4grmDUBhrizYaWbGCyGeDy2BkNE2w8CUXvnMdBv_IBCJoZjBF8iTnweXws30vzDsv9SjiE47i_lDJXoMLJeoLftO6pbNTVI4svZjLY-fqswLBE5Siyzb8XP3hAylVQXroUevqmZFiAm2dW_OD5JoxCzx4bdVqqcO59Ny6W3sFR5IF3h8A54KoSmSAbpa3Sg"/><span class="font-headline-md text-headline-md text-primary">GoBus</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">India's premier high-precision bus ticketing network. Providing real-time seat matrices, safe online bookings, and punctual departures across 50,000+ interconnected routes.</p><div class="flex items-center gap-space-xs font-label-md text-label-md text-tertiary"><span class="material-symbols-outlined text-[18px]">verified</span><span>Verified Operator Network &amp; Safe Travels</span></div></div><div class="col-span-2 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface">Quick Links</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="home" href="../gobus_home_1/code.html">Home</a></li><li><a class="hover:text-primary transition-colors" data-path="search-buses" href="../gobus_search_buses/code.html">Search Buses</a></li><li><a class="hover:text-primary transition-colors" data-path="my-bookings" href="../gobus_my_bookings/code.html">My Bookings</a></li><li><a class="hover:text-primary transition-colors" data-path="operator-directory" href="../gobus_help_support_desk/code.html">Operator Directory</a></li></ul></div><div class="col-span-2 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface">About GoBus</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="about-us" href="../gobus_user_profile_preferences/code.html">Company Profile</a></li><li><a class="hover:text-primary transition-colors" data-path="safety-charter" href="../gobus_help_support_desk/code.html">Safety Charter</a></li><li><a class="hover:text-primary transition-colors" data-path="careers" href="../gobus_help_support_desk/code.html">Careers</a></li><li><a class="hover:text-primary transition-colors" data-path="press" href="../gobus_help_support_desk/code.html">Press Releases</a></li></ul></div><div class="col-span-2 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface">Support &amp; FAQs</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="help" href="../gobus_help_support_desk/code.html">Help Center</a></li><li><a class="hover:text-primary transition-colors" data-path="ticket-cancellation" href="../gobus_help_support_desk/code.html">Ticket Cancellation</a></li><li><a class="hover:text-primary transition-colors" data-path="refund-status" href="../gobus_help_support_desk/code.html">Refund Status</a></li><li><a class="hover:text-primary transition-colors" data-path="insurance-claims" href="../gobus_help_support_desk/code.html">Insurance Claims</a></li></ul></div><div class="col-span-2 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface">Legal &amp; Policies</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="terms-and-conditions" href="../gobus_help_support_desk/code.html">Terms &amp; Conditions</a></li><li><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="../gobus_help_support_desk/code.html">Privacy Policy</a></li><li><a class="hover:text-primary transition-colors" data-path="cancellation-policy" href="../gobus_help_support_desk/code.html">Cancellation Policy</a></li><li><a class="hover:text-primary transition-colors" data-path="user-agreement" href="../gobus_help_support_desk/code.html">User Agreement</a></li></ul></div></div><div class="mt-space-xl pt-space-lg flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant bg-surface-container-low px-space-lg py-space-md rounded-lg"><p>© 2025 GoBus Technologies Ltd. All rights reserved. Registered under Ministry of Road Transport &amp; Highways.</p><div class="flex items-center gap-space-md"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[16px]">call</span><span>24x7 Helpline: +91 (80) 6940 9000</span></span><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[16px]">mail</span><span>support@gobus.in</span></span></div></div></div></footer></body></html>

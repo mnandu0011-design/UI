@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-primary-container": "#ffeded",
+        "secondary-fixed": "#ffdad8",
+        "on-error": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "surface-tint": "#bf0032",
+        "on-error-container": "#93000a",
+        "surface-container-low": "#f4f3f7",
+        "secondary": "#b7102a",
+        "tertiary": "#00632a",
+        "outline-variant": "#e5bdbd",
+        "surface-dim": "#dbd9dd",
+        "surface-variant": "#e3e2e6",
+        "on-tertiary-fixed": "#002109",
+        "inverse-on-surface": "#f1f0f4",
+        "primary-fixed": "#ffdada",
+        "tertiary-fixed": "#95f8a5",
+        "on-tertiary-container": "#c5ffc9",
+        "on-primary": "#ffffff",
+        "tertiary-fixed-dim": "#7adb8c",
+        "surface-container-high": "#e9e7eb",
+        "error-container": "#ffdad6",
+        "primary-fixed-dim": "#ffb3b4",
+        "on-primary-fixed-variant": "#920024",
+        "secondary-fixed-dim": "#ffb3b1",
+        "inverse-primary": "#ffb3b4",
+        "on-tertiary-fixed-variant": "#005322",
+        "on-tertiary": "#ffffff",
+        "on-surface": "#1a1b1e",
+        "surface-bright": "#faf9fd",
+        "surface-container-highest": "#e3e2e6",
+        "surface": "#faf9fd",
+        "on-primary-fixed": "#40000b",
+        "on-secondary": "#ffffff",
+        "on-secondary-container": "#fffbff",
+        "tertiary-container": "#127e3a",
+        "on-secondary-fixed": "#410007",
+        "background": "#faf9fd",
+        "on-surface-variant": "#5c3f40",
+        "error": "#ba1a1a",
+        "inverse-surface": "#2f3033",
+        "primary": "#ae002d",
+        "secondary-container": "#db313f",
+        "on-background": "#1a1b1e",
+        "outline": "#906f6f",
+        "surface-container": "#efedf1",
+        "on-secondary-fixed-variant": "#92001c",
+        "primary-container": "#d7193f"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.5rem",
+        "space-xl": "2rem",
+        "space-lg": "1.5rem",
+        "margin": "2rem",
+        "space-xs": "0.25rem",
+        "space-md": "1rem",
+        "gutter": "1.5rem"
+      },
+      "fontFamily": {
+        "headline-sm": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "body-sm": ["Inter"],
+        "body-lg": ["Inter"],
+        "label-md": ["Inter"],
+        "headline-xl": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "label-lg": ["Inter"],
+        "label-sm": ["Inter"],
+        "title-md": ["Plus Jakarta Sans"],
+        "body-md": ["Inter"]
+      },
+      "fontSize": {
+        "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "headline-xl": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+        "title-md": ["16px", {"lineHeight": "22px", "fontWeight": "600"}],
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+      }
+    }
+  }
+}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-on-primary py-space-xs px-margin"><div class="max-w-[1440px] mx-auto flex items-center justify-between font-label-sm text-label-sm"><span>24x7 Emergency Bus Support &amp; Instant Live Tracking Assistance</span><span class="font-label-md text-label-md tracking-wide">Toll-Free Helpline: 1800-419-4628</span></div></div><div class="h-20 max-w-[1440px] mx-auto px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-sm"><img alt="GoBus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WC3hbITWpolsdr1e1_sWqqcN0aWwNrtOz_y-6HlSYA9c0hVgRcGcdQxNRbs4grmDUBhrizYaWbGCyGeDy2BkNE2w8CUXvnMdBv_IBCJoZjBF8iTnweXws30vzDsv9SjiE47i_lDJXoMLJeoLftO6pbNTVI4svZjLY-fqswLBE5Siyzb8XP3hAylVQXroUevqmZFiAm2dW_OD5JoxCzx4bdVqqcO59Ny6W3sFR5IF3h8A54KoSmSAbpa3Sg"/><span class="font-headline-md text-headline-md text-primary tracking-tight">GoBus</span></div><nav class="flex items-center gap-space-sm" data-active-classes="bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg"><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="home" href="../gobus_home_1/code.html">Home</a><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg" data-path="search-buses" href="../gobus_search_buses/code.html">Search Buses</a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="my-bookings" href="../gobus_my_bookings/code.html">My Bookings</a><a class="px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="help" href="../gobus_help_support_desk/code.html">Help</a></nav></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface"><span class="material-symbols-outlined text-secondary text-[18px]">currency_rupee</span><span>INR</span></div><button class="px-space-lg py-space-sm bg-primary hover:bg-secondary active:bg-on-primary-fixed-variant text-on-primary font-label-lg text-label-lg rounded-lg transition-colors flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px]">lock</span><span>Demo Login</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Journey Control Header Bar -->
+<section class="w-full bg-surface-container-lowest shadow-sm z-30">
+<div class="max-w-[1366px] mx-auto px-margin py-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Chennai</span>
+<span class="material-symbols-outlined text-primary text-[20px]">trending_flat</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Bengaluru</span>
+</div>
+<div class="h-4 w-px bg-surface-container-highest"></div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span>Tomorrow, 15 Oct 2025</span>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-space-sm py-0.5 rounded-full" id="total-count-badge">38 Buses Available</span>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low hover:bg-surface-container text-primary font-label-lg text-label-lg rounded-lg transition-all cursor-pointer" id="toggle-modify-btn">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span id="modify-text">Modify Search</span>
+</button>
+</div>
+<!-- Expandable Horizontal Modify Search Panel -->
+<div class="hidden pt-space-sm pb-space-xs" id="modify-panel">
+<div class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between gap-space-md">
+<div class="flex-1 bg-surface-container-lowest px-space-md py-space-xs rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">trip_origin</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">FROM</span>
+<input class="bg-transparent font-title-md text-title-md text-on-surface focus:outline-none w-full" type="text" value="Chennai, Tamil Nadu"/>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center hover:bg-surface transition-colors cursor-pointer text-primary">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<div class="flex-1 bg-surface-container-lowest px-space-md py-space-xs rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">TO</span>
+<input class="bg-transparent font-title-md text-title-md text-on-surface focus:outline-none w-full" type="text" value="Bengaluru, Karnataka"/>
+</div>
+</div>
+<div class="w-52 bg-surface-container-lowest px-space-md py-space-xs rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_month</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">DATE</span>
+<span class="font-title-md text-title-md text-on-surface">15 Oct 2025</span>
+</div>
+</div>
+<button class="px-space-xl py-space-sm bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-secondary transition-colors cursor-pointer" id="apply-modify">
+            Update Search
+          </button>
+</div>
+</div>
+<!-- Quick Sorting Ribbon -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mr-space-xs">Sort By:</span>
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-lg" id="sort-controls">
+<button class="sort-tab active px-space-md py-1 font-label-md text-label-md rounded-lg transition-colors cursor-pointer bg-surface-container-lowest text-primary shadow-sm font-semibold" data-sort="cheapest">Cheapest First (₹499+)</button>
+<button class="sort-tab px-space-md py-1 font-label-md text-label-md rounded-lg transition-colors cursor-pointer text-on-surface-variant hover:text-on-surface" data-sort="earliest">Earliest Departure (06:00)</button>
+<button class="sort-tab px-space-md py-1 font-label-md text-label-md rounded-lg transition-colors cursor-pointer text-on-surface-variant hover:text-on-surface" data-sort="duration">Fastest Duration (5h 45m)</button>
+<button class="sort-tab px-space-md py-1 font-label-md text-label-md rounded-lg transition-colors cursor-pointer text-on-surface-variant hover:text-on-surface" data-sort="rating">Highest Rated (4.8+)</button>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm bg-tertiary-fixed/40 px-space-sm py-1 rounded">
+<span class="material-symbols-outlined text-[16px]">electric_bolt</span>
+<span>Zero Booking Fee on Instant UPI Payments</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Multi-Column Content Workspace -->
+<div class="max-w-[1366px] w-full mx-auto px-margin py-space-lg flex gap-gutter items-start">
+<!-- Left Column: Sticky Sidebar Filters (280px wide) -->
+<aside class="w-[280px] shrink-0 bg-surface-container-lowest rounded-xl p-space-md shadow-sm sticky top-24 flex flex-col gap-space-lg max-h-[calc(100vh-120px)] overflow-y-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">filter_alt</span>
+<h3 class="font-title-md text-title-md text-on-surface">Filter Buses</h3>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:text-secondary cursor-pointer underline" id="reset-filters">Reset All</button>
+</div>
+<!-- Departure Slot Filter -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Departure Time</span>
+<div class="grid grid-cols-2 gap-space-xs text-center font-label-sm text-label-sm">
+<label class="cursor-pointer">
+<input class="filter-time sr-only peer" name="dep_time" type="checkbox" value="morning"/>
+<div class="p-space-xs rounded-lg bg-surface-container-low peer-checked:bg-primary peer-checked:text-on-primary transition-all flex flex-col items-center">
+<span class="material-symbols-outlined text-[18px]">wb_twilight</span>
+<span class="font-semibold">Morning</span>
+<span class="text-[10px] opacity-80">06:00 - 12:00</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="filter-time sr-only peer" name="dep_time" type="checkbox" value="afternoon"/>
+<div class="p-space-xs rounded-lg bg-surface-container-low peer-checked:bg-primary peer-checked:text-on-primary transition-all flex flex-col items-center">
+<span class="material-symbols-outlined text-[18px]">light_mode</span>
+<span class="font-semibold">Afternoon</span>
+<span class="text-[10px] opacity-80">12:00 - 18:00</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="filter-time sr-only peer" name="dep_time" type="checkbox" value="evening"/>
+<div class="p-space-xs rounded-lg bg-surface-container-low peer-checked:bg-primary peer-checked:text-on-primary transition-all flex flex-col items-center">
+<span class="material-symbols-outlined text-[18px]">nights_stay</span>
+<span class="font-semibold">Evening</span>
+<span class="text-[10px] opacity-80">18:00 - 24:00</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="filter-time sr-only peer" name="dep_time" type="checkbox" value="night"/>
+<div class="p-space-xs rounded-lg bg-surface-container-low peer-checked:bg-primary peer-checked:text-on-primary transition-all flex flex-col items-center">
+<span class="material-symbols-outlined text-[18px]">bedtime</span>
+<span class="font-semibold">Night</span>
+<span class="text-[10px] opacity-80">00:00 - 06:00</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Bus Types Filter -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Bus Type</span>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<label class="flex items-center justify-between cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<input class="filter-type accent-primary rounded w-4 h-4 cursor-pointer" type="checkbox" value="ac"/>
+<span>AC Coaches</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(28)</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<input class="filter-type accent-primary rounded w-4 h-4 cursor-pointer" type="checkbox" value="non-ac"/>
+<span>Non-AC Standard</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(10)</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<input class="filter-type accent-primary rounded w-4 h-4 cursor-pointer" type="checkbox" value="sleeper"/>
+<span>Sleeper Berths</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(22)</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<input class="filter-type accent-primary rounded w-4 h-4 cursor-pointer" type="checkbox" value="seater"/>
+<span>Seater / Semi-Sleeper</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(16)</span>
+</label>
+</div>
+</div>
+<!-- Price Range Slider -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Max Price</span>
+<span class="font-title-md text-title-md text-primary font-bold" id="price-display">₹1,800</span>
+</div>
+<input class="accent-primary w-full cursor-pointer h-1.5 bg-surface-container rounded-lg" id="price-range" max="1800" min="399" step="50" type="range" value="1800"/>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>₹399</span>
+<span>₹1,800</span>
+</div>
+</div>
+<!-- Operators List -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Bus Operators</span>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<label class="flex items-center justify-between cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<input class="filter-operator accent-primary rounded w-4 h-4 cursor-pointer" type="checkbox" value="orange"/>
+<span>Orange Tours</span>
+</div>
+<span class="font-label-sm text-label-sm">4.9 ★</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<input class="filter-operator accent-primary rounded w-4 h-4 cursor-pointer" type="checkbox" value="srs"/>
+<span>SRS Travels</span>
+</div>
+<span class="font-label-sm text-label-sm">4.8 ★</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<input class="filter-operator accent-primary rounded w-4 h-4 cursor-pointer" type="checkbox" value="kpn"/>
+<span>KPN Travels</span>
+</div>
+<span class="font-label-sm text-label-sm">4.6 ★</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<input class="filter-operator accent-primary rounded w-4 h-4 cursor-pointer" type="checkbox" value="greenline"/>
+<span>GreenLine Express</span>
+</div>
+<span class="font-label-sm text-label-sm">4.9 ★</span>
+</label>
+<label class="flex items-center justify-between cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<input class="filter-operator accent-primary rounded w-4 h-4 cursor-pointer" type="checkbox" value="vrl"/>
+<span>VRL Travels</span>
+</div>
+<span class="font-label-sm text-label-sm">4.7 ★</span>
+</label>
+</div>
+</div>
+<!-- Amenities Section -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Amenities</span>
+<div class="grid grid-cols-1 gap-1 text-on-surface-variant font-body-sm text-body-sm">
+<label class="flex items-center gap-space-xs cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<input class="filter-amenity accent-primary rounded cursor-pointer" type="checkbox" value="wifi"/>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span>WiFi Onboard</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<input class="filter-amenity accent-primary rounded cursor-pointer" type="checkbox" value="water"/>
+<span class="material-symbols-outlined text-[16px]">water_drop</span>
+<span>Water Bottle</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<input class="filter-amenity accent-primary rounded cursor-pointer" type="checkbox" value="charging"/>
+<span class="material-symbols-outlined text-[16px]">power</span>
+<span>USB Charging Port</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<input class="filter-amenity accent-primary rounded cursor-pointer" type="checkbox" value="blanket"/>
+<span class="material-symbols-outlined text-[16px]">bed</span>
+<span>Blankets Provided</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer py-1 px-space-xs rounded hover:bg-surface-container-low">
+<input class="filter-amenity accent-primary rounded cursor-pointer" type="checkbox" value="tracking"/>
+<span class="material-symbols-outlined text-[16px]">gps_fixed</span>
+<span>Live GPS Tracking</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- Right Column: Bus Results List (Horizontal Cards) -->
+<main class="flex-1 flex flex-col gap-space-md min-w-0" id="buses-container">
+<!-- Dynamic Notice Card -->
+<div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-between text-on-surface-variant px-space-md">
+<div class="flex items-center gap-space-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<span>All buses sanitized and adhere to SafeJourney protocol with verified GPS departure guarantees.</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>98.4% On-Time Departures</span>
+</div>
+</div>
+<!-- Bus Card 1 -->
+<article class="bus-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col gap-space-md" data-amenities="wifi,water,charging,blanket,tracking" data-duration="450" data-operator="orange" data-price="850" data-rating="4.9" data-time="night" data-types="ac,sleeper">
+<div class="grid grid-cols-12 gap-space-md items-center">
+<!-- Col 1: Operator Details (4 cols) -->
+<div class="col-span-4 flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Orange Tours &amp; Travels</h2>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-1.5 py-0.5 rounded flex items-center gap-0.5">
+<span>4.9</span>
+<span class="material-symbols-outlined text-[12px]">star</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Scania AC Multi-Axle Sleeper 2+1</p>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">reviews</span>
+<span>1,420 passenger reviews</span>
+</div>
+</div>
+<!-- Col 2: Route Times & Timeline (4 cols) -->
+<div class="col-span-4 flex items-center justify-between text-center px-space-sm">
+<div class="text-left flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">21:30</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Koyambedu</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chennai</span>
+</div>
+<div class="flex flex-col items-center px-space-xs min-w-[90px]">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1">7h 30m</span>
+<div class="w-full flex items-center relative">
+<div class="w-2 h-2 rounded-full bg-primary shrink-0"></div>
+<div class="w-full h-0.5 bg-surface-container-high mx-1"></div>
+<div class="w-2 h-2 rounded-full bg-secondary shrink-0"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary mt-1">Direct Route</span>
+</div>
+<div class="text-right flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">05:00</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Madiwala</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bengaluru</span>
+</div>
+</div>
+<!-- Col 3: Amenities & Seat Status (2 cols) -->
+<div class="col-span-2 flex flex-col gap-space-xs items-center justify-center">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" title="Free WiFi">wifi</span>
+<span class="material-symbols-outlined text-[18px]" title="Water Bottle">water_drop</span>
+<span class="material-symbols-outlined text-[18px]" title="Charging Port">power</span>
+<span class="material-symbols-outlined text-[18px]" title="Blanket">bed</span>
+<span class="material-symbols-outlined text-[18px]" title="Live GPS">gps_fixed</span>
+</div>
+<span class="bg-primary-fixed/40 text-on-primary-fixed-variant px-2 py-0.5 rounded text-label-sm font-label-sm">
+              18 Seats Left
+            </span>
+</div>
+<!-- Col 4: Price & CTA (2 cols) -->
+<div class="col-span-2 flex flex-col items-end gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹1,050</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">₹850</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tax inclusive</span>
+<button class="select-seat-btn w-full mt-1 px-space-md py-space-xs bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm transition-all flex items-center justify-center gap-1 cursor-pointer" data-bus="Orange Tours &amp; Travels" data-price="850" data-route="Chennai → Bengaluru" onclick="window.location.href='../gobus_my_bookings/code.html'">
+<span>View Seats</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Bus Card 2 -->
+<article class="bus-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col gap-space-md" data-amenities="charging,blanket,tracking" data-duration="450" data-operator="srs" data-price="699" data-rating="4.8" data-time="night" data-types="ac,seater">
+<div class="grid grid-cols-12 gap-space-md items-center">
+<div class="col-span-4 flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">SRS Travels</h2>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-1.5 py-0.5 rounded flex items-center gap-0.5">
+<span>4.8</span>
+<span class="material-symbols-outlined text-[12px]">star</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Volvo 9600 B11R Semi-Sleeper AC</p>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">reviews</span>
+<span>2,890 passenger reviews</span>
+</div>
+</div>
+<div class="col-span-4 flex items-center justify-between text-center px-space-sm">
+<div class="text-left flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">22:15</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Guindy</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chennai</span>
+</div>
+<div class="flex flex-col items-center px-space-xs min-w-[90px]">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1">7h 30m</span>
+<div class="w-full flex items-center relative">
+<div class="w-2 h-2 rounded-full bg-primary shrink-0"></div>
+<div class="w-full h-0.5 bg-surface-container-high mx-1"></div>
+<div class="w-2 h-2 rounded-full bg-secondary shrink-0"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">1 Stop</span>
+</div>
+<div class="text-right flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">05:45</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Electronic City</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bengaluru</span>
+</div>
+</div>
+<div class="col-span-2 flex flex-col gap-space-xs items-center justify-center">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" title="Charging Port">power</span>
+<span class="material-symbols-outlined text-[18px]" title="Blanket">bed</span>
+<span class="material-symbols-outlined text-[18px]" title="Live GPS">gps_fixed</span>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold">
+              12 Seats Left
+            </span>
+</div>
+<div class="col-span-2 flex flex-col items-end gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹890</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">₹699</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tax inclusive</span>
+<button class="select-seat-btn w-full mt-1 px-space-md py-space-xs bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm transition-all flex items-center justify-center gap-1 cursor-pointer" data-bus="SRS Travels" data-price="699" data-route="Chennai → Bengaluru" onclick="window.location.href='../gobus_my_bookings/code.html'">
+<span>View Seats</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Bus Card 3 -->
+<article class="bus-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col gap-space-md" data-amenities="water,charging,tracking" data-duration="390" data-operator="kpn" data-price="549" data-rating="4.6" data-time="morning" data-types="ac,seater,sleeper">
+<div class="grid grid-cols-12 gap-space-md items-center">
+<div class="col-span-4 flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">KPN Travels</h2>
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded flex items-center gap-0.5">
+<span>4.6</span>
+<span class="material-symbols-outlined text-[12px]">star</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">BharatBenz AC Seater/Sleeper</p>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">reviews</span>
+<span>980 passenger reviews</span>
+</div>
+</div>
+<div class="col-span-4 flex items-center justify-between text-center px-space-sm">
+<div class="text-left flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">07:00</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Koyambedu</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chennai</span>
+</div>
+<div class="flex flex-col items-center px-space-xs min-w-[90px]">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1">6h 30m</span>
+<div class="w-full flex items-center relative">
+<div class="w-2 h-2 rounded-full bg-primary shrink-0"></div>
+<div class="w-full h-0.5 bg-surface-container-high mx-1"></div>
+<div class="w-2 h-2 rounded-full bg-secondary shrink-0"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary mt-1">Highway Express</span>
+</div>
+<div class="text-right flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">13:30</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Majestic</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bengaluru</span>
+</div>
+</div>
+<div class="col-span-2 flex flex-col gap-space-xs items-center justify-center">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" title="Water Bottle">water_drop</span>
+<span class="material-symbols-outlined text-[18px]" title="Charging Port">power</span>
+<span class="material-symbols-outlined text-[18px]" title="Live GPS">gps_fixed</span>
+</div>
+<span class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded text-label-sm font-label-sm">
+              24 Seats Left
+            </span>
+</div>
+<div class="col-span-2 flex flex-col items-end gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹750</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">₹549</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tax inclusive</span>
+<button class="select-seat-btn w-full mt-1 px-space-md py-space-xs bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm transition-all flex items-center justify-center gap-1 cursor-pointer" data-bus="KPN Travels" data-price="549" data-route="Chennai → Bengaluru" onclick="window.location.href='../gobus_my_bookings/code.html'">
+<span>View Seats</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Bus Card 4 -->
+<article class="bus-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col gap-space-md" data-amenities="wifi,water,charging,tracking" data-duration="375" data-operator="greenline" data-price="799" data-rating="4.9" data-time="afternoon" data-types="ac,seater">
+<div class="grid grid-cols-12 gap-space-md items-center">
+<div class="col-span-4 flex flex-col gap-1">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">GreenLine Express</h2>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-1.5 py-0.5 rounded flex items-center gap-0.5">
+<span>4.9</span>
+<span class="material-symbols-outlined text-[12px]">star</span>
+</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="bg-tertiary/10 text-tertiary text-[11px] font-semibold px-1 rounded flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">eco</span>
+                Electric Coach
+              </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Luxury EV 2+2</p>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span class="material-symbols-outlined text-[14px]">reviews</span>
+<span>610 passenger reviews</span>
+</div>
+</div>
+<div class="col-span-4 flex items-center justify-between text-center px-space-sm">
+<div class="text-left flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">14:00</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">T. Nagar</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chennai</span>
+</div>
+<div class="flex flex-col items-center px-space-xs min-w-[90px]">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1">6h 15m</span>
+<div class="w-full flex items-center relative">
+<div class="w-2 h-2 rounded-full bg-primary shrink-0"></div>
+<div class="w-full h-0.5 bg-surface-container-high mx-1"></div>
+<div class="w-2 h-2 rounded-full bg-secondary shrink-0"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary mt-1">Direct EV Run</span>
+</div>
+<div class="text-right flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">20:15</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Silk Board</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bengaluru</span>
+</div>
+</div>
+<div class="col-span-2 flex flex-col gap-space-xs items-center justify-center">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" title="Free WiFi">wifi</span>
+<span class="material-symbols-outlined text-[18px]" title="Water Bottle">water_drop</span>
+<span class="material-symbols-outlined text-[18px]" title="Charging Port">power</span>
+<span class="material-symbols-outlined text-[18px]" title="Live GPS">gps_fixed</span>
+</div>
+<span class="bg-primary text-on-primary px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold">
+              Only 8 Seats Left
+            </span>
+</div>
+<div class="col-span-2 flex flex-col items-end gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹999</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">₹799</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tax inclusive</span>
+<button class="select-seat-btn w-full mt-1 px-space-md py-space-xs bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm transition-all flex items-center justify-center gap-1 cursor-pointer" data-bus="GreenLine Express" data-price="799" data-route="Chennai → Bengaluru" onclick="window.location.href='../gobus_my_bookings/code.html'">
+<span>View Seats</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Empty State View -->
+<div class="hidden bg-surface-container-lowest rounded-xl p-space-xl text-center flex-col items-center justify-center gap-space-md shadow-sm" id="empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[36px]">directions_bus</span>
+</div>
+<div class="max-w-md flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">No matching buses found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We couldn't find any journeys matching your current filter criteria. Try adjusting your departure slots, bus operators, or price ceiling.</p>
+</div>
+<button class="px-space-lg py-space-sm bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-secondary transition-colors cursor-pointer" id="clear-all-filters-btn">
+          Reset Filter Preferences
+        </button>
+</div>
+</main>
+</div>
+</div>
+<script>
+  // Modify Search Toggle Behavior
+  const modifyBtn = document.getElementById('toggle-modify-btn');
+  const modifyPanel = document.getElementById('modify-panel');
+  const modifyText = document.getElementById('modify-text');
+
+  modifyBtn.addEventListener('click', () => {
+    modifyPanel.classList.toggle('hidden');
+    if (modifyPanel.classList.contains('hidden')) {
+      modifyText.textContent = 'Modify Search';
+    } else {
+      modifyText.textContent = 'Close Panel';
+    }
+  });
+
+  const applyModify = document.getElementById('apply-modify');
+  applyModify.addEventListener('click', () => {
+    modifyPanel.classList.add('hidden');
+    modifyText.textContent = 'Modify Search';
+  });
+
+  // Price Slider Live Label
+  const priceRange = document.getElementById('price-range');
+  const priceDisplay = document.getElementById('price-display');
+
+  priceRange.addEventListener('input', (e) => {
+    priceDisplay.textContent = '₹' + Number(e.target.value).toLocaleString('en-IN');
+    applyFilters();
+  });
+
+  // Dynamic Filtering System
+  const cards = Array.from(document.querySelectorAll('.bus-card'));
+  const emptyState = document.getElementById('empty-state');
+  const totalCountBadge = document.getElementById('total-count-badge');
+
+  function applyFilters() {
+    const selectedTimes = Array.from(document.querySelectorAll('.filter-time:checked')).map(el => el.value);
+    const selectedTypes = Array.from(document.querySelectorAll('.filter-type:checked')).map(el => el.value);
+    const selectedOps = Array.from(document.querySelectorAll('.filter-operator:checked')).map(el => el.value);
+    const selectedAmenities = Array.from(document.querySelectorAll('.filter-amenity:checked')).map(el => el.value);
+    const maxPrice = Number(priceRange.value);
+
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const cardPrice = Number(card.getAttribute('data-price'));
+      const cardTime = card.getAttribute('data-time');
+      const cardOp = card.getAttribute('data-operator');
+      const cardTypes = card.getAttribute('data-types').split(',');
+      const cardAmenities = card.getAttribute('data-amenities').split(',');
+
+      // Checks
+      const matchesPrice = cardPrice <= maxPrice;
+      const matchesTime = selectedTimes.length === 0 || selectedTimes.includes(cardTime);
+      const matchesOp = selectedOps.length === 0 || selectedOps.includes(cardOp);
+      const matchesType = selectedTypes.length === 0 || selectedTypes.some(t => cardTypes.includes(t));
+      const matchesAmenity = selectedAmenities.length === 0 || selectedAmenities.every(a => cardAmenities.includes(a));
+
+      if (matchesPrice && matchesTime && matchesOp && matchesType && matchesAmenity) {
+        card.style.display = 'flex';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (visibleCount === 0) {
+      emptyState.classList.remove('hidden');
+      emptyState.classList.add('flex');
+    } else {
+      emptyState.classList.add('hidden');
+      emptyState.classList.remove('flex');
+    }
+
+    totalCountBadge.textContent = `${visibleCount} Buses Available`;
+  }
+
+  // Bind all filter controls
+  document.querySelectorAll('.filter-time, .filter-type, .filter-operator, .filter-amenity').forEach(input => {
+    input.addEventListener('change', applyFilters);
+  });
+
+  function resetAll() {
+    document.querySelectorAll('.filter-time, .filter-type, .filter-operator, .filter-amenity').forEach(el => el.checked = false);
+    priceRange.value = 1800;
+    priceDisplay.textContent = '₹1,800';
+    applyFilters();
+  }
+
+  document.getElementById('reset-filters').addEventListener('click', resetAll);
+  document.getElementById('clear-all-filters-btn').addEventListener('click', resetAll);
+
+  // Sorting System
+  const sortTabs = document.querySelectorAll('.sort-tab');
+  const busContainer = document.getElementById('buses-container');
+
+  sortTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      sortTabs.forEach(t => {
+        t.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        t.classList.add('text-on-surface-variant');
+      });
+      tab.classList.remove('text-on-surface-variant');
+      tab.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+
+      const sortMode = tab.getAttribute('data-sort');
+      const sortedCards = [...cards];
+
+      if (sortMode === 'cheapest') {
+        sortedCards.sort((a, b) => Number(a.getAttribute('data-price')) - Number(b.getAttribute('data-price')));
+      } else if (sortMode === 'earliest') {
+        const timeRank = { morning: 1, afternoon: 2, evening: 3, night: 4 };
+        sortedCards.sort((a, b) => timeRank[a.getAttribute('data-time')] - timeRank[b.getAttribute('data-time')]);
+      } else if (sortMode === 'duration') {
+        sortedCards.sort((a, b) => Number(a.getAttribute('data-duration')) - Number(b.getAttribute('data-duration')));
+      } else if (sortMode === 'rating') {
+        sortedCards.sort((a, b) => Number(b.getAttribute('data-rating')) - Number(a.getAttribute('data-rating')));
+      }
+
+      sortedCards.forEach(c => busContainer.appendChild(c));
+      busContainer.appendChild(emptyState);
+    });
+  });
+
+  // Seat Selection Link Interaction
+  document.querySelectorAll('.select-seat-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const busName = btn.getAttribute('data-bus');
+      const route = btn.getAttribute('data-route');
+      const price = btn.getAttribute('data-price');
+      
+      sessionStorage.setItem('selectedBus', JSON.stringify({ busName, route, price }));
+      window.location.href = `../gobus_my_bookings/code.html`;
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-lowest mt-space-xl shadow-[0_-1px_8px_rgba(0,0,0,0.03)]"><div class="max-w-[1440px] mx-auto px-margin py-space-xl"><div class="grid grid-cols-12 gap-gutter"><div class="col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="GoBus Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WC3hbITWpolsdr1e1_sWqqcN0aWwNrtOz_y-6HlSYA9c0hVgRcGcdQxNRbs4grmDUBhrizYaWbGCyGeDy2BkNE2w8CUXvnMdBv_IBCJoZjBF8iTnweXws30vzDsv9SjiE47i_lDJXoMLJeoLftO6pbNTVI4svZjLY-fqswLBE5Siyzb8XP3hAylVQXroUevqmZFiAm2dW_OD5JoxCzx4bdVqqcO59Ny6W3sFR5IF3h8A54KoSmSAbpa3Sg"/><span class="font-headline-md text-headline-md text-primary">GoBus</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">India's premier high-precision bus ticketing network. Providing real-time seat matrices, safe online bookings, and punctual departures across 50,000+ interconnected routes.</p><div class="flex items-center gap-space-xs font-label-md text-label-md text-tertiary"><span class="material-symbols-outlined text-[18px]">verified</span><span>Verified Operator Network &amp; Safe Travels</span></div></div><div class="col-span-2 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface">Quick Links</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="home" href="../gobus_home_1/code.html">Home</a></li><li><a class="hover:text-primary transition-colors" data-path="search-buses" href="../gobus_search_buses/code.html">Search Buses</a></li><li><a class="hover:text-primary transition-colors" data-path="my-bookings" href="../gobus_my_bookings/code.html">My Bookings</a></li><li><a class="hover:text-primary transition-colors" data-path="operator-directory" href="../gobus_help_support_desk/code.html">Operator Directory</a></li></ul></div><div class="col-span-2 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface">About GoBus</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="about-us" href="../gobus_user_profile_preferences/code.html">Company Profile</a></li><li><a class="hover:text-primary transition-colors" data-path="safety-charter" href="../gobus_help_support_desk/code.html">Safety Charter</a></li><li><a class="hover:text-primary transition-colors" data-path="careers" href="../gobus_help_support_desk/code.html">Careers</a></li><li><a class="hover:text-primary transition-colors" data-path="press" href="../gobus_help_support_desk/code.html">Press Releases</a></li></ul></div><div class="col-span-2 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface">Support &amp; FAQs</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="help" href="../gobus_help_support_desk/code.html">Help Center</a></li><li><a class="hover:text-primary transition-colors" data-path="ticket-cancellation" href="../gobus_help_support_desk/code.html">Ticket Cancellation</a></li><li><a class="hover:text-primary transition-colors" data-path="refund-status" href="../gobus_help_support_desk/code.html">Refund Status</a></li><li><a class="hover:text-primary transition-colors" data-path="insurance-claims" href="../gobus_help_support_desk/code.html">Insurance Claims</a></li></ul></div><div class="col-span-2 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-on-surface">Legal &amp; Policies</h4><ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="terms-and-conditions" href="../gobus_help_support_desk/code.html">Terms &amp; Conditions</a></li><li><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="../gobus_help_support_desk/code.html">Privacy Policy</a></li><li><a class="hover:text-primary transition-colors" data-path="cancellation-policy" href="../gobus_help_support_desk/code.html">Cancellation Policy</a></li><li><a class="hover:text-primary transition-colors" data-path="user-agreement" href="../gobus_help_support_desk/code.html">User Agreement</a></li></ul></div></div><div class="mt-space-xl pt-space-lg flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant bg-surface-container-low px-space-lg py-space-md rounded-lg"><p>© 2025 GoBus Technologies Ltd. All rights reserved. Registered under Ministry of Road Transport &amp; Highways.</p><div class="flex items-center gap-space-md"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[16px]">call</span><span>24x7 Helpline: +91 (80) 6940 9000</span></span><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[16px]">mail</span><span>support@gobus.in</span></span></div></div></div></footer></body></html>
